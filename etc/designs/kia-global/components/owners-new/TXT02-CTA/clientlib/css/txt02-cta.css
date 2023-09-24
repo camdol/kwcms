@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* TXT02 */
+.cmpnt-txt02-cta {box-sizing:border-box;}
+.cmpnt-txt02-cta__wrap {text-align:center}
+.cmpnt-txt02-cta__button {display:inline-flex;align-items: center;gap:4px;box-sizing:border-box;padding:0 30px;height:46px;background-color:#05141F;font-family:'KiaB';font-size:14px;line-height:46px;color:#fff;text-decoration:none}
+.cmpnt-txt02-cta__button:hover {text-decoration:none;}
+
+.cta-ico {width:16px;height:16px;background-repeat:no-repeat;background-position:0 0;background-size:16px;}
+.cta-ico.ico-none {display:none}
+.ico-download {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-download-white.svg');}
+.ico-phone {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone-white.svg');}
+.ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink-white.svg');order:2}
+.cta-ico.ico-newIcon {background:none}
+.ico-newIcon img {width:16px;height:16px;}
+
+.cmpnt-txt02-cta__button.bg-white {background-color:#fff;border:1px solid #05141F}
+.bg-white strong {color:#05141F}
+.bg-white .ico-download {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-download.svg');}
+.bg-white .ico-phone {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone.svg');}
+.bg-white .ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg');order:2}
+
+@media screen and (min-width: 1025px) and (max-width: 20000px) {
+    .cmpnt-txt02-cta__wrap {margin:0 auto;padding:90px 0;}
+    .cmpnt-txt02-cta__button + .cmpnt-txt02-cta__button {margin-left:8px}
+}
+
+@media (max-width:1280px) {
+
+}
+
+
+@media screen and (max-width:1024px){
+    .cmpnt-txt02-cta__wrap {padding:60px 0;}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-txt02-cta__wrap[data-type='large'] {margin:0 38px;}
+    .cmpnt-txt02-cta__wrap[data-type='medium'] {width:512px;margin:0 auto}
+    .cmpnt-txt02-cta__button + .cmpnt-txt02-cta__button {margin-left:8px}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+    .cmpnt-txt02-cta__wrap {margin:0 20px;}
+    .cmpnt-txt02-cta__button {width:100%;justify-content: center;}
+    .cmpnt-txt02-cta__button + .cmpnt-txt02-cta__button {margin-top:8px}
+}

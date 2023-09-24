@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+.cmpnt-tab {width:100%;padding:0;box-sizing:border-box;}
+.cmpnt-tab__inner {width:100%;max-width:1280px;margin:auto;box-sizing:border-box;padding-right:10px}
+.cmpnt-tab__list {overflow-x:auto;display:flex;flex-direction: row;align-items:flex-start;flex-wrap: nowrap;padding:30px 0;white-space:nowrap;box-sizing:border-box;}
+.cmpnt-tab__item {position:relative;display:inline-block;padding-top:10px;text-align:right;font-family:"kiaB";font-size:18px;margin-right:35px;line-height:150%;color:#05141f;opacity:.6;text-decoration:none;}
+.cmpnt-tab__item:hover {text-decoration-thickness:1px;text-underline-offset:6px;}
+.cmpnt-tab__item.on {font-family:"kiaB";color:#05141f;opacity:1;}
+.cmpnt-tab__item.on:after {display:block;position:absolute;top:-2px;left:0;content:"";width:100%;height:4px;background:#05141f;}
+
+@media(max-width:1280px){
+.cmpnt-tab__list {padding:30px 38px;}
+}
+
+/* tablet */
+@media(max-width:1024px){
+    .cmpnt-tab__list {padding:30px 38px;}
+}
+/* mobile */
+@media(max-width:767px){
+    .cmpnt-tab__list {padding:14px 20px;}
+}

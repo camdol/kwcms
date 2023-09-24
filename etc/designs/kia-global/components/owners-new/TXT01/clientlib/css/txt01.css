@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* txt01 */
+.cmpnt-txt01__wrap {line-height:140%;box-sizing:border-box;}
+
+@media screen and (min-width: 1025px) and (max-width: 20000px) {
+    .cmpnt-txt01__wrap {width:1280px;margin:0 auto;padding:180px 0;font-size:16px;}
+    
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-txt01__wrap {padding:120px 38px;font-size:24px;}
+    
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+    .cmpnt-txt01__wrap {padding:120px 20px;font-size:24px;}
+    
+}

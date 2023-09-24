@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* src01 */
+.cmpnt-src01 {box-sizing:border-box;background-color:#f8f8f8;}
+.cmpnt-src01__wrap {position:relative}
+.cmpnt-src01__swiper.swiper {position:relative;flex-wrap:wrap}
+.cmpnt-src01__swiper .swiper-slide {display:flex;}
+
+.cmpnt-src01__item.on {background-color:rgba(5, 20, 31, 0.80);}
+.on .cmpnt-src01__model-name {color:#fff;}
+.cmpnt-src01__item {display:flex;justify-content:space-between;background-color:#fff;border:1px solid rgba(5, 20, 31, 0.20);}
+.cmpnt-src01__modle-img img{width:100%;height:auto}
+.cmpnt-src01__model-name {display:block;color:#000;word-break: break-all;}
+
+
+.swiper-pagination, .swiper-button-next, .swiper-button-prev {display:block !important}
+.cmpnt-src01__wrap .swiper-button span {display:none}
+.cmpnt-src01__wrap .swiper-button-prev:after, 
+.cmpnt-src01__wrap .swiper-button-next:after {font-size:0}
+.cmpnt-src01__wrap .swiper-button-prev,
+.cmpnt-src01__wrap .swiper-button-next {position:absolute;width:80px;height:80px;border-radius:80px;background-color:rgba(5, 20, 31, 0.8);background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-swiper-arrow.svg');background-position: 50% 50%;background-repeat: no-repeat;background-size:24px;}
+.cmpnt-src01__wrap .swiper-button-prev {transform: rotate(3.142rad)}
+.cmpnt-src01__wrap .swiper-button-prev:hover,
+.cmpnt-src01__wrap .swiper-button-next:hover {background-color:rgba(5, 20, 31, 0.2);}
+.cmpnt-src01__wrap .swiper-button-prev.swiper-button-disabled,
+.cmpnt-src01__wrap .swiper-button-next.swiper-button-disabled {display:none !important}
+
+.cmpnt-src01__wrap .swiper-pagination.swiper-pagination-bullets {bottom:0;line-height:1em;cursor:pointer}
+.cmpnt-src01__wrap .swiper-pagination-bullet {height:2px;background-color:#05141F;opacity:0.2;border-radius: 0;--swiper-pagination-bullet-horizontal-gap:5px}
+.cmpnt-src01__wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {opacity:1}
+
+
+@media screen and (min-width: 1025px) and (max-width: 20000px) {
+    .cmpnt-src01__wrap {width:1280px;margin:0 auto;padding-bottom:90px;}
+    .cmpnt-src01__swiper.swiper {padding-bottom:60px}
+    .cmpnt-src01__swiper .swiper-slide {gap:40px}
+    .cmpnt-src01__item {width:288px;flex-direction: column;aspect-ratio: 1/1;}
+    .cmpnt-src01__model-name {padding:24px 24px 0;font-size:20px;line-height:130%;}
+    .cmpnt-src01__swiper .swiper-pagination-bullet {width:40px;}
+    .cmpnt-src01__wrap .swiper-button-prev,
+    .cmpnt-src01__wrap .swiper-button-next {width:80px;height:80px;border-radius:80px;background-size:24px;}
+    .cmpnt-src01__wrap .swiper-button-prev {left:-40px;top:124px;}
+    .cmpnt-src01__wrap .swiper-button-next {right:-40px;top:124px;}
+}
+
+@media (max-width:1280px) {
+
+}
+
+
+@media screen and (max-width:1024px){
+    .cmpnt-src01__wrap {padding-bottom:60px;}
+    .cmpnt-src01__swiper.swiper-grid-column > .swiper-wrapper {flex-direction: initial;}
+    .cmpnt-src01__item {flex-direction:row;min-height:115px}
+    .cmpnt-src01__model-name {width:50%;padding:16px;font-size:18px;line-height:150%;}
+    .cmpnt-src01__modle-img {width:50%;height:auto;display:flex;align-items: center;align-items: flex-end;}
+    .cmpnt-src01__swiper .swiper-pagination-bullet {width:24px;}
+    .cmpnt-src01__wrap .swiper-button-prev,
+    .cmpnt-src01__wrap .swiper-button-next {width:44px;height:44px;border-radius:44px;background-size:20px;}
+    .cmpnt-src01__wrap .swiper-button-prev {left:-22px;top:calc(50% - 54px)}
+    .cmpnt-src01__wrap .swiper-button-next {right:-22px;top:calc(50% - 54px)}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-src01__wrap {margin:0 38px;}
+    .cmpnt-src01__swiper.swiper {padding-bottom:48px}
+    .cmpnt-src01__swiper .swiper-slide {gap:28px 0;flex-wrap:wrap;justify-content: space-between;}
+    .cmpnt-src01__item {width:calc(50% - 14px);}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+    .cmpnt-src01__wrap {margin:0 20px;}
+    .cmpnt-src01__swiper.swiper {padding-bottom:40px}
+    .cmpnt-src01__swiper .swiper-slide {gap:12px;flex-wrap:wrap;justify-content: space-between;}
+    .cmpnt-src01__wrap .swiper-button-prev {left:-10px;}
+    .cmpnt-src01__wrap .swiper-button-next {right:-10px;}
+    .cmpnt-src01__item {width:100%;}
+}
