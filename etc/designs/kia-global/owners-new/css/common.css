@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* layout - common */
+.layout-center {text-align:center}
+.layout-left {text-align:left}
+.layout-right {text-align:right}
+
+.layout-white {background-color:#fff !important}
+.layout-grey {background-color:#f8f8f8 !important}
+
+
+/* Icon - common */
+.cta-ico {width:16px;height:16px;background-repeat:no-repeat;background-position:0 0;background-size:16px;}
+.cta-ico.ico-none {display:none}
+.ico-download {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-download-white.svg');}
+.ico-phone {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone-white.svg');}
+.ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink-white.svg');order:2}
+.cta-ico.ico-newIcon {background:none}
+.ico-newIcon img {width:16px;height:16px;}
+
+.bg-white strong {color:#05141F}
+.bg-white .ico-download {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-download.svg');}
+.bg-white .ico-phone {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone.svg');}
+.bg-white .ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg');order:2}

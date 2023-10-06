@@ -1268,8 +1268,12 @@
 <div ng-app="kwcmsAppModuleApp" ng-cloak>
     <div class="owners_new_par parsys">
 
-        <link rel="stylesheet" href="/etc/designs/kia-global/owners-new/css/swiper-bundle.min.css" type="text/css">
-        <script defer type="text/javascript" src="/etc/designs/kia-global/owners-new/js/swiper-bundle.min.js"></script>
+        <!-- Template common -->
+        <link rel="stylesheet" href="/etc/designs/kia-global/owners-new/css/common.css">
+        <link rel="stylesheet" href="/etc/designs/kia-global/owners-new/css/swiper-bundle.min.css">
+        <script defer src="/etc/designs/kia-global/owners-new/js/common.js"></script>
+        <script defer src="/etc/designs/kia-global/owners-new/js/swiper-bundle.min.js"></script>
+        <!-- //Template common -->
 
         <!-- SRC03 -->
         <div class="SRC03 parbase section">
@@ -1297,7 +1301,7 @@
                         <div class="cmpnt-src-select" placeholder="Engine">
                             <input type="hidden" id="selectYear" name="select_name" vlaue="">
                             <ul>
-                                <li class="cmpnt-src-select__item">1.6 CRDi ISG</li>
+                                <li class="cmpnt-src-select__item">New R 2.2 SMARTSTREAM</li>
                                 <li class="cmpnt-src-select__item">1.6 CRDi ISG</li>
                             </ul>
                         </div>
@@ -1369,9 +1373,18 @@
                 <div class="cmpnt-src04__wrap">
                     <!-- search -->
                     <section class="cmpnt-src04__search">
-                        <div class="cmpnt-src-input">
+                        <div class="cmpnt-src-input"><!-- 230926 add  error 인 경우 : is-error 클래스 추가 -->
                             <input type="text" id="search_keyword" placeholder="Enter your Kia VIN(17-digit code)" title="Enter your Kia VIN(17-digit code)">
                         </div>
+                        <div class="cmpnt-src__error">Error Text</div><!-- 230926 add : Error Message -->
+                        <div class="cmpnt-src__helpArea"><a href="#" class="cmpnt-ico__help"><span>Where can I find my VIN?</span></a></div>
+                    </section>
+
+                    <section class="cmpnt-src04__search">
+                        <div class="cmpnt-src-input is-error">
+                            <input type="text" id="search_keyword" placeholder="Enter your Kia VIN(17-digit code)" title="Enter your Kia VIN(17-digit code)">
+                        </div>
+                        <div class="cmpnt-src__error">Error Text</div><!-- 230926 add : Error Message -->
                         <div class="cmpnt-src__helpArea"><a href="#" class="cmpnt-ico__help"><span>Where can I find my VIN?</span></a></div>
                     </section>
                     <!-- //search -->

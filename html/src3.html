@@ -1268,8 +1268,12 @@
 <div ng-app="kwcmsAppModuleApp" ng-cloak>
     <div class="owners_new_par parsys">
 
-        <link rel="stylesheet" href="/etc/designs/kia-global/owners-new/css/swiper-bundle.min.css" type="text/css">
-        <script defer type="text/javascript" src="/etc/designs/kia-global/owners-new/js/swiper-bundle.min.js"></script>
+        <!-- Template common -->
+        <link rel="stylesheet" href="/etc/designs/kia-global/owners-new/css/common.css">
+        <link rel="stylesheet" href="/etc/designs/kia-global/owners-new/css/swiper-bundle.min.css">
+        <script defer src="/etc/designs/kia-global/owners-new/js/common.js"></script>
+        <script defer src="/etc/designs/kia-global/owners-new/js/swiper-bundle.min.js"></script>
+        <!-- //Template common -->
 
         <!-- SRC05 -->
         <div class="SRC04 parbase section">
@@ -1280,7 +1284,7 @@
                 <div class="cmpnt-src05__wrap">
                     <!-- search -->
                     <section class="cmpnt-src05__search">
-                        <div class="cmpnt-src-input">
+                        <div class="cmpnt-src-input"><!-- 230926 add  error 인 경우 : is-error 클래스 추가 -->
                             <input type="text" id="search_keyword" placeholder="Enter Your Kia VIN(17-digit code)" title="Enter Your Kia VIN(17-digit code)">
                         </div>
                         <div class="cmpnt-src__helpArea"><a href="#" class="cmpnt-ico__help"><span>Where can I find my VIN?</span></a></div>

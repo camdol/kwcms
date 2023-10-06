@@ -1,26 +1,29 @@
 'use strict';
 
+//#Component : SRC02
 (function () {
     window.addEventListener("DOMContentLoaded", showToggleSelect);
-    window.addEventListener("DOMContentLoaded", setSelect);
 
     // selectbox show/hide
     function showToggleSelect() {
         const selectEls = document.querySelectorAll('.cmpnt-src-select');
         Array.prototype.forEach.call(selectEls, function(el){
-            el.addEventListener('click', () => el.classList.toggle('is-show'));
-        });
-    }
-
-    // selectbox select value
-    function setSelect() {
-        const selectEls = document.querySelectorAll('.cmpnt-src-select__item');
-        Array.prototype.forEach.call(selectEls, function(el){
-            el.addEventListener('click', e =>  {
-                const target = e.target
-                target.closest('.cmpnt-src-select').setAttribute('value', target.innerText.trim())
-                target.closest('ul').querySelector('.is-select') && target.closest('ul').querySelector('.is-select').classList.remove('is-select');
-                target.classList.add('is-select');
+            el.addEventListener('click', (e) => {
+                const target = e.target;
+                if(target.classList.contains('cmpnt-src-select')) {
+                    if (target.classList.contains('is-show')) {
+                        target.classList.remove('is-show');
+                    }else if (target.parentElement.querySelector('.is-show')) {
+                        target.parentElement.querySelector('.is-show').classList.remove('is-show');
+                        target.classList.add('is-show');
+                    }else {
+                        target.classList.add('is-show');
+                    }
+                }
+                    
+                if(target.classList.contains('cmpnt-src-select__item')) {
+                    target.closest('.cmpnt-src-select').classList.remove('is-show');
+                }
             });
         });
     }

@@ -1,19 +1,24 @@
 'use strict';
 
+//#Component : SRC01
 let cmpntSrcSwiper;
 let swiperOptions;
 (function () {
-  const srcSwiperBtn = `
-    <div class="swiper-button">
-      <div class="swiper-button-next"><span>Next</span></div>
-      <div class="swiper-button-prev"><span>Prev</span></div>
-    </div>
-  `;
-  const item = document.createElement('div');
-  item.setAttribute('class', 'swiper-button__wrap');
-  item.innerHTML = srcSwiperBtn;
-  const target = document.querySelector('.cmpnt-src01__wrap');
-  target.insertBefore(item, null);
+  window.addEventListener("DOMContentLoaded", setNaviation);
+
+  function setNaviation() {
+    const srcSwiperBtn = `
+      <div class="swiper-button">
+        <div class="swiper-button-next"><span>Next</span></div>
+        <div class="swiper-button-prev"><span>Prev</span></div>
+      </div>
+    `;
+    const item = document.createElement('div');
+    item.setAttribute('class', 'swiper-button__wrap');
+    item.innerHTML = srcSwiperBtn;
+    const target = document.querySelector('.cmpnt-src01__wrap');
+    target.insertBefore(item, null);
+  }
 
   swiperOptions = {
       loop:false,
