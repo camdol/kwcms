@@ -1,25 +1,58 @@
 @charset "utf-8";
 
-.cmpnt-kyv {overflow:hidden;position:relative;width:100%;height:calc(100vh - 112px);margin:auto;box-sizing:border-box;}
-.cmpnt-kyv__wrap {position:relative;width:100%;height:100%;margin:auto;box-sizing:border-box;}
+.cmpnt-img05 {overflow:hidden;position:relative;width:100%;box-sizing:border-box;background-color:#fff;}
+.cmpnt-img05__wrap {position:relative;box-sizing:border-box;display:flex}
+.cmpnt-img05__img img {width:100%;aspect-ratio:16/9;object-fit: cover;}
+
+.cmpnt-img05__title {font-family:'kiaB';line-height:140%;}
+.cmpnt-img05__desc {line-height:150%;opacity:0.8;}
+
+.cmpnt-img05__button {display:inline-flex;align-items: center;gap:4px;box-sizing:border-box;padding:0 30px;height:46px;background-color:#05141F;font-family:'KiaB';font-size:14px;line-height:46px;color:#fff;text-decoration:none;}
+.cmpnt-img05__button:hover {text-decoration:none;}
+.cmpnt-img05__button.bg-white {background-color:#fff;border:1px solid #05141F;padding:1px 29px}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-  
+    .cmpnt-img05__wrap {width:1280px;margin:0 auto;padding:90px 0;gap:40px}
+    
+    .cmpnt-img05__content,
+    .cmpnt-img05__img {width:50%}
+    .cmpnt-img05__title + .cmpnt-img05__desc {margin-top:20px;}
+    .cmpnt-img05__desc + .cmpnt-img05__cta {margin-top:40px;}
+    .cmpnt-img05__cta {display:flex;justify-content:flex-start;gap:10px}
+    .cmpnt-img05__title {font-size:36px;}
+    .cmpnt-img05__desc {font-size:17px;}
 }
 
 @media (max-width:1280px) {
 
 }
 
-
 @media screen and (max-width:1024px){
-   
+    .cmpnt-img05__wrap {padding:60px 0;}
+    .cmpnt-img05__title + .cmpnt-img05__desc {margin-top:16px;}
+    .cmpnt-img05__desc + .cmpnt-img05__cta {margin-top:28px;}
+    .cmpnt-img05__title {font-size:24px;}
+    .cmpnt-img05__desc {font-size:16px;}
+}
+
+@media screen and (min-width:768px)  and (max-width:800px){
+    .cmpnt-img05__cta a + a {margin-top:10px;}
+}
+
+@media screen and (min-width:801px)  and (max-width:1024px){
+    .cmpnt-img05__cta a + a {margin-left:8px;}
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
-   
+    .cmpnt-img05__wrap {margin:0 38px;gap:28px}
+    .cmpnt-img05__content,
+    .cmpnt-img05__img {width:50%}
 }
 
 @media screen and (min-width:0) and (max-width:767px){
-   
+    .cmpnt-img05__wrap {margin:0 20px;flex-direction:column;gap:24px;}
+    .cmpnt-img05__content {width:100%;order:2;}
+    .cmpnt-img05__img {width:100%;order:1;}
+    .cmpnt-img05__cta {display:flex;flex-direction:column;gap:10px}
+    .cmpnt-img05__button {width:100%;justify-content: center;}
 }
