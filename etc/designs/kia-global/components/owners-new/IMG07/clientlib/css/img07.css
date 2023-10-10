@@ -8,7 +8,7 @@
 .cmpnt-img07__desc {line-height:150%;opacity:0.8;}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-    .cmpnt-img07__wrap {width:1280px;margin:0 auto;padding:54px 0 90px;gap:40px;}
+    .cmpnt-img07__wrap {width:1280px;margin:0 auto;padding:0 0 90px;gap:40px;}
     
     .cmpnt-img07__img + .cmpnt-img07__title {margin-top:24px}
     .cmpnt-img07__title + .cmpnt-img07__desc {margin-top:20px}
@@ -21,7 +21,7 @@
 }
 
 @media screen and (max-width:1024px){
-    .cmpnt-img07__wrap {padding:40px 0 60px;}
+    .cmpnt-img07__wrap {padding:0 0 60px;}
     .cmpnt-img07__title {font-size:20px;}
     .cmpnt-img07__desc {font-size:16px;}
     .cmpnt-img07__img + .cmpnt-img07__title {margin-top:24px}

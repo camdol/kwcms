@@ -20,7 +20,7 @@
     .cmpnt-img03__title,
     .cmpnt-img03__content {width:50%}
     .cmpnt-img03__desc + .cmpnt-img03__cta {margin-top:40px;}
-    .cmpnt-img03__cta {display:flex;justify-content:flex-start;gap:10px}
+    .cmpnt-img03__cta {display:flex;justify-content:flex-start;flex-wrap: wrap;gap:10px}
     .cmpnt-img03__title {font-size:36px;}
     .cmpnt-img03__desc {font-size:17px;}
 }
