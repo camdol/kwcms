@@ -15,6 +15,9 @@
 .cmpnt-img08__swiper.col2 .swiper-slide {width:calc(50% - 20px)}
 .cmpnt-img08__swiper.col3 .swiper-slide + .swiper-slide,
 .cmpnt-img08__swiper.col2 .swiper-slide + .swiper-slide {margin-left:40px}
+.cmpnt-img08__wrap .cmpnt-img08__swiper.col3 .swiper-wrapper,
+.cmpnt-img08__wrap .cmpnt-img08__swiper.col2 .swiper-wrapper {padding-bottom:0}
+
 .cmpnt-img08__wrap .swiper-button {display:none}
 .cmpnt-img08__wrap .swiper-pagination,
 .cmpnt-img08__wrap .swiper-button-next, 
@@ -44,11 +47,10 @@
     .cmpnt-img08__desc + .cmpnt-img08__cta {margin-top:40px}
     .cmpnt-img08__cta {display:flex;justify-content:flex-start;flex-wrap: wrap;gap:10px}
 
-    .cmpnt-img08__wrap .swiper-wrapper {padding-bottom:100px}
+    .cmpnt-img08__swiper .swiper-wrapper {padding-bottom:100px}
     .cmpnt-img08__wrap .swiper-pagination-bullet {width:40px;}
     .cmpnt-img08__wrap .swiper-button-prev,
     .cmpnt-img08__wrap .swiper-button-next {width:80px;height:80px;background-size:24px;top:95px;}
-
     .cmpnt-img08__wrap .swiper-button-prev {left:-40px;}
     .cmpnt-img08__wrap .swiper-button-next {right:-40px;}
 }
