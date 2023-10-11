@@ -6,7 +6,7 @@ let swiperImg04Options;
 (function () {
     swiperImg04Options = {
       loop:true,
-      slidesPerView: 'auto',
+      slidesPerView: 1,
       spaceBetween: 24,
       initialSlide:0,
       draggable: true,
@@ -38,16 +38,26 @@ let swiperImg04Options;
           const naviNext = this.navigation.nextEl;
           const naviPrev = this.navigation.prevEl;
           const activeImgH = this.slides[this.activeIndex].querySelector('img').offsetHeight;
-          const activeImgW = this.slides[this.activeIndex].querySelector('img').offsetWidth / 2;
           const pagenationGap = window.innerWidth > 1024 ? 35 : 28;
-          const naviGap = window.innerWidth > 1024 ? 180 : 68;
           const naviTop = window.innerWidth > 1024 ? (activeImgH / 2) - 20 + 'px' : (activeImgH / 2) + 'px';
           pagination.style.top = activeImgH + pagenationGap + 'px';
           naviNext.style.top = naviTop;
-          naviNext.style.left = `calc(50% + ${activeImgW}px + ${naviGap}px)`;
           naviPrev.style.top = naviTop;
-          naviPrev.style.left = `calc(50% - ${activeImgW}px - 260px)`;
-          console.log(activeImgH);
+        },
+        resize: function() {
+          const pagination = this.pagination.el;
+          const naviNext = this.navigation.nextEl;
+          const naviPrev = this.navigation.prevEl;
+          const activeImgH = this.slides[this.activeIndex].querySelector('img').offsetHeight;
+          const pagenationGap = window.innerWidth > 1024 ? 35 : 28;
+          const naviTop = window.innerWidth > 1024 ? (activeImgH / 2) - 20 + 'px' : (activeImgH / 2) + 'px';
+          pagination.style.top = activeImgH + pagenationGap + 'px';
+          naviNext.style.top = naviTop;
+          naviPrev.style.top = naviTop;
+          if(window.innerWidth > 1024) {
+            naviNext.style.right = '13vw';
+            naviPrev.style.left = '13vw';
+          }
         },
         
       },

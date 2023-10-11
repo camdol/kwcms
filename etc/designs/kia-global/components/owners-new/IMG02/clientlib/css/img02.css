@@ -29,6 +29,8 @@
 .cmpnt-img02__wrap .swiper-pagination-bullet {height:2px;background-color:#05141F;opacity:0.2;border-radius: 0;--swiper-pagination-bullet-horizontal-gap:5px}
 .cmpnt-img02__wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {opacity:1}
 
+.cmpnt-img02__wrap .is-hide {display:none !important}
+
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-img02__wrap {padding-bottom:90px;}
     .cmpnt-img02__img {height:648px;}
@@ -37,8 +39,10 @@
     .cmpnt-img02__sub-desc {font-size:17px;}
  
     .cmpnt-img02__swiper.swiper {margin-left:calc(50% - 640px);padding-bottom:48px}
+    .cmpnt-img02__swiper.swiper.no-slide {padding-bottom:0}
     .cmpnt-img02__swiper .swiper-slide {display:flex;gap:40px;width:840px;min-width:1280px}
     .cmpnt-img02__swiper.swiper .cmpnt-img02__item {width:400px;min-width:400px;padding:24px 0 40px;}
+    .cmpnt-img02__swiper.swiper.no-slide .cmpnt-img02__item {padding-bottom:0}
     .cmpnt-img02__wrap .swiper-pagination {height:48px;}
     .cmpnt-img02__wrap .swiper-pagination-bullet {width:40px;}
     .cmpnt-img02__wrap .swiper-button-prev,

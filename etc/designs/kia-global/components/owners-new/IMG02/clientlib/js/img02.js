@@ -24,13 +24,9 @@ let swiperImg02Options;
       observeParents: true, 
       watchOverflow : true,
       breakpoints: {
-        1850: {
-          slidesOffsetAfter: 310,
-        },
         1025: {
             slidesPerView: 'auto',
             spaceBetween: 40,
-            slidesOffsetAfter: 120,
         },
         768: {
           slidesPerView: 1.3,
@@ -43,12 +39,30 @@ let swiperImg02Options;
       },
       on: {
         init: function() {
-          console.log(this.slides.length);
           if(this.slides.length === 1) {
-            this.pagination.el.remove();
-            this.navigation.nextEl.remove();
-            this.navigation.prevEl.remove();
+            this.pagination.el.classList.add('is-hide');
+            this.navigation.nextEl.classList.add('is-hide');
+            this.navigation.prevEl.classList.add('is-hide');
+            this.el.classList.add('no-slide');
           } 
+        },
+        slideChange: function () {
+          if(window.innerWidth > 1024) {
+            const lastIdx = this.slides.length - 1;
+            const xValue = this.slidesGrid[lastIdx];
+            if(this.activeIndex === lastIdx) {
+              this.slides[lastIdx].parentElement.style.transform = `translate3d(-${xValue}px, 0px, 0px)`;  
+            }
+          }
+        },
+        resize: function() {
+          if(window.innerWidth > 1024) {
+            const lastIdx = this.slides.length - 1;
+            const xValue = this.slidesGrid[lastIdx];
+            if(this.activeIndex === lastIdx) {
+              this.slides[lastIdx].parentElement.style.transform = `translate3d(-${xValue}px, 0px, 0px)`;  
+            }
+          }
         },
       }
     };

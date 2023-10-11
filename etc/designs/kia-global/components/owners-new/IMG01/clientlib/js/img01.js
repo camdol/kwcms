@@ -37,28 +37,22 @@ let swiperImg01Options;
         },
       },
       on: {
-        init: function() {
-          const targtX = window.getComputedStyle(this.wrapperEl).getPropertyValue("transform").match(/(-?[0-9\.]+)/g)[4];
-          this.wrapperEl.dataset.value = targtX;
-        },
         slideChange: function () {
           if(window.innerWidth > 1024) {
-            console.log('slide length', this.slides.snapGrid);
-            console.log('this.activeIndex', this.activeIndex);
-            if(this.activeIndex === 3) {
-             
-              this.slides[lastSlideIdx].parentElement.style.transform = `translate3d(-1760px, 0px, 0px)`;  
+            const lastIdx = this.slides.length - 1;
+            const transX = this.slidesGrid[lastIdx];
+            if(this.activeIndex === lastIdx) {
+              this.slides[lastIdx].parentElement.style.transform = `translate3d(-${transX}px, 0px, 0px)`;  
             }
           }
         },
         resize: function() {
           if(window.innerWidth > 1024) {
-            this.update();
-            this.slideTo(0);
-            setTimeout(() => {
-              const targtX = window.getComputedStyle(this.wrapperEl).getPropertyValue("transform").match(/(-?[0-9\.]+)/g)[4];
-              this.wrapperEl.dataset.value = targtX;
-            }, 500);
+            const lastIdx = this.slides.length - 1;
+            const transX = this.slidesGrid[lastIdx];
+            if(this.activeIndex === lastIdx) {
+              this.slides[lastIdx].parentElement.style.transform = `translate3d(-${transX}px, 0px, 0px)`;  
+            }
           }
         }
       },

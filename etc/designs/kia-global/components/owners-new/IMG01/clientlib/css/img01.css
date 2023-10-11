@@ -32,7 +32,7 @@
 .cmpnt-img01__wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {opacity:1}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-    .cmpnt-img01__wrap {margin:auto 0 auto calc(50% - 640px);gap:40px;align-items: flex-start;}
+    .cmpnt-img01__wrap {padding-left:calc(50% - 640px);margin-top:auto;margin-bottom:auto;gap:40px;align-items: flex-start;}
     .cmpnt-img01 {min-height:648px;}
     .cmpnt-img01__head {width:400px;min-width:400px}
     .cmpnt-img01__title {font-size:36px;}
@@ -40,7 +40,7 @@
     .cmpnt-img01__sub-title {font-size:26px;}
     .cmpnt-img01__sub-desc {font-size:17px;}
  
-    .cmpnt-img01__swiper.swiper {width:calc(100% - 440px);padding-bottom:48px;}
+    .cmpnt-img01__swiper.swiper {padding-bottom:48px;}
     .cmpnt-img01__swiper .swiper-slide {display:flex;gap:40px;width:840px;min-width:840px}
     .cmpnt-img01__swiper .cmpnt-img01__item {width:400px;min-width:400px;padding-top:24px;padding-bottom:40px}
     .cmpnt-img01__wrap .swiper-pagination-bullet {width:40px;}
