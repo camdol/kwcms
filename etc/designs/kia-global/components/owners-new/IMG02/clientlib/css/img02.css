@@ -5,7 +5,7 @@
 .cmpnt-img02__img {width:100%}
 .cmpnt-img02__img img {width:100%;height:100%;object-fit: cover;}
 
-.cmpnt-img02__swiper .swiper-slide {border-top:1px solid #05141F;}
+.cmpnt-img02__swiper .cmpnt-img02__item {border-top:1px solid #05141F;}
 .cmpnt-img02__sub-title {font-family:'kiaM';line-height:140%}
 .cmpnt-img02__sub-desc {line-height:150%;opacity:0.8}
 .cmpnt-img02__sub-title + .cmpnt-img02__sub-desc {margin-top:16px;}
@@ -20,6 +20,8 @@
 .cmpnt-img02__wrap .swiper-button-prev {transform: rotate(3.142rad)}
 .cmpnt-img02__wrap .swiper-button-prev:hover,
 .cmpnt-img02__wrap .swiper-button-next:hover {background-color:rgba(5, 20, 31, 0.8);}
+.cmpnt-img02__wrap .swiper-button-prev.swiper-button-disabled, 
+.cmpnt-img02__wrap .swiper-button-next.swiper-button-disabled {display:none !important}
 
 .cmpnt-img02__wrap .swiper-pagination {left:-5px;width:auto;text-align:left}
 .cmpnt-img02__wrap .swiper-pagination.swiper-pagination-bullets {left:-5px;bottom:0;line-height:1em;cursor:pointer}
@@ -35,7 +37,8 @@
     .cmpnt-img02__sub-desc {font-size:17px;}
  
     .cmpnt-img02__swiper.swiper {margin-left:calc(50% - 640px);padding-bottom:48px}
-    .cmpnt-img02__swiper.swiper .swiper-slide {width:400px;padding:24px 0 40px;}
+    .cmpnt-img02__swiper .swiper-slide {display:flex;gap:40px;width:840px;min-width:1280px}
+    .cmpnt-img02__swiper.swiper .cmpnt-img02__item {width:400px;min-width:400px;padding:24px 0 40px;}
     .cmpnt-img02__wrap .swiper-pagination {height:48px;}
     .cmpnt-img02__wrap .swiper-pagination-bullet {width:40px;}
     .cmpnt-img02__wrap .swiper-button-prev,
@@ -55,7 +58,7 @@
     .cmpnt-img02__sub-desc {font-size:16px;}
     
     .cmpnt-img02__wrap .cmpnt-img02__swiper {width:100%;padding-bottom:44px;}
-    .cmpnt-img02__swiper .swiper-slide {padding-top:16px;padding-bottom:24px}
+    .cmpnt-img02__swiper .cmpnt-img02__item {padding-top:16px;padding-bottom:24px}
     .cmpnt-img02__wrap .swiper-pagination {height:44px;}
     .cmpnt-img02__wrap .swiper-pagination-bullet {width:24px;}
     .cmpnt-img02__wrap .swiper-button-prev,
@@ -64,8 +67,9 @@
 
 @media screen and (min-width:768px) and (max-width:1024px){
     .cmpnt-img02__img {height:408px;}
-
     .cmpnt-img02__wrap .cmpnt-img02__swiper {margin-left:38px;width:calc(100% - 38px)}
+    .cmpnt-img02__swiper .swiper-slide {display:flex;gap:24px;}
+    .cmpnt-img02__swiper .cmpnt-img02__item {width:50%}
     .cmpnt-img02__wrap .swiper-button-prev {left:auto;right:92px}
     .cmpnt-img02__wrap .swiper-button-next {right:38px}
 }

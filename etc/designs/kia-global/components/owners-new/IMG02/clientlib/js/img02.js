@@ -8,7 +8,8 @@ let swiperImg02Options;
       loop:false,
       slidesPerView: 1.5,
       slidesPerGroup: 1,
-      spaceBetween: 24,
+      spaceBetween: 20,
+      slidesOffsetAfter: 120,
       initialSlide:0,
       draggable: true,
       pagination: {
@@ -23,27 +24,45 @@ let swiperImg02Options;
       observeParents: true, 
       watchOverflow : true,
       breakpoints: {
+        1850: {
+          slidesOffsetAfter: 310,
+        },
         1025: {
-            //loop:true,
             slidesPerView: 'auto',
-            slidesPerGroup: 3,
             spaceBetween: 40,
-            //loopFillGroupWithBlank :true,
-            //slideOffsetAfter: 400,
+            slidesOffsetAfter: 120,
         },
         768: {
-          loop:false,
-          slidesPerView: 2.5,
-          slidesPerGroup: 2,
+          slidesPerView: 1.3,
           spaceBetween: 24,
-          //loopFillGroupWithBlank :true,
-          //slideOffsetAfter: 400,
+          slidesOffsetAfter: 172,
+        },
+        376: {
+          slidesOffsetAfter: 130,
+        },
       },
-      },
+      on: {
+        init: function() {
+          console.log(this.slides.length);
+          if(this.slides.length === 1) {
+            this.pagination.el.remove();
+            this.navigation.nextEl.remove();
+            this.navigation.prevEl.remove();
+          } 
+        },
+      }
     };
   
 })();
 
 function initIMG02Swiper() {
+  let groupNum;
+  if(window.innerWidth >= 768) {
+    groupNum = window.innerWidth > 1024 ? 3 : 2;
+  } else {
+    groupNum = 1;
+  }
+  
+  $(".cmpnt-img02__swiper .cmpnt-img02__item").chunk(groupNum).wrap('<div class="swiper-slide"></div>'); 
   cmpntIMG02Swiper = new Swiper(".cmpnt-img02__swiper", swiperImg02Options);
 }
