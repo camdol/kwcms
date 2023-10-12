@@ -1,37 +1,20 @@
 'use strict';
 
-//IMG01
+//#Component : IMG03
 (function () {
-  const _winWidth = window.innerWidth;
-
-  //Video Tag Responsive
-  window.addEventListener("resize", videoSrcInit, true);
-  window.addEventListener("DOMContentLoaded", videoSrcInit, true);
-
-  function videoSrcInit() {
-    const _videoEl = document.querySelectorAll('video');
-
-    _videoEl.forEach(function (el){
-      if(el.getAttribute('data-media-pc') === null && el.getAttribute('data-media-mobile') === null) {
-        return;
-      } else {
-        if (_winWidth > 740 && el.getAttribute('data-media-pc') !== el.getAttribute('src')) {
-          el.setAttribute('src', el.getAttribute('data-media-pc'));
-        } 
-
-        if (_winWidth <= 740 && el.getAttribute('data-media-mobile') !== el.getAttribute('src')) {
-          el.setAttribute('src', el.getAttribute('data-media-mobile'));
-        }
-      }
-    });
-  }  
 
   // Video stop & pause
-  const videoBtns = document.querySelectorAll(".cmpnt-img03__media .cmpnt-img03__btn-play");
+  const videoBtns = document.querySelectorAll(".cmpnt-img03__btn-play");
+  const closeBtn = document.querySelector(".cmpnt-img03-popup__btn-close");
+  closeBtn.addEventListener('click', closeMediaPopup);
 
   if(videoBtns.length > 0) {
     for (var i = 0; i < videoBtns.length; i++) {
-      videoBtns[i].addEventListener('click', (e) => toggleVideo(e));
+      videoBtns[i].addEventListener('click', (e) => {
+        const target = e.target.parentElement;
+        target.classList.contains('disabled') && openMediaPopup();
+        toggleVideo(e)
+      });
     }
   }
 
@@ -48,8 +31,25 @@
     video.play();
     target.parentElement.style.display = 'none';
 
-    video.addEventListener("ended", (event) => {
+    video.addEventListener("ended", () => {
       target.parentElement.style.display = 'block';
     });
   }
+
+  function openMediaPopup() {
+    const popup = document.querySelector('.cmpnt-img03-popup');
+    const popupDim = document.querySelector('.cmpnt-popup__dimmed');
+    enableScrollLock();
+    popup.style.display = 'block';
+    popupDim.style.display = 'block';
+  }
+
+  function closeMediaPopup() {
+    const popup = document.querySelector('.cmpnt-img03-popup');
+    const popupDim = document.querySelector('.cmpnt-popup__dimmed');
+    disableScrollLock();
+    popup.style.display = 'none';
+    popupDim.style.display = 'none';
+  }
+
 })();

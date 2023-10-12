@@ -7,7 +7,7 @@
 .cmpnt-img03__media video {width:100%;height:100%;object-fit: cover;aspect-ratio:16/9;}
 .cmpnt-img03__media {position:relative}
 .cmpnt-img03__btn-play {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
-.cmpnt-img03__btn-play span {position:relative;display:inline-block;border-radius:50%;border:1px solid rgba(255, 255, 255, 0.6);background-color:rgba(5, 20, 31, 0.4);font-size:0;cursor:pointer;}
+.cmpnt-img03__btn-play span {position:relative;display:inline-block;border-radius:50%;border:1px solid rgba(255, 255, 255, 0.6);background-color:rgba(5, 20, 31, 0.4);font-size:0;}
 .cmpnt-img03__btn-play span:hover {border:1px solid rgba(255, 255, 255, 1);background-color:rgba(5, 20, 31, 0.8);}
 .cmpnt-img03__btn-play span::before {content:'';width:24px;height:24px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-play.svg');}
 
@@ -18,6 +18,14 @@
 .cmpnt-img03__button {display:inline-flex;align-items: center;gap:4px;box-sizing:border-box;padding:0 30px;height:46px;background-color:#05141F;font-family:'KiaB';font-size:14px;line-height:46px;color:#fff;text-decoration:none;}
 .cmpnt-img03__button:hover {text-decoration:none;}
 .cmpnt-img03__button.bg-white {background-color:#fff;border:1px solid #05141F;padding:1px 29px}
+
+.cmpnt-img03-popup {display:none;position:fixed;left:calc(50% - 640px);top:calc(50% - 392px);padding:0;z-index:2100}
+.cmpnt-img03-popup__wrap {position:relative;padding-top:64px;box-sizing:border-box;}
+.cmpnt-img03-popup__media {width:1280px;height:720px;}
+.cmpnt-img03-popup__media video {width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;}
+.cmpnt-img03-popup__btn-close {position:absolute;right:0;top:0;width:40px;height:40px;z-index:5}
+.cmpnt-img03-popup__btn-close span {position:relative;display:inline-block;width:40px;height:40px;border-radius:50%;background-color:rgba(5, 20, 31, 0.4);font-size:0;}
+.cmpnt-img03-popup__btn-close span::before {content:'';width:20px;height:20px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close.svg')}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-img03__wrap {width:1280px;margin:0 auto;padding:90px 0;}
