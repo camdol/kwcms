@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* IMG03 */
 .cmpnt-img03 {overflow:hidden;position:relative;width:100%;box-sizing:border-box;background-color:#f8f8f8;}
 .cmpnt-img03__wrap {position:relative;box-sizing:border-box;}
 .cmpnt-img03__media img,
@@ -7,6 +8,7 @@
 .cmpnt-img03__media {position:relative}
 .cmpnt-img03__btn-play {position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);}
 .cmpnt-img03__btn-play span {position:relative;display:inline-block;border-radius:50%;border:1px solid rgba(255, 255, 255, 0.6);background-color:rgba(5, 20, 31, 0.4);font-size:0;cursor:pointer;}
+.cmpnt-img03__btn-play span:hover {border:1px solid rgba(255, 255, 255, 1);background-color:rgba(5, 20, 31, 0.8);}
 .cmpnt-img03__btn-play span::before {content:'';width:24px;height:24px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-play.svg');}
 
 .cmpnt-img03__text-wrap {display:flex;justify-content: flex-end;}

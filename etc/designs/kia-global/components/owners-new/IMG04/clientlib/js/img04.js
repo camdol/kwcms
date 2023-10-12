@@ -22,14 +22,14 @@ let swiperImg04Options;
       },
       breakpoints: {
         1025: {
-            slidesPerView: 2,
+            slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 72,
         },
         767: {
           slidesPerView: 2,
           centeredSlides: true,
-            spaceBetween: 28,
+          spaceBetween: 28,
         },
       },
       on: {

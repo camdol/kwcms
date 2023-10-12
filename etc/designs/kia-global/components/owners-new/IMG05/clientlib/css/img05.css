@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* IMG05 */
 .cmpnt-img05 {overflow:hidden;position:relative;width:100%;box-sizing:border-box;background-color:#fff;}
 .cmpnt-img05__wrap {position:relative;box-sizing:border-box;display:flex}
 .cmpnt-img05__img img {width:100%;aspect-ratio:16/9;object-fit: cover;}

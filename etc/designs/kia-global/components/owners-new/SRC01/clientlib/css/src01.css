@@ -19,7 +19,7 @@
 .cmpnt-src01__wrap .swiper-button-prev:after, 
 .cmpnt-src01__wrap .swiper-button-next:after {font-size:0}
 .cmpnt-src01__wrap .swiper-button-prev,
-.cmpnt-src01__wrap .swiper-button-next {position:absolute;width:80px;height:80px;border-radius:80px;background-color:rgba(5, 20, 31, 0.2);background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-swiper-arrow.svg');background-position: 50% 50%;background-repeat: no-repeat;background-size:24px;}
+.cmpnt-src01__wrap .swiper-button-next {position:absolute;width:80px;height:80px;border-radius:80px;background-color:rgba(5, 20, 31, 0.2);background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-swiper-arrow-white.svg');background-position: 50% 50%;background-repeat: no-repeat;background-size:24px;}
 .cmpnt-src01__wrap .swiper-button-prev {transform: rotate(3.142rad)}
 .cmpnt-src01__wrap .swiper-button-prev:hover,
 .cmpnt-src01__wrap .swiper-button-next:hover {background-color:rgba(5, 20, 31, 0.8);}
