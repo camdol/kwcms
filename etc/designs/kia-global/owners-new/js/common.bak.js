@@ -73,16 +73,16 @@ function pauseVideo(video, target) {
 }
 
 //Youtube
-function playGalleryYoutube() {
+function playYoutube(url) {
 	$.getScript("https://www.youtube.com/iframe_api", function () {
 		loadVideo();
 	});
 
 	function loadVideo() {
-		const youtube = document.querySelector('.contentGallery-popup__media .youtube__iframe');
+		const youtube = document.querySelector('.cmpnt-popup__media');
 
 		window.YT.ready(function () {
-			const _videoId =  youtube.getAttribute('data-url');
+			const _videoId = url;
 			galleryYoutube = new window.YT.Player(youtube, {
 					width: '100%',
 					height: '100%',
@@ -118,16 +118,5 @@ function playGalleryYoutube() {
 	}
 }
 
-function loadGalleryYoutube() {
-    const target = event.target;
-    target.closest('.post-youtube__thumbnail').style.display = 'none';
-    target.closest('.contentGallery-popup__media').querySelector('.post-video--youtube').style.display = 'block';
-	galleryYoutube.playVideo();
-}
-
-function initGalleryYoutube() {
-    btnGalleryYoutube.closest('.post-youtube__thumbnail').style.display = 'block';
-    btnGalleryYoutube.closest('.contentGallery-popup__media').querySelector('.post-video--youtube').style.display = 'none';
-}	
 
 
