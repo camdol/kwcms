@@ -24,14 +24,16 @@
 .bg-white .ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg');order:2}
 
 /* video button */
-.cmpnt-video__button {position:absolute;left:50%;top:50%;font-size:0;transform: translate(-50%, -50%);font-size:0}
+.cmpnt-video__button {position:absolute;left:50%;top:50%;font-size:0;transform: translate(-50%, -50%);font-size:0;}
 .cmpnt-video__button span {position:relative;display:inline-block;width:100%;height:100%;border-radius:50%;border:1px solid rgba(255, 255, 255, 0.6);background-color:rgba(5, 20, 31, 0.4);font-size:0;line-height:0;box-sizing:border-box;}
+.cmpnt-popup__media:hover .cmpnt-video__button span,
 .cmpnt-video__button span:hover {border:1px solid rgba(255, 255, 255, 1);background-color:rgba(5, 20, 31, 0.8);}
 .cmpnt-video__button span::before {content:'';width:24px;height:24px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;}
 .cmpnt-video__button--play span::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-play.svg');}
 .cmpnt-video__button--pause span::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-pause.svg');}
 .cmpnt-video__button--pause {opacity:0}
-.cmpnt-video__button--pause:hover {opacity:1}
+.cmpnt-popup__media .cmpnt-video__button {pointer-events : none;}
+.cmpnt-video__button--play.is-video-playing {opacity:0}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-video__button {width:76px;height:76px;box-sizing:border-box;}
@@ -46,6 +48,7 @@
 /* popup : Video, Youtube */
 .cmpnt-popup {position:fixed;padding:0;z-index:2100}
 .cmpnt-popup__wrap {position:relative;padding-top:64px;box-sizing:border-box;}
+.cmpnt-popup__media {cursor:pointer}
 .cmpnt-popup__media video {width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;}
 .cmpnt-popup__btn--close {position:absolute;right:0;top:0;z-index:5;font-size:0}
 .cmpnt-popup__btn--close span {position:relative;display:inline-block;border-radius:50%;background-color:rgba(5, 20, 31, 0.4);font-size:0;}
@@ -66,14 +69,13 @@
 
 @media screen and (min-width:768px) and (max-width:1024px){
     .cmpnt-popup__btn--close {right:20px;}
-    
 }
 
 @media screen and (max-width:1024px){
     .cmpnt-popup {left:0;top:50%;transform: translateY(-50%);}
     .cmpnt-popup__media {width:100%;height:auto}
     .cmpnt-video__button span {width:50px;height:50px;}
-    .cmpnt-video__button--play.is-video-playing {opacity:0}
+    
     
 }
 
