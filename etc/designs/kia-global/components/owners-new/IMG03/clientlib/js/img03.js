@@ -2,26 +2,30 @@
 
 //#Component : IMG03
 (function () {
-  const videoBtns = document.querySelectorAll(".cmpnt-video__button--play");
+  window.addEventListener("DOMContentLoaded", initImg03);
 
-  if(videoBtns.length > 0) {
-    for (var i = 0; i < videoBtns.length; i++) {
-      videoBtns[i].addEventListener('click', (e) => {
-        const target = e.target.parentElement;
-        const targetMedia = target.previousElementSibling;
-        const url = targetMedia.dataset.videoUrl;
-        const type = targetMedia.dataset.type;
-        const poster = targetMedia.getAttribute('src');
-  
-        if(target.classList.contains('disabled')) {
-          openMediaPopup('cmpnt-img03', url, poster, type);
-        } 
-      });
-    }
-  }  
+  function initImg03() {
+    const videoBtns = document.querySelectorAll(".cmpnt-video__button--play");
 
-  function openMediaPopup(obj, url, poster, type) {
-    setPopup(obj, url, poster, type);
+    if(videoBtns.length > 0) {
+      for (var i = 0; i < videoBtns.length; i++) {
+        videoBtns[i].addEventListener('click', (e) => {
+          const target = e.target.parentElement;
+          const targetMedia = target.previousElementSibling;
+          const url = targetMedia.dataset.videoUrl;
+          const type = targetMedia.dataset.type;
+          const poster = targetMedia.getAttribute('src');
+    
+          if(target.classList.contains('disabled')) {
+            openMediaPopup(url, poster, type);
+          } 
+        });
+      }
+    }  
+  }
+
+  function openMediaPopup(url, poster, type) {
+    setPopup(url, poster, type);
     enableScrollLock();
     if(type === 'mp4') {
       const video = document.querySelector(".cmpnt-popup .cmpnt-popup__media");
@@ -29,8 +33,8 @@
     }
   }
   
-  function setPopup(obj, url, poster, type) {
-    const targetDiv = document.querySelector('.'+obj);
+  function setPopup(url, poster, type) {
+    const targetDiv = document.querySelector('#wrap');
     const positionNode = targetDiv.lastChild;
     const popup = createPopup(url, poster, type);
     targetDiv.insertBefore(popup, positionNode);
