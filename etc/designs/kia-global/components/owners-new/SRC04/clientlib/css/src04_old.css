@@ -4,6 +4,17 @@
 .cmpnt-src04 {box-sizing:border-box;background-color:#f8f8f8;line-height:150%}
 .cmpnt-src04__wrap {text-align: center;}
 .cmpnt-src04__search{width:100%;text-align:center}
+.cmpnt-src-input {display:inline-block;position:relative;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);opacity:1}
+.cmpnt-src-input::before {content:'';position:absolute;left:20px;top:-2px;width:24px;height:24px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-search.svg') no-repeat 0 50%;transform: translateY(50%);background-size:24px;}
+.cmpnt-src-input.is-error {border:1px solid #EA0029}
+.cmpnt-src__error {text-align:left;font-size:13px;line-height:150%;color:#EA0029}
+.cmpnt-src__button--reset {display:none;position:absolute;right:20px;top:-2px;width:24px;height:24px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-reset.svg') no-repeat 0 50%;transform: translateY(50%);background-size:24px;cursor:pointer;font-size:0;}
+.is-keyup .cmpnt-src__button--reset {display:block}
+.cmpnt-src-input > input {border:none;background-color: transparent;font-size:16px;line-height:150%;color:#05141F;width:100%;padding:11px 20px 11px 59px;box-sizing: border-box;}
+.cmpnt-src-input > input::placeholder {color:#05141F;opacity:0.6}
+.cmpnt-src-input + .cmpnt-src__helpArea {margin-top:20px}
+.cmpnt-src__helpArea {width:100%;text-align:center;font-family:'kiaB';font-size:13px;color:#05141F;}
+.cmpnt-ico__help {padding-left:18px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-help.svg') no-repeat 0 50%;transform: translateY(50%);background-size:14px;}
 
 .search-table {display:flex;}
 .search-table + .search-table {margin-top:60px}
@@ -67,5 +78,7 @@
     .cmpnt-src04__wrap {margin:0 20px}
     .cmpnt-src04__search {flex-direction:column;width:100%;}
     .cmpnt-src04__search + .cmpnt-src04__result {margin-top:60px}
+    .cmpnt-src__error {width:100%;margin:8px auto;}
     .search-table + .search-table {margin-top:60px}
+    .cmpnt-src-input {width:100%;}
 }

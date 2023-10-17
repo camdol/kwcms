@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* LST04 */
+.cmpnt-lst04 {background-color:#fff}
+.cmpnt-lst04__wrap {line-height:140%;box-sizing:border-box;}
+.cmpnt-lst04__category {display:flex;flex-wrap:wrap;}
+.cmpnt-lst04__button {border-radius:30px;background-color:#fff;border:1px solid rgba(5, 20, 31, 0.2);font-size:14px;box-sizing:border-box;}
+.cmpnt-lst04__button:hover {border-color:rgba(5, 20, 31, 1)}
+.cmpnt-lst04__button.is-selected {background-color:#05141F;color:#fff;border:none}
+.cmpnt-lst04__list {display:flex;flex-wrap:wrap;}
+.cmpnt-lst04__item {background-color:#f8f8f8;}
+.cmpnt-lst04__video {position:relative;}
+.cmpnt-lst04__video::before {content:'';width:24px;height:24px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-play.svg');}
+.cmpnt-lst04__video::after {content:'';position:absolute;left:50%;top:50%;transform: translate(-50%, -50%);display:inline-block;border-radius:50%;border:1px solid rgba(255, 255, 255, 0.6);background-color:rgba(5, 20, 31, 0.4);font-size:0;line-height:0;box-sizing:border-box;z-index:1;}
+.cmpnt-lst04__video:hover::after {border:1px solid rgba(255, 255, 255, 1);background-color:rgba(5, 20, 31, 0.8);}
+.cmpnt-lst04__video img {width:100%;height:auto;aspect-ratio:16/9;}
+.cmpnt-lst04__title {font-family:'kiaB';line-height:150%;}
+
+@media screen and (min-width: 1025px) and (max-width: 20000px) {
+    .cmpnt-lst04__wrap {width:1280px;margin:0 auto;padding:0 0 90px;}
+    .cmpnt-lst04__category {gap:8px;padding:30px 0}
+    .cmpnt-lst04__button {padding:0 24px;height:42px;}
+    .cmpnt-lst04__list {gap:40px}
+    .cmpnt-lst04__video img {width:400px;}
+    .cmpnt-lst04__title {padding:24px;font-size:17px;}
+    .cmpnt-lst04__video::after {width:76px;height:76px;}
+}
+
+@media screen and (max-width:1024px){
+    .cmpnt-lst04__category {gap:6px;padding:28px 0}
+    .cmpnt-lst04__button {padding:0 16px;height:36px;}
+    .cmpnt-lst04__title {padding:20px;font-size:16px;}
+    .cmpnt-lst04__video::after {width:50px;height:50px;}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-lst04__wrap {padding:0 38px 60px;}
+    .cmpnt-lst04__list {gap:28px}
+    .cmpnt-lst04__item {width:calc(50% - 14px)}
+    
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+    .cmpnt-lst04__wrap {padding:0 20px 60px;}
+    .cmpnt-lst04__list {gap:20px;flex-direction:column;}
+    .cmpnt-lst04__item {width:100%}
+}
