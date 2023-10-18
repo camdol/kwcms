@@ -24,7 +24,7 @@
 .bg-white .ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg');order:2}
 
 /* Form */
-.cmpnt-src-select {position:relative;display:flex;align-items: center;padding:0 15px;width:200px;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box;}
+.cmpnt-src-select {position:relative;display:flex;align-items: center;padding:0 15px;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box;}
 .cmpnt-src-select[placeholder]::before {content:attr(placeholder);display: block;line-height: 2em;color:#05141f;opacity:0.6}
 .cmpnt-src-select[value]::before {content: attr(value);color: #05141f;opacity:1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 .cmpnt-src-select::after {content:'';position:absolute;right:15px;top:0;width:20px;height:20px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg') no-repeat 50% 50%;transform: translateY(58%);}
@@ -37,15 +37,14 @@
 .cmpnt-src__button {padding:0 30px;height:46px;background-color:#05141F;font-family:'KiaB';font-size:14px;color:#fff}
 .cmpnt-src__button:hover {text-decoration: underline;text-decoration-thickness:1px;text-underline-offset:3px;}
 
-.cmpnt-src-input {display:inline-block;position:relative;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);opacity:1}
-
+.cmpnt-src-input {display:inline-block;position:relative;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);opacity:1;line-height:1em;height:46px;box-sizing: border-box;}
 .cmpnt-src-input::before {content:'';position:absolute;left:20px;top:-2px;width:24px;height:24px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-search.svg') no-repeat 0 50%;transform: translateY(50%);background-size:24px;}
 .cmpnt-src-input.is-error {border:1px solid #EA0029}
-.cmpnt-src__error {text-align:left;font-size:13px;line-height:150%;color:#EA0029}
+.cmpnt-src__error {display:none;text-align:left;font-size:13px;line-height:150%;color:#EA0029;margin-top:8px}
 .cmpnt-src__button--reset {display:none;position:absolute;right:20px;top:-2px;width:24px;height:24px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-reset.svg') no-repeat 0 50%;transform: translateY(50%);background-size:24px;cursor:pointer;font-size:0;}
 .is-keyup .cmpnt-src__button--reset {display:block}
-.cmpnt-src-input > input {border:none;background-color: transparent;font-size:16px;line-height:150%;color:#05141F;width:100%;padding:11px 20px 11px 59px;box-sizing: border-box;}
-.cmpnt-src-input > input:hover {outline:none;outline-offset:0;border:1px solid #05141F;height:46px;box-sizing:border-box;}
+.cmpnt-src-input > input {border:none;background-color: transparent;font-size:16px;line-height:150%;color:#05141F;width:100%;height:46px;padding:10px 20px 10px 59px;box-sizing: border-box;}
+.cmpnt-src-input > input:focus {outline:none;border:1px solid #05141F;line-style:inset;height:46px;box-sizing:border-box;}
 .cmpnt-src-input > input::placeholder {color:#05141F;opacity:0.6}
 .cmpnt-src__search-number {font-size:14px;line-height:150%;padding:18px 0}
 .cmpnt-src-input + .cmpnt-src__helpArea {margin-top:20px}
@@ -53,15 +52,19 @@
 .cmpnt-ico__help {padding-left:18px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-help.svg') no-repeat 0 50%;transform: translateY(50%);background-size:14px;}
 .cmpnt-ico__help.cmpnt-ico__help--right {padding-right:18px;padding-left:0;background-position:100% 50%}
 
-
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
-    .cmpnt-src-select {font-size:16px;width:200px}
-    .cmpnt-src-select ul {width:200px;}
+    .cmpnt-src-select {font-size:16px;min-width:200px}
+    .cmpnt-src-select ul {min-width:200px}
 }
 
 @media screen and (max-width:1024px){
     .cmpnt-src-select {font-size:14px;}
     .cmpnt-src__search-number {padding:14px 0}
+}
+
+@media screen and (min-width:768) and (max-width:1024px){
+    .cmpnt-src-select, 
+    .cmpnt-src-select ul {min-width:160px}
 }
 
 @media screen and (min-width:0) and (max-width:767px){
@@ -72,6 +75,58 @@
 
     .cmpnt-src-input {width:100%;}
     .cmpnt-src__error {width:100%;margin:8px auto;}
+}
+
+/* pagination */
+.cmpnt-pagination {display:flex;gap:30px;justify-content: center;align-items: center;}
+.cmpnt-pagination a {font-size:16px;line-height:150%;color:rgba(5, 20, 31, 0.6);min-width:10px;text-decoration:none;}
+.cmpnt-pagination a + a {margin-left:5px;}
+.cmpnt-pagination a.on,
+.cmpnt-pagination a:hover {font-family:'kiaB';color:#05141F;}
+.cmpnt-pagination a.on,
+.cmpnt-pagination a.on:hover {text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
+.cmpnt-pagination a:hover {text-decoration:none;}
+.cmpnt-pagination--prev,
+.cmpnt-pagination--next {width:18px;height:18px;background-repeat:no-repeat;background-position:50% 50%;background-size:100%;text-indent:-9999em;}
+.cmpnt-pagination--prev,
+.cmpnt-pagination--next {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-swiper-arrow.svg');}
+.cmpnt-pagination--prev.is-disabled,
+.cmpnt-pagination--next.is-disabled {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-grey.svg');cursor:default;}
+.cmpnt-pagination--prev:not(.is-disabled),
+.cmpnt-pagination--next.is-disabled {transform: rotate(3.142rad)}
+
+@media screen and (min-width: 1026px) and (max-width: 20000px) {
+    .cmpnt-pagination {margin-top:45px}
+}
+
+@media screen and (max-width:1024px){
+    .cmpnt-pagination {margin-top:30px}
+}
+
+/* List Search Message */
+.cmpnt-search-message {width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.cmpnt-search-message strong {display:block;font-size:36px;line-height:140%}
+.cmpnt-search-message li {padding-left:10px;text-indent:-10px;padding-bottom:2px;font-size:17px;line-height:150%;color:rgba(5, 20, 31, 0.6);}
+.cmpnt-search-message li::before {content:'';display:inline-block;background-color: rgba(5, 20, 31, 0.60);width:4px;height:4px;border-radius: 2px;vertical-align:middle;margin-right:10px;}
+
+@media screen and (min-width: 1026px) and (max-width: 20000px) {
+    .cmpnt-search-message {min-height:774px;gap:40px;margin-top:90px}
+    .cmpnt-search-message strong {font-size:36px;}
+    .cmpnt-search-message li {font-size:17px;}
+}
+
+@media screen and (max-width:1024px){
+    .cmpnt-search-message {gap:30px;margin-top:60px}
+    .cmpnt-search-message strong {font-size:24px;}
+    .cmpnt-search-message li {font-size:16px;}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-search-message {min-height:802px;}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+    .cmpnt-search-message {min-height:494px;}
 }
 
 /* video button */

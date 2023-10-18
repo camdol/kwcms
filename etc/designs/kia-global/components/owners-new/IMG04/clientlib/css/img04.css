@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* IMG04 */
-.cmpnt-img04 {overflow:hidden;position:relative;width:100%;box-sizing:border-box;background-color:#f8f8f8;}
+.cmpnt-img04 {overflow:hidden;position:relative;width:100%;box-sizing:border-box;background-color:#fff;}
 .cmpnt-img04__wrap {position:relative;box-sizing:border-box;}
 
 .cmpnt-img04__text {text-align:center;margin:0 auto}
