@@ -1,6 +1,6 @@
 'use strict';
 
-//#Component : LST04 
+//#Component : 
 let cmpntLst04Swiper;
 (function () {
     window.addEventListener("DOMContentLoaded", categoryToggle);
@@ -21,7 +21,7 @@ let cmpntLst04Swiper;
         });
     }
 
-    const paginationCurr = document.querySelector('.slide-pagination--current');
+    let paginationCurr = document.querySelector('.slide-pagination--current');
     const paginationTotal = document.querySelector('.slide-pagination--total');
     const options = {
         loop:false,
@@ -36,26 +36,23 @@ let cmpntLst04Swiper;
         on: {
             init: function () {
                 const totalSlides = this.slides.length;
-                paginationCurr.innerText = this.realIndex + 1;
+                paginationCurr.innerText = Number(this.realIndex + 1);
                 paginationTotal.innerText = totalSlides;
-                this.el.dataset.index = this.realIndex;
             },
             slideChange: function () {
-                const totalSlides = this.slides.length - 1;
-                const activeIdx = this.realIndex;
-                const paginationPrev = document.querySelector('.cmpnt-pagination--prev');
-                const paginationNext = document.querySelector('.cmpnt-pagination--next');
-                paginationCurr.innerText = activeIdx + 1;
-                this.el.dataset.index = activeIdx;
-
-                if(activeIdx === totalSlides) {
-                    paginationNext.classList.add('is-disabled');
-                } else if(activeIdx === (totalSlides - 1)) {
-                    paginationNext.classList.remove('is-disabled');
-                } else if (activeIdx === 0) {
-                    paginationPrev.classList.add('is-disabled');
-                } else if (activeIdx === 1) {
-                    paginationPrev.classList.remove('is-disabled');
+                const totalSlides = this.slides.length;
+                paginationCurr.innerText = Number(this.realIndex + 1);
+                if(this.realIndex === (totalSlides - 1)) {
+                    document.querySelector('.cmpnt-pagination--next').classList.add('is-disabled');
+                }
+                if(this.realIndex < (totalSlides - 1)) {
+                    document.querySelector('.cmpnt-pagination--next').classList.remove('is-disabled');
+                }
+                if(this.realIndex === 0) {
+                    document.querySelector('.cmpnt-pagination--prev').classList.add('is-disabled');
+                }
+                if(this.realIndex === 1) {
+                    document.querySelector('.cmpnt-pagination--prev').classList.remove('is-disabled');
                 }
             }
         },
@@ -66,21 +63,33 @@ let cmpntLst04Swiper;
             cmpntLst04Swiper = new Swiper(".cmpnt-lst04__list", options);
         }
     });
-    
+
     const pagination = document.querySelector('.cmpnt-lst04__slide-pagination');
-    
+    let idx = paginationCurr.innerText - 1;
     pagination.addEventListener('click', function(e) {
         const target = e.target;
-        const list = document.querySelector('.cmpnt-lst04__list');
         const totalNumber = paginationTotal.innerText - 1;
-        let idx = list.getAttribute('data-index');
+        idx = paginationCurr.innerText - 1;
+        console.log(target);
         if(idx < totalNumber && target.classList.contains('cmpnt-pagination--next')) {
             idx = parseInt(idx) + 1;
+            if(idx === totalNumber) {
+                target.classList.add('is-disabled');
+            }
+            if(idx === 1) {
+                document.querySelector('.cmpnt-pagination--prev').classList.remove('is-disabled');
+            }
         } else if(idx > -1 && target.classList.contains('cmpnt-pagination--prev')) {
-            idx = parseInt(idx) - 1;
+            idx = idx - 1;
+            if(idx === (totalNumber - 1)) {
+                document.querySelector('.cmpnt-pagination--next').classList.remove('is-disabled');
+            }
+            if(idx === 1) {
+                target.classList.remove('is-disabled');
+            }
         } 
-        list.dataset.index = idx;
         cmpntLst04Swiper.slideTo(idx);
     });
 
+    
 })();

@@ -9,9 +9,9 @@ function showToggleSelect() {
 			const target = e.target;
 			if(target.classList.contains('cmpnt-src-select')) {
 				if (target.classList.contains('is-show')) {
-					target.classList.remove('is-show');
+					target.classListNaNpxove('is-show');
 				}else if (target.parentElement.querySelector('.is-show')) {
-					target.parentElement.querySelector('.is-show').classList.remove('is-show');
+					target.parentElement.querySelector('.is-show').classListNaNpxove('is-show');
 					target.classList.add('is-show');
 				}else {
 					target.classList.add('is-show');
@@ -19,42 +19,43 @@ function showToggleSelect() {
 			}
 				
 			if(target.classList.contains('cmpnt-src-select__item')) {
-				target.closest('.cmpnt-src-select').classList.remove('is-show');
+				target.closest('.cmpnt-src-select').classListNaNpxove('is-show');
 			}
 		});
 	});
 }
 
-
-window.addEventListener("DOMContentLoaded", setBtnReset);
-window.addEventListener("DOMContentLoaded", initSearch);
+const searchInput = document.querySelectorAll('.cmpnt-src-input');
+if(searchInput.length > 0) {
+	window.addEventListener("DOMContentLoaded", setBtnReset);
+	window.addEventListener("DOMContentLoaded", initSearch);
+}
 
 function setBtnReset() {
-    const btnReset = `
-        <span>reset</span>
-    `;
-    const item = document.createElement('div');
-    item.setAttribute('class', 'cmpnt-src__button--reset');
-    item.innerHTML = btnReset;
-    const target = document.querySelector('.cmpnt-src-input');
-    target.insertBefore(item, null);
-  }
+	const btnReset = `
+			<span>reset</span>
+	`;
+	const item = document.createElement('div');
+	item.setAttribute('class', 'cmpnt-src__button--reset');
+	item.innerHTML = btnReset;
+	const target = document.querySelector('.cmpnt-src-input');
+	target.insertBefore(item, null);
+}
 
-  function initSearch() {
-    const btnReset = document.querySelector('.cmpnt-src__button--reset');
-    const input = document.querySelector('.cmpnt-src-input input')
-    input.addEventListener('keyup', function() {
-      this.parentElement.classList.add('is-keyup');
-    });
+function initSearch() {
+	const btnReset = document.querySelector('.cmpnt-src__button--reset');
+	const input = document.querySelector('.cmpnt-src-input input')
+	input.addEventListener('keyup', function() {
+		this.parentElement.classList.add('is-keyup');
+	});
 
-    btnReset.addEventListener('click', function() {
-        this.parentElement.classList.remove('is-keyup');
-        input.value = '';
+	btnReset.addEventListener('click', function() {
+			this.parentElement.classList.remove('is-keyup');
+			input.value = '';
 
-    });
+	});
 }  
 
-  
 //Chunk
 $.fn.chunk = function(size) {
     var arr = [];
@@ -62,7 +63,6 @@ $.fn.chunk = function(size) {
     for (var i = 0; i < this.length; i += size) {
       arr.push(this.slice(i, i + size));
     }
-    
     return this.pushStack(arr, "chunk", size);
 } 
 
@@ -85,15 +85,15 @@ function enableScrollLock() {
 function disableScrollLock() {
 	const { body } = document;
 	if(body.getAttribute('scrollY')){
-		body.style.removeProperty('overflow');
-		body.style.removeProperty('position');
-		body.style.removeProperty('left');
-		body.style.removeProperty('right');
-		body.style.removeProperty('top');
-		body.style.removeProperty('bottom');
+		body.styleNaNpxoveProperty('overflow');
+		body.styleNaNpxoveProperty('position');
+		body.styleNaNpxoveProperty('left');
+		body.styleNaNpxoveProperty('right');
+		body.styleNaNpxoveProperty('top');
+		body.styleNaNpxoveProperty('bottom');
 
 		window.scrollTo(0, Number(body.getAttribute('scrollY')));
-		body.removeAttribute('scrollY');
+		bodyNaNpxoveAttribute('scrollY');
 	}
 }
 
@@ -114,7 +114,7 @@ function playVideo(video, target) {
 	target.classList.replace('cmpnt-video__button--play', 'cmpnt-video__button--pause');
 
 	video.addEventListener("ended", () => {
-		target.classList.remove("is-video-playing");
+		target.classListNaNpxove("is-video-playing");
 		target.classList.replace('cmpnt-video__button--pause', 'cmpnt-video__button--play');
 	});
 }
@@ -123,31 +123,32 @@ function pauseVideo() {
   const target = event.target;
   const video = target.parentElement.querySelector('video');
 	video.pause();
-	target.parentElement.querySelector('.cmpnt-video__button--pause').classList.remove("is-video-playing");
+	target.parentElement.querySelector('.cmpnt-video__button--pause').classListNaNpxove("is-video-playing");
 	target.parentElement.querySelector('.cmpnt-video__button--pause').classList.replace('cmpnt-video__button--pause', 'cmpnt-video__button--play');
 }
 
 //Youtube
 function playYoutube(url) {
+	const youtubeId = url.split('/').at(-1).split('?')[0];
+	
 	$.getScript("https://www.youtube.com/iframe_api", function () {
-		loadVideo(url);
+		loadVideo(youtubeId);
 	});
 
-	function loadVideo(url) {
+	function loadVideo(youtubeId) {
 		const youtube = document.querySelector('.cmpnt-popup .youtube__iframe');
 
 		window.YT.ready(function () {
-			const _videoId =  url;
 			new window.YT.Player(youtube, {
 					width: '100%',
 					height: '100%',
-					videoId: _videoId,
+					videoId: youtubeId,
 					playerVars: {
 					autoplay: 0,
 					loop:1,
 					rel: 0,
 					controls: 1,
-					playlist:_videoId,
+					playlist:youtubeId,
 					mute:1,
 					modestbranding: 1,
 					playsinline: 1,

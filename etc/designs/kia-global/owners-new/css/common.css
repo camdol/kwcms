@@ -37,7 +37,7 @@
 .cmpnt-src__button {padding:0 30px;height:46px;background-color:#05141F;font-family:'KiaB';font-size:14px;color:#fff}
 .cmpnt-src__button:hover {text-decoration: underline;text-decoration-thickness:1px;text-underline-offset:3px;}
 
-.cmpnt-src-input {display:inline-block;position:relative;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);opacity:1;line-height:1em;height:46px;box-sizing: border-box;}
+.cmpnt-src-input {display:inline-block;position:relative;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);opacity:1;height:46px;box-sizing: border-box;}
 .cmpnt-src-input::before {content:'';position:absolute;left:20px;top:-2px;width:24px;height:24px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-search.svg') no-repeat 0 50%;transform: translateY(50%);background-size:24px;}
 .cmpnt-src-input.is-error {border:1px solid #EA0029}
 .cmpnt-src__error {display:none;text-align:left;font-size:13px;line-height:150%;color:#EA0029;margin-top:8px}
