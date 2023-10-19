@@ -10,21 +10,30 @@
 .cmpnt-lst01-category__button:hover {border-color:rgba(5, 20, 31, 1)}
 .cmpnt-lst01-category__button.is-selected {background-color:#05141F;color:#fff;}
 
-.cmpnt-lst01__tab {padding:24px 0;}
+.cmpnt-lst01__tab {padding:24px 0;display:none}
+.cmpnt-lst01__tab.is-active {display:block}
 .cmpnt-lst01__tab-title {position:relative;font-family:'kiaB';line-height:140%;}
 .cmpnt-lst01__tab-title::before {content:'';width:20px;height:20px;position:absolute;top:50%;left:0;transform: translate(0, -50%);background-size:100%;}
 [data-color='all'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-all.svg');}
 [data-color='red'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-red.svg');}
 [data-color='amber'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-amber.svg');}
+[data-color='green'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green.svg');}
+[data-color='blue'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-blue.svg');}
+[data-color='others'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-others.svg');}
 .cmpnt-lst01__tab-desc {font-size:14px;line-height:150%;padding-left:32px;}
 
-.cmpnt-lst01__list {border-bottom:1px solid #05141F;}
+.cmpnt-lst01__list.is-active {display:block}
+.cmpnt-lst01__list {display:none}
+.cmpnt-lst01__list.is-active:last-of-type {border-bottom:1px solid #05141F;}
 .cmpnt-lst01__title {position:relative;border-top:1px solid #05141F;}
 .cmpnt-lst01__title button::after {content:'';position:absolute;z-index:5;width:24px;height:24px;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-plus.svg');background-size:100%;}
 .cmpnt-lst01__title button.is-show::after {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-minus.svg')}
-.cmpnt-lst01__title button {width:100%;text-align:left;font-family:'kiaB';line-height:150%;box-sizing:border-box;}
+.cmpnt-lst01__title button {display:flex;width:100%;text-align:left;font-family:'kiaB';line-height:150%;box-sizing:border-box;}
 .cmpnt-lst01__desc {display:none;transition: all 0.2s ease;border-top:1px solid rgba(5, 20, 31, 0.20);line-height:150%;color:rgba(5, 20, 31, 0.80);box-sizing:border-box;}
 .is-show .cmpnt-lst01__desc {display:block}
+.cmpnt-lst01__tab.is-active + .cmpnt-lst01__list {border-bottom:1px solid #05141F;}
+
+.cmpnt-badge--ev {display:inline-block;height:24px;border-radius:24px;background-color:rgba(5, 20, 31, 0.6);font-family:'kiaM';font-size:13px;line-height:24px;color:#fff;padding:0 12px;box-sizing:border-box;margin-left:10px;vertical-align:middle}
 
 .cmpnt-lst01__icon {padding-left:50px;}
 .cmpnt-lst01__icon::before {content:'';position:absolute;top:50%;left:0;transform: translate(0, -50%);background-size:100%;}
@@ -37,7 +46,6 @@
 .cmpnt-lst01__icon.red-fuel-filter::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-red-fuel-filter.svg');}
 .cmpnt-lst01__icon.red-door-ajar::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-red-door-ajar.svg');}
 .cmpnt-lst01__icon.red-charging-indicator::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-red-charging-indicator.svg');}
-
 
 .cmpnt-lst01__icon.amber-ABS::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-amber-ABS.svg');}
 .cmpnt-lst01__icon.amber-engine::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-amber-engine.svg');}
@@ -62,9 +70,31 @@
 .cmpnt-lst01__icon.amber-high-voltage::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-amber-high-voltage.svg');}
 .cmpnt-lst01__icon.amber-service::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-amber-service.svg');}
 
+.cmpnt-lst01__icon.green-ISG::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-ISG.svg');}
+.cmpnt-lst01__icon.green-hazard::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-hazard.svg');}
+.cmpnt-lst01__icon.green-low-beam::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-low-beam.svg');}
+.cmpnt-lst01__icon.green-high-beam::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-high-beam.svg');}
+.cmpnt-lst01__icon.green-light-on::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-light-on.svg');}
+.cmpnt-lst01__icon.green-cruise-setting::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-cruise-setting.svg');}
+.cmpnt-lst01__icon.green-cruise-indicator::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-cruise-indicator.svg');}
+.cmpnt-lst01__icon.green-cruise-indicator2::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-cruise-indicator2.svg');}
+.cmpnt-lst01__icon.green-front-fog::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-front-fog.svg');}
+.cmpnt-lst01__icon.green-downhill::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-downhill.svg');}
+.cmpnt-lst01__icon.green-ECO::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-ECO.svg');}
+.cmpnt-lst01__icon.green-smart::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-smart.svg');}
+.cmpnt-lst01__icon.green-highway-lane::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-highway-lane.svg');}
+.cmpnt-lst01__icon.green-EV::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-EV.svg');}
+.cmpnt-lst01__icon.green-sport::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-sport.svg');}
+.cmpnt-lst01__icon.green-all-wheel::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-all-wheel.svg');}
+.cmpnt-lst01__icon.green-ready::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-ready.svg');}
+.cmpnt-lst01__icon.green-ready2::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green-ready2.svg');}
 
-
-
+.cmpnt-lst01__icon.blue-high-beam::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-blue-high-beam.svg');}
+.cmpnt-lst01__icon.others-auto-hold::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-others-auto-hold.svg');}
+.cmpnt-lst01__icon.others-EBD::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-others-EBD.svg');}
+.cmpnt-lst01__icon.others-lane-keeping::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-others-lane-keeping.svg');}
+.cmpnt-lst01__icon.others-steering-assist::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-others-steering-assist.svg');}
+.cmpnt-lst01__icon.others-regenerative::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-others-regenerative.svg');}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-lst01__wrap {padding:0 0 45px;}
@@ -77,32 +107,33 @@
     .cmpnt-lst01__tab-title + .cmpnt-lst01__tab-desc {margin-top:8px;}
 
     .cmpnt-lst01__icon::before {width:46px;height:46px;}
-    .cmpnt-lst01__title button {font-size:20px;padding:24px 72px 24px 54px;}
+    .cmpnt-lst01__title button {font-size:20px;padding:24px 72px 24px 54px;align-items:center;}
     .cmpnt-lst01__title button::after {right:24px;}
     .cmpnt-lst01__title button.is-show::after {transform: rotate(3.142rad) translateY(50%);}
     .cmpnt-lst01__desc {font-size:17px;padding:24px 0;}
 }
 
 @media screen and (max-width:1024px){
-    .cmpnt-lst01-category {gap:6px;padding:28px 0}
-
+    .cmpnt-lst01__wrap {padding-bottom:30px;}
+    .cmpnt-lst01-category__button  {padding:0 16px;height:36px;}
     .cmpnt-lst01__tab {padding:20px 0;}
     .cmpnt-lst01__tab-title {font-size:20px;padding-left:30px;}
     .cmpnt-lst01__tab-title + .cmpnt-lst01__tab-desc {margin-top:4px;}
 
     .cmpnt-lst01__icon::before {width:40px;height:40px;}
-    .cmpnt-lst01__title button {font-size:18px;padding:16px 56px 16px 50px;}
+    .cmpnt-lst01__title button {font-size:18px;}
+    .cmpnt-lst01__title button::after {right:16px;top:16px;}
     .cmpnt-lst01__desc {font-size:16px;padding:16px 0;}
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
-    .cmpnt-lst04__wrap {padding:0 38px 30px;}
-    .cmpnt-lst01__title button::after {right:16px;top:16px;}
-    .cmpnt-lst01__title button.is-show::after {transform: rotate(3.142rad) translateY(0);}
-    
+    .cmpnt-lst01-category__wrap {gap:6px;padding:28px 38px}
+    .cmpnt-lst01-content {margin:0 38px;}
+    .cmpnt-lst01__title button {align-items:center;padding:16px 56px 16px 50px;}
 }
 
 @media screen and (min-width:0) and (max-width:767px){
-    .cmpnt-lst04__wrap {padding:0 20px 30px;}
-    
+    .cmpnt-lst01-category__wrap {gap:6px;padding:20px 20px}
+    .cmpnt-lst01-content {margin:0 20px;}
+    .cmpnt-lst01__title button {align-items:flex-start;justify-content: space-between;padding:16px 45px 16px 50px;}
 }

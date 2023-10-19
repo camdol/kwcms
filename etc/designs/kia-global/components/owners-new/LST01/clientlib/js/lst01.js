@@ -7,18 +7,42 @@
 
     function categoryToggle() {
         const btn = document.querySelector('.cmpnt-lst01-category');
+        
         btn.addEventListener('click', (e) => {
             const target = e.target;
-            console.log(target);
-            if(target.classList.contains('is-selected')) {
-                return;
-            } else {
-                if(target.parentElement.querySelector('.is-selected')) {
-                    target.parentElement.querySelector('.is-selected').classList.remove('is-selected');
+            const color = target.dataset.color;
+            const listTarget = document.querySelector('.cmpnt-lst01-content');
+            const dataColors = listTarget.querySelectorAll('[data-color]');
+
+            categoryTabToggle(target);
+            
+            for (let i = 0; i < dataColors.length; i++) {
+                dataColors[i].classList.remove('is-active');
+            };
+
+            Array.prototype.forEach.call(dataColors, function(el){
+                if(el.dataset.color === color) {
+                    el.classList.add('is-active');
+                    if(el.dataset.color === 'all') {
+                        const tabLists = listTarget.querySelectorAll('.cmpnt-lst01__list');
+                        for (let i = 0; i < tabLists.length; i++) {
+                            tabLists[i].classList.add('is-active');
+                        }
+                    }
                 }
-                target.classList.add('is-selected');
-            }
+            });
         });
+    }
+
+    function categoryTabToggle(target) {
+        if(target.classList.contains('is-selected')) {
+            return;
+        } else {
+            if(target.parentElement.querySelector('.is-selected')) {
+                target.parentElement.querySelector('.is-selected').classList.remove('is-selected');
+            }
+            target.classList.add('is-selected');
+        }
     }
 
     // List Show/Hide
