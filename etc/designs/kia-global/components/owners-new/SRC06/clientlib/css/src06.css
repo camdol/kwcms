@@ -37,9 +37,7 @@
 
 @media screen and (max-width:1024px){
     .cmpnt-src06__wrap {padding-bottom:60px;}
-    .cmpnt-src-select,
-    .cmpnt-src-select ul {width:185px;}
-
+    
     .cmpnt-src06-manual__title {font-size:20px;padding-bottom:20px;}
     .cmpnt-src06-manual__name {font-size:18px;min-height:70px;}
     .cmpnt-src06-manual__item {padding:24px;}
@@ -53,6 +51,8 @@
     .cmpnt-src06__search + .cmpnt-src06__result {margin-top:72px}
     .cmpnt-src06-manual__list {gap:28px}
     .cmpnt-src06-manual__item {width:calc(50% - 14px);}
+    .cmpnt-src-select,
+    .cmpnt-src-select ul {width:185px;}
 }
 
 @media screen and (min-width:0) and (max-width:767px){
