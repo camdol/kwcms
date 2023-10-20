@@ -36,6 +36,12 @@ a:hover .cmpnt-lst02__price {color:#fff;}
 .cmpnt-lst02__button--cart {position:absolute;border-radius:50%;background-color:rgba(5, 20, 31, 0.4);background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-cart-white.svg');background-position: 50% 50%;background-repeat: no-repeat;text-indent:-9999em;}
 .cmpnt-lst02__button--cart:hover {background-color:rgba(5, 20, 31, 0.8);}
 
+.cmpnt-lst02-search {background-color:#f8f8f8;}
+.cmpnt-lst02-search__wrap {display:flex;justify-content: space-between;align-items: center;}
+.cmpnt-lst02-search__form {display:flex;gap:10px;}
+.cmpnt-lst02-search__title {font-family:'kiaB';font-size:17px;line-height:150%}
+.cmpnt-lst02__button-open {display:none}
+
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-lst02__wrap {padding:0 0 45px;}
     .cmpnt-lst02__content {width:1280px;margin:0 auto;}
@@ -44,6 +50,10 @@ a:hover .cmpnt-lst02__price {color:#fff;}
     .cmpnt-lst02__link {font-size:16px;padding-right:22px;}
     .cmpnt-lst02__link::after {width:18px;height:18px;}
     .cmpnt-lst02__button {padding:0 24px;height:42px;}
+
+    .cmpnt-lst02-search__wrap {width:1280px;margin:0 auto;}
+    .cmpnt-lst02-search {padding:20px 0}
+    .cmpnt-lst02-search__title {font-size:17px;}
 
     .cmpnt-lst02__list {gap:40px}
     .cmpnt-lst02__item {width:290px}
@@ -60,6 +70,8 @@ a:hover .cmpnt-lst02__price {color:#fff;}
     .cmpnt-lst02__link {font-size:13px;padding-right:18px;}
     .cmpnt-lst02__link::after {width:14px;height:14px;}
     .cmpnt-lst02__button {padding:0 16px;height:36px;}
+
+    .cmpnt-lst02-search__title {font-size:16px;}
     .cmpnt-lst02__name {padding:14px 16px 0}
     .cmpnt-lst02__price {font-size:16px;padding:0 16px 14px}
     .cmpnt-lst02__name + .cmpnt-lst02__price {margin-top:10px}
@@ -69,6 +81,11 @@ a:hover .cmpnt-lst02__price {color:#fff;}
 @media screen and (min-width:768px) and (max-width:1024px){
     .cmpnt-lst02__content {margin:0 38px;}
     .cmpnt-lst02__category-wrap {display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+
+    .cmpnt-lst02-search {padding:24px 38px}
+    .cmpnt-src-select,
+    .cmpnt-src-select ul {width:160px;}
+
     .cmpnt-lst02__list {gap:28px}
     .cmpnt-lst02__item {width:calc((100% / 3) - 19px);}
     .cmpnt-lst02__button--cart {right:12px;bottom:12px;}
@@ -79,6 +96,23 @@ a:hover .cmpnt-lst02__price {color:#fff;}
     .cmpnt-lst02__category-wrap {text-align:right}
     .cmpnt-lst02__category {padding:14px 0}
     .cmpnt-lst02__link {margin:14px -10px 14px 0}
+
+    .cmpnt-lst02-search__form {display:none}
+    .cmpnt-lst02-search.is-open {display:block;position:fixed;left:0;top:50%;z-index:2100;transform: translateY(-50%);width:100%;height:100%;padding:0;background-color:#fff;}
+    .is-open .cmpnt-lst02-search__wrap {flex-direction:column;}
+    .is-open .cmpnt-lst02-search__wrap > div {width:100%;}
+    .cmpnt-lst02-search__title {position:relative;background-color:#f8f8f8;width:100%;padding:22px 20px;box-sizing:border-box;}
+    .is-open .cmpnt-lst02-search__title {border-bottom:1px solid rgba(5, 20, 31, 0.20);}
+    .cmpnt-lst02__button-open {display:block;width:24px;height:24px;position:absolute;top:50%;right:20px;transform: translateY(-50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg');background-size:100%;background-position: 50% 50%;background-repeat: no-repeat;text-indent:-9999em;}
+    .is-open .cmpnt-lst02__button-open {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close.svg');background-size:100%;background-position: 50% 50%;}
+    .is-open .cmpnt-lst02-search__form {display:flex;flex-direction:column;gap:0;padding:0 20px;}
+    .is-open .cmpnt-src-select {flex-direction:column;align-items:flex-start;width:auto;border:none;padding:10px 0 0;margin:0 20px;border-bottom:1px solid #000;font-family:'kiaB';font-size:14px;height:auto}
+    .is-open .cmpnt-src-select.is-show ul {position:relative;max-height:none;border-width:1px 0 0;overflow:initial;}
+    .is-open .cmpnt-src-select__item {padding:10px 20px;font-family:'kiaM';}
+    .is-open .cmpnt-src-select::before {margin-left:14px;margin-bottom:6px;}
+    .is-open .cmpnt-src-select::after {top:2px}
+    .is-open .cmpnt-src__button {position:fixed;left:0;bottom:30px;right:0;margin:0 20px}
+
     .cmpnt-lst02__list {gap:20px}
     .cmpnt-lst02__item {width:calc(50% - 10px);}
     .cmpnt-lst02__button--cart {right:10px;bottom:10px;}

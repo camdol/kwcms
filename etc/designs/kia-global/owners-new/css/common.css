@@ -30,7 +30,7 @@
 .cmpnt-src-select::after {content:'';position:absolute;right:15px;top:0;width:20px;height:20px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg') no-repeat 50% 50%;transform: translateY(58%);}
 .cmpnt-src-select.is-show::after {transform: rotate(3.142rad) translateY(-50%);}
 .cmpnt-src-select.is-show ul {display:block;overflow:auto;max-height:202px;}
-.cmpnt-src-select ul {display:none;position: absolute;left:-1px;top: 100%;z-index: 100;padding: 0;list-style: none;background: #fff;border: 1px solid rgba(5, 20, 31, 0.2);box-sizing:border-box;}
+.cmpnt-src-select ul {display:none;position:absolute;left:-1px;top:100%;z-index:100;padding:0;list-style:none;background: #fff;border: 1px solid rgba(5, 20, 31, 0.2);box-sizing:border-box;overflow:auto;;}
 .cmpnt-src-select ul li:hover,
 .cmpnt-src-select ul li:hover.is-select {background-color:rgba(5, 20, 31, 1);color:#fff;text-decoration:underline;}
 .cmpnt-src-select ul li.is-select {color:#05141F;text-decoration:underline}

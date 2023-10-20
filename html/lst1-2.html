@@ -1321,12 +1321,19 @@
                         <ul class="cmpnt-lst01__list is-active" data-color="red"><!-- data-color : all, red, amber, green, blue, others -->
                             <!-- #list -->
                             <li class="cmpnt-lst01__item">
+                                <!-- title -->
                                 <div class="cmpnt-lst01__title">
-                                    <button type="button" class="cmpnt-lst01__icon red-airbag">Airbag Warning Light<span class="cmpnt-badge--ev">EV</span></button>
+                                    <button type="button" class="cmpnt-lst01__icon red-airbag"><!-- icon class 추가  -->
+                                        Airbag Warning Light<span class="cmpnt-badge--ev">EV</span><!-- EV badge -->
+                                    </button>
                                 </div>
+                                <!-- //title -->
+
+                                <!-- description -->
                                 <div class="cmpnt-lst01__desc">
                                     If the airbag warning light stays on, have your vehicle inspected by an Authorized Kia Dealer.
                                 </div>
+                                <!-- //description -->
                             </li>
                             <!-- //#list -->
                             <li class="cmpnt-lst01__item">
@@ -1922,24 +1929,27 @@
             <!--@ publising -->
             <div class="cmpnt-lst02">
                 <div class="cmpnt-lst02__wrap">
-                    <!-- search -->
+                    <!-- search : Mobile - popup -->
                     <section class="cmpnt-lst02-search">
-                        <!-- <div  class="cmpnt-lst02-search__wrap">
+                        <div  class="cmpnt-lst02-search__wrap">
                             <div class="cmpnt-lst02-search__title">
                                 Change Vehicle
+                                <button type="button" class="cmpnt-lst02__button-open">open</button>
                             </div>
                             <div class="cmpnt-lst02-search__form">
-                                <div class="cmpnt-src-select multi-select" placeholder="Model">
+                                <div class="cmpnt-src-select" placeholder="Model">
                                     <input type="hidden" id="selectModel" name="select_name" vlaue="">
                                     <ul>
                                         <li class="cmpnt-src-select__item">EV6</li>
                                         <li class="cmpnt-src-select__item">EV9</li>
+                                        <li class="cmpnt-src-select__item">K3</li>
                                         <li class="cmpnt-src-select__item">K5</li>
                                         <li class="cmpnt-src-select__item">K7</li>
+                                        <li class="cmpnt-src-select__item">K8</li>
                                     </ul>
                                 </div>
-                                <div class="cmpnt-src-select multi-select" placeholder="Year">
-                                    <input type="hidden" id="selectModel" name="select_name" vlaue="">
+                                <div class="cmpnt-src-select" placeholder="Year">
+                                    <input type="hidden" id="selectYear" name="select_name" vlaue="">
                                     <ul>
                                         <li class="cmpnt-src-select__item">2024</li>
                                         <li class="cmpnt-src-select__item">2023</li>
@@ -1949,9 +1959,9 @@
                                 </div>
                                 <button class="cmpnt-src__button" type="submit">Search</button>
                             </div>
-                        </div> -->
+                        </div>
                     </section>
-                    <!-- //search -->
+                    <!-- //search : Mobile - popup -->
 
                     <section class="cmpnt-lst02__content">
 
