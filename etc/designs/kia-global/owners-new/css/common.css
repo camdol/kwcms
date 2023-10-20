@@ -135,7 +135,7 @@
 .cmpnt-video__button {position:absolute;left:50%;top:50%;font-size:0;transform: translate(-50%, -50%);font-size:0;}
 .cmpnt-video__button span {position:relative;display:inline-block;width:100%;height:100%;border-radius:50%;border:1px solid rgba(255, 255, 255, 0.6);background-color:rgba(5, 20, 31, 0.4);font-size:0;line-height:0;box-sizing:border-box;}
 .cmpnt-popup__media:hover .cmpnt-video__button span,
-.cmpnt-video__button span:hover {border:1px solid rgba(255, 255, 255, 1);background-color:rgba(5, 20, 31, 0.8);}
+.cmpnt-video__button span:hover {border:2px solid rgba(255, 255, 255, 1);background-color:rgba(5, 20, 31, 0.8);}
 .cmpnt-video__button span::before {content:'';width:24px;height:24px;position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;}
 .cmpnt-video__button--play span::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-play.svg');}
 .cmpnt-video__button--pause span::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-pause.svg');}
@@ -161,7 +161,7 @@
 .cmpnt-popup__media .youtube__iframe {width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;}
 .cmpnt-popup__btn--close {position:absolute;right:0;top:0;z-index:5;font-size:0}
 .cmpnt-popup__btn--close span {position:relative;display:inline-block;border-radius:50%;background-color:rgba(5, 20, 31, 0.4);font-size:0;}
-.cmpnt-popup__btn--close span::before {content:'';position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close.svg')}
+.cmpnt-popup__btn--close span::before {content:'';position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close-white.svg')}
 .cmpnt-popup__dimmed {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:2000;}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {

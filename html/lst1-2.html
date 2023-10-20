@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>lst01/lst05</title><!--GT Title-->
+<title>lst01/lst02</title><!--GT Title-->
 <!-- meta -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -1768,11 +1768,13 @@
                         <ul class="cmpnt-lst01__list is-active" data-color="blue">
                             <li class="cmpnt-lst01__item">
                                 <div class="cmpnt-lst01__title">
-                                    <button type="button" class="cmpnt-lst01__icon blue-high-beam">High Beam Indicator Light</button>
+                                    <button type="button" class="cmpnt-lst01__icon blue-high-beam">High Beam Indicator light</button>
                                 </div>
                                 <div class="cmpnt-lst01__desc">
-                                    The ABS (Anti-lock Braking System) allows the driver to maintain the control over the vehicle by preventing the vehicle from slipping when the brakes are applied.
-                                    If the ABS warning light stays on, have your vehicle inspected by an Authorized Kia Dealer.
+                                    The high beam indicator light illuminates when:<br><br>
+
+                                    • The headlights are on and in the high beam position<br>
+                                    • The lighting control lever is pulled into the flash-to-pass position
                                 </div>
                             </li>
                         </ul>
@@ -1842,13 +1844,264 @@
                 </div>
             </div>
             <!--// publising -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++
+                Lst01 아이콘 
+                class명 | title
+
+                red-airbag              Airbag Warning Light
+                red-seat-belt           Seat Belt Warning Light
+                red-park-brake          Parking Brake Warning Light
+                red-EPS                 EPS Warning Light
+                red-charging-system     Charging System Warning Light
+                red-engine-oil          Engine Oil Pressure Warning Light
+                red-fuel-filter         Fuel Filter Warning Light (Diesel Engine)
+                red-door-ajar           Door Ajar Warning Light
+                red-charging-indicator  Charging Indicator Light
+
+                amber-ABS                   ABS Warning Light
+                amber-engine                Engine Warning Light
+                amber-low-fuel              Low Fuel Level Warning Light
+                amber-low-tire              Low Tire Pressure Warning Light
+                amber-electronic-parking    Electronic Parking Brake Warning Light
+                amber-forward-collision     Forward Collision-Avoidance Assist Warning Light
+                amber-all-wheel             All Wheel Drive Warning Light
+                amber-master                Master Warning Light
+                amber-ESC                   ESC Indicator Light
+                amber-ESC-off               ESC Off Indicator Light
+                amber-immobilizer           Immobilizer Indicator Light (without Smart Key)
+                amber-immobilizer           Immobilizer Indicator Light (with Smart Key)
+                amber-LED                   LED Headlamp Warning Light
+                amber-SCR                   SCR Warning Light (Diesel Engine)
+                amber-glow                  Glow Indicator Light (Diesel Engine)
+                amber-rear-fog              Rear Fog Indicator Light
+                amber-engine-oil            Engine Oil Level Warning Light
+                amber-washer-fluid          Washer Fluid Warning Light
+                amber-adaptive-front        Adaptive Front Lighting System (AFLS) Warning Light
+                amber-sport-mode            SPORT Mode Indicator Light
+                amber-power-down            Power Down Warning Light
+                amber-high-voltage          High Voltage Battery Level Warning Light
+                amber-service               Service Warning Light
+
+
+                green-ISG               ISG Indicator Light (Diesel Engine)
+                green-hazard            Hazard Warning/Turn Signal Indicator Light
+                green-low-beam          Low Beam Indicator Light
+                green-high-beam         High Beam Assist (HBA) Indicator Light
+                green-light-on          Light ON Indicator Light
+                green-cruise-setting    Cruise Setting Indicator Light
+                green-cruise-indicator  Cruise Indicator Light
+                green-cruise-indicator2 Cruise Indicator Light
+                green-front-fog         Front Fog Indicator Light
+                green-downhill          Downhill Brake Control Indicator Light
+                green-ECO               ECO Mode Indicator Light
+                green-smart             SMART Mode Indicator Light
+                green-highway-lane      Highway Lane Change Assist Indicator Light
+                green-EV                EV Mode Indicator Light (for Hybrid Car)
+                green-sport             SPORT Mode Indicator Light
+                green-all-wheel         All Wheel Drive (AWD) LOCK Indicator light
+                green-ready             Ready Indicator Light
+                green-ready2            Ready Indicator Light
+
+                blue-high-beam          High Beam Indicator light
+
+                others-auto-hold        AUTO HOLD Indicator Light
+                others-EBD              EBD Warning Light
+                others-lane-keeping     Lane Keeping Assist Indicator
+                others-steering-assist  Steering Assist Mode Indicator Light
+                others-regenerative     Regenerative Brake Warning Light
+            ++++++++++++++++++++++++++++++++++++++++ -->
         </div>
         <!-- //lst01 -->
 
-        <div style="width:100%;background-color:rgb(0, 0, 0);color:#fff;font-size:14px;padding:10px 0;text-align:center;margin:20px 0">lst05</div>
+        <div style="width:100%;background-color:rgb(0, 0, 0);color:#fff;font-size:14px;padding:10px 0;text-align:center;margin:20px 0">lst02</div>
 
-        
+        <!-- LST02 -->
+        <div class="lst02 parbase section">
+            <link rel="stylesheet" href="/etc/designs/kia-global/components/owners-new/LST02/clientlib/css/lst02.css" type="text/css">
+            <script  defer type="text/javascript" src="/etc/designs/kia-global/components/owners-new/LST02/clientlib/js/lst02.js"></script>
+            <!--@ publising -->
+            <div class="cmpnt-lst02">
+                <div class="cmpnt-lst02__wrap">
+                    <!-- search -->
+                    <section class="cmpnt-lst02-search">
+                        <!-- <div  class="cmpnt-lst02-search__wrap">
+                            <div class="cmpnt-lst02-search__title">
+                                Change Vehicle
+                            </div>
+                            <div class="cmpnt-lst02-search__form">
+                                <div class="cmpnt-src-select multi-select" placeholder="Model">
+                                    <input type="hidden" id="selectModel" name="select_name" vlaue="">
+                                    <ul>
+                                        <li class="cmpnt-src-select__item">EV6</li>
+                                        <li class="cmpnt-src-select__item">EV9</li>
+                                        <li class="cmpnt-src-select__item">K5</li>
+                                        <li class="cmpnt-src-select__item">K7</li>
+                                    </ul>
+                                </div>
+                                <div class="cmpnt-src-select multi-select" placeholder="Year">
+                                    <input type="hidden" id="selectModel" name="select_name" vlaue="">
+                                    <ul>
+                                        <li class="cmpnt-src-select__item">2024</li>
+                                        <li class="cmpnt-src-select__item">2023</li>
+                                        <li class="cmpnt-src-select__item">2022</li>
+                                        <li class="cmpnt-src-select__item">2021</li>
+                                    </ul>
+                                </div>
+                                <button class="cmpnt-src__button" type="submit">Search</button>
+                            </div>
+                        </div> -->
+                    </section>
+                    <!-- //search -->
 
+                    <section class="cmpnt-lst02__content">
+
+                        <div class="cmpnt-lst02__category-wrap">  
+                            <!-- Category -->
+                            <div class="cmpnt-lst02__category">
+                                <button type="button" class="cmpnt-lst02__button is-selected">All</button>
+                                <button type="button" class="cmpnt-lst02__button">Exterior</button>
+                                <button type="button" class="cmpnt-lst02__button">Interior</button>
+                                <button type="button" class="cmpnt-lst02__button">Best Selling</button>
+                            </div>
+                            <!-- //Category -->
+
+                            <a href="#" class="cmpnt-lst02__link">View My List</a>
+                        </div>
+
+                        <!-- Accessory list -->
+                        <ul class="cmpnt-lst02__list">
+                            <!-- #list -->
+                            <li class="cmpnt-lst02__item">
+                                <a href="#">
+                                    <div class="cmpnt-lst02__img">
+                                        <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_list02_01.jpg" alt="title"><!-- image-->
+                                        <button type="button" class="cmpnt-lst02__button--cart">My List Cart</button>
+                                    </div>
+                                    
+                                    <!-- Product Name -->
+                                    <div class="cmpnt-lst02__name">
+                                        Ash Tray
+                                    </div>
+                                    <!-- //Product Name -->
+                                    <!-- Price -->
+                                    <div class="cmpnt-lst02__price" data-currency="$"><!-- Currency Symbol : data-currency -->
+                                        00.00
+                                    </div>
+                                    <!-- //Price -->
+                                </a>
+                            </li>
+                            <!-- //#list -->
+                            <li class="cmpnt-lst02__item">
+                                <a href="#">
+                                    <div class="cmpnt-lst02__img">
+                                        <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_list02_02.jpg" alt="title"><!-- image-->
+                                        <button type="button" class="cmpnt-lst02__button--cart">My List Cart</button>
+                                    </div>
+                                    
+                                    <div class="cmpnt-lst02__name">
+                                        Auto-Dimming Mirror w/HomeLink®
+                                    </div>
+                                    <div class="cmpnt-lst02__price" data-currency="$">
+                                        00.00
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="cmpnt-lst02__item">
+                                <a href="#">
+                                    <div class="cmpnt-lst02__img">
+                                        <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_list02_03.jpg" alt="title"><!-- image-->
+                                        <button type="button" class="cmpnt-lst02__button--cart">My List Cart</button>
+                                    </div>
+                                    
+                                    <div class="cmpnt-lst02__name">
+                                        Cargo Mat, Carpeted
+                                    </div>
+                                    <div class="cmpnt-lst02__price" data-currency="$">
+                                        00.00
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="cmpnt-lst02__item">
+                                <a href="#">
+                                    <div class="cmpnt-lst02__img">
+                                        <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_list02_04.jpg" alt="title"><!-- image-->
+                                        <button type="button" class="cmpnt-lst02__button--cart">My List Cart</button>
+                                    </div>
+                                    
+                                    <div class="cmpnt-lst02__name">
+                                        Alloy Wheel, 21"
+                                    </div>
+                                    <div class="cmpnt-lst02__price" data-currency="$">
+                                        00.00
+                                    </div>
+                                </a>
+                            </li>    
+                            <li class="cmpnt-lst02__item">
+                                <a href="#">
+                                    <div class="cmpnt-lst02__img">
+                                        <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_list02_05.jpg" alt="title"><!-- image-->
+                                        <button type="button" class="cmpnt-lst02__button--cart">My List Cart</button>
+                                    </div>
+                                    
+                                    <div class="cmpnt-lst02__name">
+                                        Door Handle Pocket Protector, Clear Appliqué
+                                    </div>
+                                    <div class="cmpnt-lst02__price" data-currency="$">
+                                        00.00
+                                    </div>
+                                </a>
+                            </li>    
+                            <li class="cmpnt-lst02__item">
+                                <a href="#">
+                                    <div class="cmpnt-lst02__img">
+                                        <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_list02_06.jpg" alt="title"><!-- image-->
+                                        <button type="button" class="cmpnt-lst02__button--cart">My List Cart</button>
+                                    </div>
+                                    
+                                    <div class="cmpnt-lst02__name">
+                                        Retractable Luggage Tray
+                                    </div>
+                                    <div class="cmpnt-lst02__price" data-currency="$">
+                                        00.00
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="cmpnt-lst02__item">
+                                <a href="#">
+                                    <div class="cmpnt-lst02__img">
+                                        <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_list02_07.jpg" alt="title"><!-- image-->
+                                        <button type="button" class="cmpnt-lst02__button--cart">My List Cart</button>
+                                    </div>
+                                    
+                                    <div class="cmpnt-lst02__name">
+                                        Windshield Sunshade
+                                    </div>
+                                    <div class="cmpnt-lst02__price" data-currency="$">
+                                        00.00
+                                    </div>
+                                </a>
+                            </li>   
+                        </ul>
+                        <!-- //Accessory list -->
+
+                        <!-- pagination -->
+                        <div class="cmpnt-pagination">
+                            <button type="button" class="cmpnt-pagination--prev is-disabled">prev</button><!-- disabled 인 경우 : is-disabled 클래스 추가 -->
+                            <a href="#" class="cmpnt-pagination__number on">1</a><!-- 현재 페이지 : on 클래스 추가 -->
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <button type="button" class="cmpnt-pagination--next">next</button><!-- disabled 인 경우 : is-disabled 클래스 추가 -->
+                        </div>
+                        <!-- //pagination -->
+                    </section>
+                    
+                </div>
+            </div>
+            <!--@ //publising -->
+        </div>
+        <!-- //LST02 -->
     </div>
 
     <div id="footer">
