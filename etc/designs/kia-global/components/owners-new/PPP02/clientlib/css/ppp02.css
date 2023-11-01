@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* ppp02 */
+.cmpnt-ppp02__layer {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 1060px; width: 100%; background-color: #fff; margin: 0 auto; padding: 0; box-sizing:border-box; z-index: 2100; }
+.cmpnt-ppp02__wrap {position: relative; padding: 90px 110px;}
+.cmpnt-ppp02__text {margin-bottom: 40px; text-align: center;}
+.cmpnt-ppp02__content {border-top: 2px solid #05141F;}
+.cmpnt-ppp02__list {border-top: 1px solid #05141F; border-bottom: 1px solid #05141F;}
+.cmpnt-ppp02__title {font-size: 26px; font-family: kiaB; line-height: 140%; margin-bottom: 16px;}
+.cmpnt-ppp02__desc {font-size: 17px; line-height: 150%;}
+input {position: relative;}
+
+/* checkbox */
+.cmpnt-ppp02__checkBox {padding: 10px 0; display: flex; justify-content: space-between; align-items: center;}
+.form_chk .select-all + label .check-icon, .form_chk .product-list +label .check-icon {position:absolute;top:50%;left:0; display: inline-block; width: 24px; height: 24px;margin-right: 12px; vertical-align: middle; transform: translateY(-50%); background: url('/content/dam/kwcms/gt/en/images/owners-new/common/checkbox_off.svg') 50% 50%; opacity: 0.2;}
+.form_chk .select-all:checked + label .check-icon,
+.form_chk .product-list:checked + label .check-icon {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/checkbox_on.svg') 50% 50%; opacity: 0.8;}
+.form_chk .select-all + label .check-icon:hover {opacity: 0.8;}
+.check-text {margin-left: 34px; font-size:14px; line-height: 150%; opacity: 0.8;}
+.cmpnt-ppp02__button-delete {font-size: 14px; font-family: kiaB; height: 38px; border: 1px solid #05141F; padding: 0 20px; opacity: 0.4;}
+.cmpnt-ppp02__button-delete.is-active {opacity: 1;}
+.cmpnt-ppp02__dimmed {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5); z-index: 2000;}
+.cmpnt-ppp02 .cmpnt-popup__btn--close {position: absolute; top: 24px; right: 24px;}
+.cmpnt-ppp02__item-top {position: relative; margin-bottom: 8px;}
+.cmpnt-ppp02__list {height: 399px; overflow-y: auto; box-sizing: border-box;}
+.cmpnt-ppp02__item {padding: 16px 0;}
+.cmpnt-ppp02__item + .cmpnt-ppp02__item {border-top: 1px solid rgba(5, 20, 31, 0.20);}
+.cmpnt-ppp02__item-content {display: flex; flex-direction: row; gap: 20px;}
+.cmpnt-ppp02__product-thumb img {width: 120px; height: 120px; object-fit: contain;}
+.cmpnt-ppp02__product-link {text-decoration: none;}
+.cmpnt-ppp02__product-name {font-size: 14px; line-height: 150%; font-family: kiaB; margin-bottom: 8px; padding-right: 110px;}
+.cmpnt-ppp02__product-number {max-width: 223px; font-size: 13px; line-height: 150%; overflow: hidden;
+text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; margin-bottom: 23px; opacity: 0.8;}
+
+/* count */
+.cmpnt-ppp02__amount {display: flex; justify-content: space-between; align-items: center;}
+.cmpnt-ppp02__count-wrap {border: 1px solid rgba(5, 20, 31, 0.20); width: 86px; display: flex; box-sizing: border-box;}
+.cmpnt-ppp02__count-btn {width: 28px; height: 28px; background-size: 18px; background-repeat: no-repeat; background-position: center center;}
+.count-btn--minus {border-right: 1px solid rgba(5, 20, 31, 0.20); background-image: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-minus.svg');}
+.count-btn--plus {border-left: 1px solid rgba(5, 20, 31, 0.20);background-image: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-plus.svg');}
+.cmpnt-ppp02__count-input {outline: none; padding: 0; border: none; text-align: center; width: 28px; height: 28px; font-size: 12px; font-family: kiaB;appearance: none; -moz-appearance: none; -webkit-appearance: none;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+
+/* cost */
+.cmpnt-ppp02__cost {font-size: 17px; line-height: 150%; font-family: kiaB;}
+
+/* total */
+.cmpnt-ppp02__total {display: flex; justify-content: space-between; align-items: center; padding: 40px 0;font-size: 17px; line-height: 150%; font-family: kiaB;}
+.cmpnt-ppp02__button-close {display: block; width: 24px; height: 24px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background-image: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close.svg'); background-size: 100%;
+background-position: 50% 50%; background-repeat: no-repeat; opacity: 0.6;}
+.cmpnt-ppp02__cta {display: flex; gap: 10px;justify-content: center;}
+.cmpnt-ppp02__button {display: inline-block; height: 46px; font-size: 14px; font-family: kiaB;line-height: 46px;padding: 0 30px; box-sizing: border-box; text-decoration: none;}
+.cmpnt-ppp02__button:hover, 
+.cmpnt-ppp02__button:focus, 
+.cmpnt-ppp02__button:active {text-decoration: none;}
+.cmpnt-ppp02__button--print {background-color: #05141F; color: #fff;}
+.cmpnt-ppp02__button--share {background-color: #fff; border: 1px solid #05141F;}
+
+@media screen and (min-width: 1026px) and (max-width: 20000px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .cmpnt-ppp02__layer {max-width: 512px;  overflow-y: scroll;}
+  .cmpnt-ppp02__wrap {padding: 60px 30px;}
+  .cmpnt-ppp02__text {margin-bottom: 30px;}
+  .cmpnt-ppp02__title {font-size: 20px; margin-bottom: 12px;}
+  .cmpnt-ppp02__desc {font-size: 16px;}
+  .cmpnt-ppp02__item-content {gap: 12px;}
+  .cmpnt-ppp02__product-thumb img {width: 100px; height: 100px;}
+  .cmpnt-ppp02__product-name {padding-right: 0;}
+  .cmpnt-ppp02__product-number {font-size: 12px; margin-bottom: 18px;}
+  .cmpnt-ppp02__cost {font-size: 16px;}
+  .cmpnt-ppp02__total {font-size: 16px; padding: 30px 0;}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+  .cmpnt-ppp02__layer {height: 100%;
+    overflow-y: scroll;}
+  .cmpnt-ppp02__wrap {padding: 60px 20px;}
+  .cmpnt-ppp02__text {margin-bottom: 30px;}
+  .cmpnt-ppp02__title {font-size: 20px; margin-bottom: 12px;}
+  .cmpnt-ppp02__desc {font-size: 16px;}
+  .cmpnt-ppp02__list {height: auto;}
+  .cmpnt-ppp02__item-content {gap: 12px;}
+  .cmpnt-ppp02__product-thumb img {width: 100px; height: 100px;}
+  .cmpnt-ppp02__product-name {padding-right: 0;}
+  .cmpnt-ppp02__product-number {font-size: 12px; margin-bottom: 18px;}
+  .cmpnt-ppp02__cost {font-size: 16px;}
+  .cmpnt-ppp02__total {font-size: 16px; padding: 30px 0;}
+  .cmpnt-ppp02__cta {flex-direction: column; align-items: center;}
+  .cmpnt-ppp02__cta a {width: 100%; text-align: center;}
+
+}

@@ -26,7 +26,7 @@
 /* Form */
 .cmpnt-src-select {position:relative;display:flex;align-items: center;padding:0 15px;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box;}
 .cmpnt-src-select[placeholder]::before {content:attr(placeholder);display: block;line-height: 2em;color:#05141f;opacity:0.6}
-.cmpnt-src-select[value]::before {content:attr(value);color: #05141f;opacity:1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.cmpnt-src-select[value]::before {content: attr(value);color: #05141f;opacity:1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 .cmpnt-src-select::after {content:'';position:absolute;right:15px;top:0;width:20px;height:20px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg') no-repeat 50% 50%;transform: translateY(58%);}
 .cmpnt-src-select.is-show::after {transform: rotate(3.142rad) translateY(-50%);}
 .cmpnt-src-select.is-show ul {display:block;overflow:auto;max-height:202px;}
