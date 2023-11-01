@@ -1,13 +1,13 @@
 @charset "utf-8";
 
-/* TBL03 */
+/* TBL01 */
 .cmpnt-tbl01 {box-sizing:border-box;background-color:#fff}
 
 .cmpnt-tbl01__table {border-top:1px solid #05141F;}
 .cmpnt-tbl01__table .table-thead {display:flex;box-sizing:border-box;}
+.cmpnt-tbl01__table .table-tr {display:flex;align-items: center;}
 .cmpnt-tbl01__table .table-th,
 .cmpnt-tbl01__table .table-td {box-sizing:border-box;vertical-align:middle;}
-.cmpnt-tbl01__table .table-tr {display:flex;align-items: center;}
 .cmpnt-tbl01__table .table-th {font-family:'kiaB';line-height:150%;}
 .cmpnt-tbl01__table .title {display:block;}
 .cmpnt-tbl01__table .brief {font-family:'kiaM';font-size:14px;line-height:150%;color:rgba(5, 20, 31, 0.8);margin-bottom:24px;}
@@ -19,17 +19,16 @@
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-tbl01__wrap {width:1280px;margin:0 auto;padding-bottom:90px}
-    .cmpnt-tbl01__table .table-thead {border-bottom:1px solid #05141F;}
+    .cmpnt-tbl01__table .table-thead {border-bottom:1px solid #05141F;gap:40px;}
     .cmpnt-tbl01__table .table-tr {border-bottom:1px solid rgba(5, 20, 31, 0.2)}
-    .cmpnt-tbl01__table .table-thead .title + .brief {margin-top:12px;}
     .cmpnt-tbl01__table .table-th,
-    .cmpnt-tbl01__table .table-td {width:20%;padding:24px 0}
+    .cmpnt-tbl01__table .table-td {width:calc(20% - 32px);padding:24px 0}
     .cmpnt-tbl01__table .table-tr {gap:0 40px}
     .cmpnt-tbl01__table .table-th {font-size:20px;}
     .cmpnt-tbl01__table .table-thead .table-th {position:relative;padding-bottom:54px}
-    .cmpnt-tbl01__table .table-thead .table-th:first-child {width:40%;padding-left:20%;}
+    .cmpnt-tbl01__table .table-thead .table-th:first-child {margin-left:calc(20% + 12px);}
+    .cmpnt-tbl01__table .table-thead .title + .brief {margin-top:12px;}
     .cmpnt-tbl01__table .price {position:absolute;bottom:24px;left:0}
-    .cmpnt-tbl01__table .table-thead .table-th:first-child .price {left:50%}
 }
 
 @media screen and (max-width:1024px){
@@ -41,7 +40,7 @@
     .cmpnt-tbl01__table .table-th,
     .cmpnt-tbl01__table .table-td {width:calc(25% - 28px);padding:16px 0}
     .cmpnt-tbl01__table .table-th {font-size:18px;}
-    .cmpnt-tbl01__table .table-thead .table-th {width:25%}
+    .cmpnt-tbl01__table .table-thead .table-th {width:calc(25% - 28px)}
     .cmpnt-tbl01__table .table-tr .table-th {width:100%;border-bottom:1px solid rgba(5, 20, 31, 0.2)}
 }
 

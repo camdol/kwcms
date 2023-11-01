@@ -1,9 +1,9 @@
 'use strict';
 
-//#Component : 
+//#Component : TBL01
 (function () {
     window.addEventListener("DOMContentLoaded", () => {
-        if(window.innerWidth > 768 ) {
+        if(window.innerWidth > 767 ) {
             setTitleHeight();
         }
     });
