@@ -1,6 +1,6 @@
 'use strict';
 
-//#Component : 
+//#Component : LST02
 (function () {
     window.addEventListener("DOMContentLoaded", categoryToggle);
     window.addEventListener("DOMContentLoaded", lst02Popup);

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* cst00 */
+.cmpnt-cst00 {background-color:#fff}
+.cmpnt-cst00__title {font-family: kiaB; text-align: left; line-height: 140%;}
+.cmpnt-cst00__wrap {box-sizing:border-box; display: flex; justify-content: space-between;}
+.cmpnt-cst00__desc {text-align: left;line-height: 150%; margin-bottom: 12px;}
+.cmpnt-cst00__phone {display: block; font-size: 16px; font-family: kiaB; line-height: 150%; text-decoration: none; margin-bottom: 24px;}
+.cmpnt-cst00__phone:hover {text-decoration: none;}
+.cmpnt-cst00__phone .ico-phone {background-image: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone.svg')}
+.cmpnt-cst00__phone .cta-ico {display: inline-block; width: 18px; height: 18px; background-size: 100%; vertical-align: middle; margin-right: 4px;}
+.cmpnt-cst00__service.service--line {border-left: 1px solid rgba(5, 20, 31, 0.20); padding-left: 24px;}
+.cmpnt-cst00__service-item {display: flex; align-items: flex-start; gap: 16px;font-size: 16px; text-align: left; line-height: 150%; opacity: 80%;}
+.cmpnt-cst00__service-item + .cmpnt-cst00__service-item {margin-top: 4px;}
+.cmpnt-cst100__service-weekday {font-family: kiaB; word-wrap: break-word; white-space: -moz-pre-wrap; white-space: break-spaces;}
+.cmpnt-cst100__service-holiday {font-family: kiaB;word-wrap: break-word; white-space: -moz-pre-wrap; white-space: break-spaces;}
+.cmpnt-cst100__service-hour {flex: 1 0 0 ;}
+
+@media screen and (min-width: 1026px) and (max-width: 20000px) {
+  .cmpnt-cst00__wrap {width: 1280px; margin: 0 auto; padding: 90px 0; gap: 180px;}
+  .cmpnt-cst00__title {width: 32%; font-size: 26px; }
+  .cmpnt-cst00__content {width: 55%;}
+  .cmpnt-cst00__desc {font-size: 20px;}
+  .cmpnt-cst00__service-item {font-size: 17px;}
+  .cmpnt-cst100__service-weekday {width: 110px; font-family: kiaB;}
+  .cmpnt-cst100__service-holiday {width: 110px; font-family: kiaB;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .cmpnt-cst00__wrap {margin: 60px 38px; gap: 28px;}
+  .cmpnt-cst00__title {width: 35%; font-size: 20px;}
+  .cmpnt-cst00__content {width: 61%;}
+  .cmpnt-cst00__desc {font-size: 18px;}
+  .cmpnt-cst100__service-weekday {width: 90px;}
+  .cmpnt-cst100__service-holiday {width: 90px;}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+  .cmpnt-cst00__wrap {margin: 60px 20px; flex-direction: column; gap: 24px;}
+  .cmpnt-cst00__title {font-size: 20px;}
+  .cmpnt-cst00__desc {font-size: 18px;}
+  .cmpnt-cst100__service-weekday {width: 90px;}
+  .cmpnt-cst100__service-holiday {width: 90px;}
+}

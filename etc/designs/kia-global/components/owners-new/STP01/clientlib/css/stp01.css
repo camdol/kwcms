@@ -24,6 +24,7 @@
 .cmpnt-step__carlist .carlist__imgbox {width:100%;max-width:224px;margin:auto;box-sizing:border-box;text-align:center}
 .cmpnt-step__carlist .carlist__imgbox img {width:100%;height:100%;aspect-ratio:16/9;}
 .cmpnt-step__carlist .carlist__name {padding:12px 0;font-size:16px;font-family:'kiaB';text-align:center;line-height:1.5;}
+.cmpnt-step__carlist .carlist__item .car_selectbox {border:1px solid transparent;}
 .cmpnt-step__carlist .carlist__item .car_selectbox.on {border:1px solid #05141f;}
 .cmpnt-step__button {width:100%;padding-bottom:24px;text-align:right;box-sizing:border-box;}
 .cmpnt-step__button .square-button {display:inline-block;height:46px;color:#fff;font-size:14px;padding:0 30px;font-family:'kiaB';line-height:46px;background:#05141f;text-decoration:none;}
@@ -56,15 +57,13 @@
     .cmpnt-step__carlist .carlist__item a {max-width:158px;}
     .cmpnt-step__carlist .carlist__imgbox img {max-width:158px;}
 }
-
-
 /* step01 E */
 
 /* step02 S */
 .cmpnt-step__step.step02 .cmpnt-step__titlewrap {position:relative;}
-.cmpnt-step__mapbox {width:100%;padding:24px 0 24px 0;box-sizing:border-box;}
-.cmpnt-src05__search{width:100%;text-align:center}
-.cmpnt-src-input {display:inline-block;position:relative;width:100%;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);opacity:1}
+.cmpnt-step__mapbox {width:100%;padding:0 0 24px 0;box-sizing:border-box;}
+.cmpnt-src05__search .cmpnt-src-input {width:100%;margin:24px 0}
+/* .cmpnt-src-input {display:inline-block;position:relative;width:100%;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);opacity:1}
 .cmpnt-src-input::before {content:'';position:absolute;left:20px;top:-2px;width:24px;height:24px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-search.svg') no-repeat 0 50%;transform: translateY(50%);background-size:24px;}
 .cmpnt-src-input.is-error {border:1px solid #EA0029}
 .cmpnt-src__error {text-align:left;font-size:13px;line-height:150%;color:#EA0029}
@@ -73,7 +72,11 @@
 .cmpnt-src-input > input {border:none;background-color: transparent;font-size:16px;line-height:150%;color:#05141F;width:100%;padding:11px 59px 11px 59px;box-sizing: border-box;}
 .cmpnt-src-input > input:focus {outline:none;border:1px solid #05141f}
 .cmpnt-src-input > input::placeholder {color:#05141F;opacity:0.6}
-.cmpnt-src-input + .cmpnt-src__helpArea {margin-top:20px}
+.cmpnt-src-input + .cmpnt-src__helpArea {margin-top:20px} */
+.cmpnt-src-input__result {margin:18px 0;font-size:14px;line-height:150%;}
+.cmpnt-src-input__message {display:flex;align-items: center;justify-content: center;min-height:840px;font-family:'kiaB';font-size:36px;line-height:140%;}
+.cmpnt-src-input__message::before {content:'';margin-right:12px;width:48px;height:48px;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-message.svg');background-repeat:no-repeat;background-position:0 50%;background-size:100%;}
+
 .cmpnt-step__vihicle {display:flex;justify-content: flex-start;align-items: center;width:100%;padding-top:12px;box-sizing:border-box;}
 .cmpnt-step__vihicle-name {width:180px;font-size:26px;font-family:'kiaB';line-height:1.4;}
 .cmpnt-step__vihicle-image {width:224px;margin-left:24px;}
@@ -83,57 +86,63 @@
 .cmpnt-step__search .sch_btn {flex-shrink: 0;width:30px;}
 .cmpnt-step__search .form_wrp {flex-grow: 1;box-sizing:border-box;}
 .cmpnt-step__search .form_wrp input {margin-left:15px;padding:0;border:none;font-size:16px;line-height: 24px;color:#05141f;}
-.cmpnt-step__maparea {display:flex;flex-direction: row-reverse;justify-content: flex-start;width:100%;margin-top:24px;border-top:1px solid rgba(5,20,31,0.2);}
-.cmpnt-step__dealerbox {flex-shrink: 0;width:35%;max-width:440px;max-height:841px;overflow-y:auto;box-sizing:border-box;}
-.cmpnt-step__dealerbox ul {width:100%;height:100%;}
+.cmpnt-step__maparea {display:flex;flex-direction: row-reverse;justify-content: flex-start;width:100%;border-top:1px solid rgba(5,20,31,0.2);}
+.cmpnt-step__dealerbox {flex-shrink: 0;width:35%;max-width:440px;box-sizing:border-box;border-bottom:1px solid rgba(5,20,31,0.2);}
+.cmpnt-step__dealerbox ul {width:100%;}
 .cmpnt-step__dealerlist {width:100%;}
-.cmpnt-step__dealerlist {padding:24px 70px 24px 70px;font-size:14px;color:#05141f;line-height:1.5;border-bottom:1px solid rgba(5, 20, 31, 0.2);box-sizing:border-box;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/location_on_black.png') no-repeat 24px 24px;background-size:36px 36px;}
+.cmpnt-step__dealerlist {padding:24px 70px 24px 70px;font-size:14px;color:#05141f;line-height:1.5;border-bottom:1px solid rgba(5, 20, 31, 0.2);box-sizing:border-box;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-location.svg') no-repeat 24px 24px;background-size:36px 36px;}
 .cmpnt-step__dealerlist-title {padding-bottom:8px;font-size:20px;font-family:'kiaB';line-height:150%;}
 .cmpnt-step__dealerlist span {display:block;width:100%;max-width:346px;padding-bottom:0.5px;line-height:1.5;word-break:break-word;}
 .cmpnt-step__dealerlist .url_address {padding-bottom:16px;}
 .cmpnt-step__dealerlist .url_address a {font-size:14px;color:#05141f;opacity:.6;}
-.cmpnt-step__dealerlist.on {color:#fff;background: #05141f url('/content/dam/kwcms/gt/en/images/owners-new/common/location_on.png') no-repeat 24px 24px;background-size:36px 36px;}
+.cmpnt-step__dealerlist.on {color:#fff;background: #05141f url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-location-white.svg') no-repeat 24px 24px;background-size:36px 36px;}
 .cmpnt-step__dealerlist.on .url_address a {color:#fff;opacity:.6;}
 .cmpnt-step__dealerlist.on .dealerlist_adress {color:#fff;}
 .cmpnt-step__map {flex-grow: 1;width:65.5%;max-width:840px;aspect-ratio: auto 1/1;box-sizing:border-box;}
 .cmpnt-step__dealerbox::-webkit-scrollbar {width: 6px;background-color: #fff}
 .cmpnt-step__dealerbox::-webkit-scrollbar-thumb {background-color: #05141f !important;border-radius: 6px;background-clip: padding-box;border: 1px solid transparent}
 .cmpnt-step__dealerbox::-webkit-scrollbar-track {background-color: #ccc !important;opacity: .2;border-radius: 6px;box-shadow: inset 0 0 2px #fff}
+.cmpnt-step__dealerbox .cmpnt-pagination {margin:24px 0}
 .cmpnt-step__map-inner {width:100%;height:0;padding-top:100%;}
 /* tablet */
 @media(max-width:1024px){
-.cmpnt-step__inner {padding:0 38px 60px 38px;box-sizing:border-box;}
-.cmpnt-step__vihicle {display:block;}
-.cmpnt-step__maparea {display:block;margin-top:16px;}
-.cmpnt-step__map {overflow:hidden;display:block;width:100%;max-width:100%;height:298px;/*aspect-ratio: auto 3/1.3;*/}
-.cmpnt-step__dealerbox {width:100%;max-width:100%;height:480px;margin-top:16px;border-top:1px solid rgba(5,20,31,0.2);}
-.cmpnt-step__dealerlist-title {font-size:18px;line-height:1.5;}
-.cmpnt-step__vihicle-name {font-size:20px;line-height:1.5;}
-.cmpnt-step__titlewrap.current .cmpnt-step__title {font-size:20px;line-height:1.5;}
-.cmpnt-step__vihicle-edit button {font-size:16px;}
-.cmpnt-step__vihicle-image {width:212px;margin-left:0;}
-.cmpnt-step__dealerlist span {max-width:100%;}
+    .cmpnt-step__inner {padding:0 38px 60px 38px;box-sizing:border-box;}
+    .cmpnt-step__vihicle {display:block;}
+    .cmpnt-step__maparea {display:block;margin-top:16px;}
+    .cmpnt-step__map {overflow:hidden;display:block;width:100%;max-width:100%;height:298px;/*aspect-ratio: auto 3/1.3;*/}
+    .cmpnt-step__dealerbox {width:100%;max-width:100%;margin-top:16px;border-top:1px solid rgba(5,20,31,0.2);}
+    .cmpnt-step__dealerlist-title {font-size:18px;line-height:1.5;}
+    .cmpnt-step__vihicle-name {font-size:20px;line-height:1.5;}
+    .cmpnt-step__titlewrap.current .cmpnt-step__title {font-size:20px;line-height:1.5;}
+    .cmpnt-step__vihicle-edit button {font-size:16px;}
+    .cmpnt-step__vihicle-image {width:212px;margin-left:0;}
+    .cmpnt-step__dealerlist span {max-width:100%;}
+    .cmpnt-step__Dealer-address {display:none}
+    .cmpnt-src-input__result {margin:14px 0;}
+    .cmpnt-src05__search .cmpnt-src-input {margin:18px 0}
+    .cmpnt-src-input__message {min-height:802px;font-size:24px;}
+    .cmpnt-src-input__message {flex-direction:column;gap:10px;}
 }
 
 @media(max-width:767px){
-.cmpnt-step__inner {padding:0 20px 60px 20px;}
-.cmpnt-step__mapbox {padding:16px 0;}
-.cmpnt-step__maparea {display:block;margin-top:16px;}
-.cmpnt-step__map {width:100%;height:298px;}
-.cmpnt-step__dealerbox {width:100%;max-width:100%;height:440px;}
-.cmpnt-step__vihicle-name {font-size:20px;line-height:1.5;}
-.cmpnt-step__vihicle-image {margin-left:0;max-width:158px;}
-.cmpnt-step__titlewrap .cmpnt-step__title {font-size:20px;line-height:1.5;}
-.cmpnt-step__dealerlist {padding: 20px 20px 20px 60px;}
-.cmpnt-step__dealerlist-title {font-size:16px;}
-.cmpnt-step__dealerlist, .cmpnt-step__dealerlist.on {background-size:30px 30px;background-position:14px 16px;}
-.cmpnt-step__dealerlist .url_address a {font-size:14px;line-height:1.5;}
-.cmpnt-step__vihicle-edit button {font-size:16px;}
-.cmpnt-step__titlewrap .cmpnt-step__number {padding-bottom:8px;}
-.cmpnt-step__button {text-align:center;}
-.cmpnt-step__button .square-button {width:100%;box-sizing:border-box;}
+    .cmpnt-step__inner {padding:0 20px 60px 20px;}
+    .cmpnt-step__mapbox {padding:16px 0;}
+    .cmpnt-step__maparea {display:block;margin-top:16px;}
+    .cmpnt-step__map {width:100%;height:298px;}
+    .cmpnt-step__dealerbox {width:100%;}
+    .cmpnt-step__vihicle-name {font-size:20px;line-height:1.5;}
+    .cmpnt-step__vihicle-image {margin-left:0;max-width:158px;}
+    .cmpnt-step__titlewrap .cmpnt-step__title {font-size:20px;line-height:1.5;}
+    .cmpnt-step__dealerlist {padding: 20px 20px 20px 60px;}
+    .cmpnt-step__dealerlist-title {font-size:16px;}
+    .cmpnt-step__dealerlist, .cmpnt-step__dealerlist.on {background-size:30px 30px;background-position:14px 16px;}
+    .cmpnt-step__dealerlist .url_address a {font-size:14px;line-height:1.5;}
+    .cmpnt-step__vihicle-edit button {font-size:16px;}
+    .cmpnt-step__titlewrap .cmpnt-step__number {padding-bottom:8px;}
+    .cmpnt-step__button {text-align:center;}
+    .cmpnt-step__button .square-button {width:100%;box-sizing:border-box;}
+    .cmpnt-src05__search .cmpnt-src-input {margin:20px 0}
 } 
-
 /* step02 E */
 
 /* step03 S */
@@ -143,7 +152,7 @@
 .cmpnt-step__Dealer-address {font-size:20px;color:#05141f;opacity:.8;line-height:1.5;}
 .cmpnt-step__infotable {width:100%;}
 .cmpnt-step__info-tr {display:table;table-layout: fixed;width: 100%;border-bottom:1px solid rgba(5, 20, 31, 0.20);}
-.cmpnt-step__info-th, .cmpnt-step__info-td {display: table-cell;padding:24px 0;vertical-align: middle;}
+.cmpnt-step__info-th, .cmpnt-step__info-td {display: table-cell;padding:24px 0;vertical-align: top;}
 .cmpnt-step__info-th {width:400px;font-size:20px;font-family:'kiaB';line-height:1.5;box-sizing:border-box;}
 .cmpnt-step__info-td .radio_box:before {width:24px;height:24px;margin: -2px 12px 0 0;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/radio_off.svg') no-repeat; background-position:0 0;}
 .cmpnt-step__info-td .radio_box.r_on:before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/radio_on.svg') no-repeat; background-position:0 0;}
@@ -186,7 +195,9 @@
 .cmpnt-step__informationBox {width:100%;padding:20px 0;}
 .cmpnt-step__step.step03 .cmpnt-step__button {padding:0;padding-top:40px;}
 .cmpnt-step__info-title {display:flex;}
-.cmpnt-src-select {position:relative;display:flex;align-items: center;font-size:14px;padding:0 15px;width:100%;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box;background:#fff;}
+.textarea__bytes {font-family:'kiaM';font-size:14px;line-height:150%;color:rgba(5,20,31,0.6)}
+
+/* .cmpnt-src-select {position:relative;display:flex;align-items: center;font-size:14px;padding:0 15px;width:100%;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box;background:#fff;}
 .cmpnt-src-select[placeholder]::before {content:attr(placeholder);display: block;line-height: 2em;color:#05141f;opacity:0.6}
 .cmpnt-src-select[value]::before {content: attr(value);color: #05141f;opacity:1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 .cmpnt-src-select::after {content:'';position:absolute;right:15px;top:0;width:20px;height:20px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg') no-repeat 50% 50%;transform: translateY(58%);}
@@ -194,8 +205,9 @@
 .cmpnt-src-select.is-show ul {display:block}
 .cmpnt-src-select ul {display:none;width:100%;position: absolute;left:-1px;top: 100%;z-index: 100;padding: 0;list-style: none;background: #fff;border: 1px solid rgba(5, 20, 31, 0.2);max-height: 200px;overflow-y: auto;}
 .cmpnt-src-select ul li:hover {background-color:rgba(5, 20, 31, 1);color:#fff;text-decoration:underline}
-.cmpnt-src-select ul li.is-select {/* background-color:rgba(5, 20, 31, 0.03) */;color:#05141F;text-decoration:underline}
-.cmpnt-src-select__item {height:40px;padding:12px 16px 5px;box-sizing:border-box;color: #495057;border: 1px solid transparent;text-align:left;}
+.cmpnt-src-select ul li.is-select {;color:#05141F;text-decoration:underline} */
+.cmpnt-src-select ul {width:100%}
+.cmpnt-src-select__item {height:40px;padding:12px 16px 5px;box-sizing:border-box;color: #495057;border: 1px solid transparent;text-align:left;} */
 .cmpnt-step__info-td .form_wrp.required .cmpnt-src-select {border:1px solid #ea0029;}
 .informationBox_title {padding-bottom:8px;font-size:14px;font-family:'kiaB';line-height:1.5;}
 .informationBox_notice {font-size:13px;line-height:1.5;opacity:.6;}
@@ -217,51 +229,94 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;margin
 
 
 @media(max-width:1024px){
-.cmpnt-step__info-th {width:100%;padding:24px 0 16px 0;}
-.cmpnt-step__Dealer-name {font-size:20px;line-height:1.5;}
-.cmpnt-step__info-th {font-size:18px;}
-.cmpnt-step__info-th, .cmpnt-step__info-td {display:block;}
-.cmpnt-step__info-td {padding:0 0 24px 0;}
-.cmpnt-step__info-title {display:flex;}
-.cmpnt-step__info-title .form_chk {width:25%;margin-right:0;}
-.cmpnt-step__info-td label {font-size:16px;}
-.cmpnt-step__info-phone .phone_select, .cmpnt-step__info-phone .phone_td {display:block;}
-.cmpnt-step__info-phone .phone_select {width:100%;}
-.cmpnt-step__info-phone .phone_td .info_dth {margin-left:0;padding-top:16px;}
+    .cmpnt-step__info-th {width:100%;padding:24px 0 16px 0;}
+    .cmpnt-step__Dealer-name {font-size:20px;line-height:1.5;}
+    .cmpnt-step__info-th {font-size:18px;}
+    .cmpnt-step__info-th, .cmpnt-step__info-td {display:block;}
+    .cmpnt-step__info-td {padding:0 0 24px 0;}
+    .cmpnt-step__info-title {display:flex;}
+    .cmpnt-step__info-title .form_chk {width:25%;margin-right:0;}
+    .cmpnt-step__info-td label {font-size:16px;}
+    .cmpnt-step__info-phone .phone_select, .cmpnt-step__info-phone .phone_td {display:block;}
+    .cmpnt-step__info-phone .phone_select {width:100%;}
+    .cmpnt-step__info-phone .phone_td .info_dth {margin-left:0;padding-top:16px;}
 }
 
 @media(max-width:768px){
-.cmpnt-step__Dealer-name {font-size:20px;}
-.cmpnt-step__Dealer-address {font-size:16px;}
+    .cmpnt-step__Dealer-name {font-size:20px;}
+    .cmpnt-step__Dealer-address {font-size:16px;}
 }
 @media(max-width:767px){
-.cmpnt-step__Dealer {display:block;}
-.cmpnt-step__Dealer-name {font-size:20px;width:100%;padding-bottom:8px;}
-.cmpnt-step__titlewrap .cmpnt-step__title {font-size:20px;line-height:1.5;}
-.cmpnt-step__info-tr {display:block;padding:24px 0;}
-.cmpnt-step__info-th, .cmpnt-step__info-td {display:block;padding:0;}
-.cmpnt-step__info-th {width:100%;font-size:18px;line-height:1.5;}
-.cmpnt-step__info-td {padding:16px 0 0 0;}
-.cmpnt-step__info-td:after {display:block;content:"";clear:both;}
-.cmpnt-step__info-td label {font-size:16px; line-height:1.5;}
-.cmpnt-step__info-td .form_chk {float:left;width:50%;padding-top:16px;margin-right:0;}
-.cmpnt-step__info-td .form_chk:first-child {padding-top:0;}
-.cmpnt-step__info-td .form_chk:nth-child(2) {padding-top:0;}
-.cmpnt-step__info-td .form_area .space {display:block;height:10px;}
-.cmpnt-step__infotable .form_area .form_wrp, .cmpnt-step__infotable .form_area .form_sch, .cmpnt-step__infotable .form_area .form_date {display:block;}
-.cmpnt-step__info-phone .phone_select, .cmpnt-step__info-phone .phone_td {display:block;}
-.cmpnt-step__info-phone .phone_select {width:100%;}
-.cmpnt-step__info-phone .phone_td .info_dth {margin-left:0;padding-top:16px;}
-.cmpnt-step__informationBox {padding-bottom:16px;}
-.cmpnt-step__step.step03 .cmpnt-step__button {padding-top:28px;}
-.cmpnt-step__step.step03 .cmpnt-step__button .square-button {display:block;font-size:14px;text-align:center;}
+    .cmpnt-step__Dealer {display:block;}
+    .cmpnt-step__Dealer-name {font-size:20px;width:100%;padding-bottom:8px;}
+    .cmpnt-step__titlewrap .cmpnt-step__title {font-size:20px;line-height:1.5;}
+    .cmpnt-step__info-tr {display:block;padding:24px 0;}
+    .cmpnt-step__info-th, .cmpnt-step__info-td {display:block;padding:0;}
+    .cmpnt-step__info-th {width:100%;font-size:18px;line-height:1.5;}
+    .cmpnt-step__info-td {padding:16px 0 0 0;}
+    .cmpnt-step__info-td:after {display:block;content:"";clear:both;}
+    .cmpnt-step__info-td label {font-size:16px; line-height:1.5;}
+    .cmpnt-step__info-td .form_chk {float:left;width:50%;padding-top:16px;margin-right:0;}
+    .cmpnt-step__info-td .form_chk:first-child {padding-top:0;}
+    .cmpnt-step__info-td .form_chk:nth-child(2) {padding-top:0;}
+    .cmpnt-step__info-td .form_area .space {display:block;height:10px;}
+    .cmpnt-step__infotable .form_area .form_wrp, .cmpnt-step__infotable .form_area .form_sch, .cmpnt-step__infotable .form_area .form_date {display:block;}
+    .cmpnt-step__info-phone .phone_select, .cmpnt-step__info-phone .phone_td {display:block;}
+    .cmpnt-step__info-phone .phone_select {width:100%;}
+    .cmpnt-step__info-phone .phone_td .info_dth {margin-left:0;padding-top:16px;}
+    .cmpnt-step__informationBox {padding-bottom:16px;}
+    .cmpnt-step__step.step03 .cmpnt-step__button {padding-top:28px;}
+    .cmpnt-step__step.step03 .cmpnt-step__button .square-button {display:block;font-size:14px;text-align:center;}
 }
-
-
 /* step03 E */
 
+.cmpnt-step__map .gm-style-iw {border-radius:initial;}
+.cmpnt-step__map .dealer_info .name {font-family:'kiaB';line-height:150%;}
+.cmpnt-step__map .dealer_info .info li {line-height:150%;color:rgba(5, 20, 31, 0.8);}
+.cmpnt-step__map .dealer_info .name + .info {margin-top:12px;}
+.cmpnt-step__map .gm-style-iw-c {padding:24px;}
+.cmpnt-step__map button[aria-label="Close"] {top:0 !important;right:0 !important;width:34px !important;height:34px !important}
+.cmpnt-step__map button[aria-label="Close"] span {width:24px !important;height:24px !important;margin:0 !important}
 
+@media screen and (min-width: 1026px) and (max-width: 20000px) {
+    .cmpnt-step__map .dealer_info .name {font-size:20px;}
+    .cmpnt-step__map .dealer_info .info li {font-size:13px;}
+}
 
+@media(max-width:1024px){
+    .cmpnt-step__map .dealer_info .name {font-size:18px;}
+    .cmpnt-step__map .dealer_info .info li {font-size:12px;}
+    .cmpnt-step__map .gm-style-iw-c {padding:20px;}
+}
 
-
-
+/*  s: 검증계 적용 시 삭제(검수용) */
+.gm-style-iw-t {
+    position: absolute;
+    width: 100%;
+}
+.gm-style-iw-c {
+    position: absolute;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(-50%,-100%,0);
+    transform: translate3d(-50%,-100%,0);
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    -webkit-box-shadow: 0 2px 7px 1px rgba(0,0,0,.3);
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,.3);
+}
+.gm-style-iw {
+    font-weight: 300;
+    font-size: 13px;
+    overflow: hidden;
+}
+.gm-style-iw-d {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto;
+}
+/*  e: 검증계 적용 시 삭제(검수용) */

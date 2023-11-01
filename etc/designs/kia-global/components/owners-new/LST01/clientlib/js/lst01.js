@@ -56,13 +56,13 @@
             el.addEventListener('click', (e) => {
                 const target = e.target;
                 const targetLi = target.closest('li');
-                if(targetLi.classList.contains('is-show')) {
-                    targetLi.classList.remove('is-show');
+                if(target.closest('li').classList.contains('is-show')) {
+                    target.closest('li').classList.remove('is-show');
                 } else {
                     if (target.closest('.cmpnt-lst01-content').querySelector('.cmpnt-lst01__item.is-show')) {
                         target.closest('.cmpnt-lst01-content').querySelector('.cmpnt-lst01__item.is-show').classList.remove('is-show');
                     } 
-                    targetLi.classList.add('is-show');
+                    target.closest('li').classList.add('is-show');
                 }
                 
             });

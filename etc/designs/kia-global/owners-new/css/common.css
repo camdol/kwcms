@@ -26,11 +26,11 @@
 /* Form */
 .cmpnt-src-select {position:relative;display:flex;align-items: center;padding:0 15px;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box;}
 .cmpnt-src-select[placeholder]::before {content:attr(placeholder);display: block;line-height: 2em;color:#05141f;opacity:0.6}
-.cmpnt-src-select[value]::before {content: attr(value);color: #05141f;opacity:1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
+.cmpnt-src-select[value]::before {content:attr(value);color: #05141f;opacity:1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 .cmpnt-src-select::after {content:'';position:absolute;right:15px;top:0;width:20px;height:20px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg') no-repeat 50% 50%;transform: translateY(58%);}
 .cmpnt-src-select.is-show::after {transform: rotate(3.142rad) translateY(-50%);}
 .cmpnt-src-select.is-show ul {display:block;overflow:auto;max-height:202px;}
-.cmpnt-src-select ul {display:none;position:absolute;left:-1px;top:100%;z-index:100;padding:0;list-style:none;background: #fff;border: 1px solid rgba(5, 20, 31, 0.2);box-sizing:border-box;overflow:auto;;}
+.cmpnt-src-select ul {display:none;position: absolute;left:-1px;top: 100%;z-index: 100;padding: 0;list-style: none;background: #fff;border: 1px solid rgba(5, 20, 31, 0.2);box-sizing:border-box;}
 .cmpnt-src-select ul li:hover,
 .cmpnt-src-select ul li:hover.is-select {background-color:rgba(5, 20, 31, 1);color:#fff;text-decoration:underline;}
 .cmpnt-src-select ul li.is-select {color:#05141F;text-decoration:underline}
@@ -46,7 +46,7 @@
 .is-keyup .cmpnt-src__button--reset {display:block}
 .cmpnt-src-input > input {border:none;background-color: transparent;font-size:16px;line-height:150%;color:#05141F;width:100%;height:46px;padding:10px 20px 10px 59px;box-sizing: border-box;}
 .cmpnt-src-input > input:focus {outline:none;border:1px solid #05141F;line-style:inset;height:46px;box-sizing:border-box;}
-.cmpnt-src-input > input::placeholder {color:#05141F;opacity:0.6}
+.cmpnt-src-input > input::placeholder {color:#05141F;opacity:0.6;font-size:14px}
 .cmpnt-src__search-number {font-size:14px;line-height:150%;padding:18px 0}
 .cmpnt-src-input + .cmpnt-src__helpArea,
 .cmpnt-src__error + .cmpnt-src__helpArea {margin-top:20px}
