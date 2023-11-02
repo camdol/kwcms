@@ -55,7 +55,6 @@
         Array.prototype.forEach.call(lists, function(el){
             el.addEventListener('click', (e) => {
                 const target = e.target;
-                const targetLi = target.closest('li');
                 if(target.closest('li').classList.contains('is-show')) {
                     target.closest('li').classList.remove('is-show');
                 } else {

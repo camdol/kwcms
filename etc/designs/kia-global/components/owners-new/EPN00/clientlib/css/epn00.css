@@ -16,7 +16,7 @@
     .cmpnt-epn00__wrap {width:1280px;margin:0 auto;padding:0 0 90px;}
     .cmpnt-epn00__title button {font-size:20px;padding:24px 72px 24px 0;}
     .cmpnt-epn00__title button::after {right:24px;top:50%;transform: translate(0, -50%);}
-    .cmpnt-epn00__title button.is-show::after {transform: rotate(3.142rad) translateY(50%);}
+    .is-show  .cmpnt-epn00__title button::after {transform: rotate(3.142rad) translateY(50%);}
     .cmpnt-epn00__detail {font-size:17px;padding:24px 0;}
 }
 
@@ -28,7 +28,7 @@
     .cmpnt-epn00__wrap {padding:0 0 60px;}
     .cmpnt-epn00__title button {font-size:18px;padding:16px 56px 16px 0;}
     .cmpnt-epn00__title button::after {right:16px;top:16px;}
-    .cmpnt-epn00__title button.is-show::after {transform: rotate(3.142rad) translateY(0);}
+    .is-show .cmpnt-epn00__title button::after {transform: rotate(3.142rad) translateY(0);}
     .cmpnt-epn00__detail {font-size:16px;padding:16px 0;}
 }
 

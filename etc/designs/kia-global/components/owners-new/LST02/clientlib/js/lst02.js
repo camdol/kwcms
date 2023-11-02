@@ -25,13 +25,16 @@
     function lst02Popup() {
         const popup = document.querySelector('.cmpnt-lst02-search');
         const btnOpen = document.querySelector('.cmpnt-lst02-search__title');
+        const container = document.querySelector('#container');
        
         btnOpen.addEventListener('click', () => {
             if(popup.classList.contains('is-open')) {
                 popup.classList.remove('is-open');
+                container.classList.remove('has-popup');
                 disableScrollLock();
             } else {
                 popup.classList.add('is-open');
+                container.classList.add('has-popup');
                 enableScrollLock();
             }
             

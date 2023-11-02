@@ -97,8 +97,9 @@ a:hover .cmpnt-lst02__price {color:#fff;}
     .cmpnt-lst02__category {padding:14px 0}
     .cmpnt-lst02__link {margin:14px -10px 14px 0}
 
+    #container.has-popup {z-index:2000}
     .cmpnt-lst02-search__form {display:none}
-    .cmpnt-lst02-search.is-open {display:block;position:fixed;left:0;top:61px;z-index:2100;width:100%;height:100%;padding:0;background-color:#fff;}
+    .cmpnt-lst02-search.is-open {display:block;position:fixed;left:0;top:0;z-index:2100;width:100%;height:100%;padding:0;background-color:#fff;}
     .is-open .cmpnt-lst02-search__wrap {flex-direction:column;}
     .is-open .cmpnt-lst02-search__wrap > div {width:100%;}
     .cmpnt-lst02-search__title {position:relative;background-color:#f8f8f8;width:100%;padding:22px 20px;box-sizing:border-box;}
@@ -116,5 +117,5 @@ a:hover .cmpnt-lst02__price {color:#fff;}
     .cmpnt-lst02__list {gap:20px}
     .cmpnt-lst02__item {width:calc(50% - 10px);}
     .cmpnt-lst02__button--cart {right:10px;bottom:10px;}
-    .cmpnt-src-select ul li.is-select {background-color: #F8F8F8;text-decoration: none;}
+    
 }
