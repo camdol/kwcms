@@ -25,7 +25,7 @@
 @media screen and (max-width:1024px){
     .cmpnt-tbl02__wrap {padding-bottom:60px;}
     .cmpnt-tbl02__table .table-thead {display:none}
-    .cmpnt-tbl02__table .table-tr {flex-direction:column;border-top:1px solid #05141F;border-bottom:1px solid #05141F;}
+    .cmpnt-tbl02__table .table-tr {flex-direction:column;border-bottom:1px solid #05141F;}
     .cmpnt-tbl02__table .table-th {width:100%;padding:16px 0;font-size:18px;border-bottom:1px solid rgba(5, 20, 31, 0.2)}
     .cmpnt-tbl02__table .table-td {width:100%;display:flex;justify-content: space-between;font-size:16px;}
     .cmpnt-tbl02__table .table-th + .table-td {padding-top:16px;}
