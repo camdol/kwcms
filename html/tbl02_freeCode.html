@@ -1,0 +1,102 @@
+<!-- freecode -->
+<!-- TBL02 -->
+<div class="cmpnt-tbl02">
+    <section class="cmpnt-tbl02__wrap">
+        <!-- freecode -->
+        <div class="cmpnt-tbl02__table">
+            <!-- thead -->
+            <div class="table-thead">
+                <div class="table-th">1-year<br>20,000km</div>
+                <div class="table-th">2-year<br>40,000km</div>
+                <div class="table-th">3-year<br>60,000km</div>
+            </div>
+            <!-- //thead -->
+            <!-- tbody -->
+            <div class="table-tr">
+                <div class="table-th">Picanto, K3</div>
+                <div class="table-td"><span class="term">1-year 20,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">2-year 40,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">3-year 60,000km</span><span class="price">$000</span></div>
+            </div>
+            <div class="table-tr">
+                <div class="table-th">K5</div>
+                <div class="table-td"><span class="term">1-year 20,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">2-year 40,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">3-year 60,000km</span><span class="price">$000</span></div>
+            </div>
+            <div class="table-tr">
+                <div class="table-th">K7, Stinger</div>
+                <div class="table-td"><span class="term">1-year 20,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">2-year 40,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">3-year 60,000km</span><span class="price">$000</span></div>
+            </div>
+            <div class="table-tr">
+                <div class="table-th">K7, Stinger</div>
+                <div class="table-td"><span class="term">1-year 20,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">2-year 40,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">3-year 60,000km</span><span class="price">$000</span></div>
+            </div>
+            <div class="table-tr">
+                <div class="table-th">Stonic, Niro, Sportage, Seltos, Soul</div>
+                <div class="table-td"><span class="term">1-year 20,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">2-year 40,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">3-year 60,000km</span><span class="price">$000</span></div>
+            </div>
+            <div class="table-tr">
+                <div class="table-th">Sorento, Carnival</div>
+                <div class="table-td"><span class="term">1-year 20,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">2-year 40,000km</span><span class="price">$000</span></div>
+                <div class="table-td"><span class="term">3-year 60,000km</span><span class="price">$000</span></div>
+            </div>
+            <!-- //tbody -->
+        </div>  
+        <!-- //freecode -->
+    </section>
+</div>
+<!-- //TBL02 -->
+<!-- //freecode -->
+
+<!-- CSS -->
+<style type="text/css">
+/* TBL02 */
+.cmpnt-tbl02 {box-sizing:border-box;background-color:#fff}
+
+.cmpnt-tbl02__table {border-top:1px solid #05141F;}
+.cmpnt-tbl02__table .table-thead {display:flex;box-sizing:border-box;}
+.cmpnt-tbl02__table .table-tr {display:flex;align-items: center;}
+.cmpnt-tbl02__table .table-th,
+.cmpnt-tbl02__table .table-td {box-sizing:border-box;vertical-align:middle;}
+.cmpnt-tbl02__table .table-td {line-height:150%;color:rgba(5, 20, 31, 0.8);}
+.cmpnt-tbl02__table .table-th {font-family:'kiaB';line-height:150%;}
+
+@media screen and (min-width: 1025px) and (max-width: 20000px) {
+    .cmpnt-tbl02__wrap {width:1280px;margin:0 auto;padding-bottom:90px}
+    .cmpnt-tbl02__table .table-thead {border-bottom:1px solid #05141F;gap:40px}
+    .cmpnt-tbl02__table .table-tr {border-bottom:1px solid rgba(5, 20, 31, 0.2)}
+    .cmpnt-tbl02__table .table-th {width:calc(25% - 30px);padding:24px 0;font-size:20px;}
+    .cmpnt-tbl02__table .table-td {width:calc(25% - 30px);padding:24px 0;font-size:17px;}
+    .cmpnt-tbl02__table .table-tr {gap:0 40px}
+    .cmpnt-tbl02__table .table-thead .table-th:first-child {margin-left:calc(25% + 9px);}
+    .cmpnt-tbl02__table .table-td .term {display:none}
+}
+
+@media screen and (max-width:1024px){
+    .cmpnt-tbl02__wrap {padding-bottom:60px;}
+    .cmpnt-tbl02__table .table-thead {display:none}
+    .cmpnt-tbl02__table .table-tr {flex-direction:column;border-bottom:1px solid #05141F;}
+    .cmpnt-tbl02__table .table-th {width:100%;padding:16px 0;font-size:18px;border-bottom:1px solid rgba(5, 20, 31, 0.2)}
+    .cmpnt-tbl02__table .table-td {width:100%;display:flex;justify-content: space-between;font-size:16px;}
+    .cmpnt-tbl02__table .table-th + .table-td {padding-top:16px;}
+    .cmpnt-tbl02__table .table-td + .table-td {padding-top:8px;}
+    .cmpnt-tbl02__table .table-td:last-child {padding-bottom:16px;}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-tbl02__wrap {margin:0 38px;}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+    .cmpnt-tbl02__wrap {margin:0 20px;}
+}
+</style>
+<!-- //CSS -->

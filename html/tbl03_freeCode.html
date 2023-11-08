@@ -1,0 +1,79 @@
+<!-- freecode -->
+<!-- TBL03 -->
+<div class="cmpnt-tbl03">
+    <section class="cmpnt-tbl03__wrap">
+
+        <!-- freecode -->
+        <div class="cmpnt-tbl03__title">Cautions</div>
+        <div class="cmpnt-tbl03__detail">
+            <ul>
+                <li>
+                    1. If the battery has been attached or detached in the past, follow these steps before starting the update process:
+                    <ul>
+                        <li>a. Turn off the engine.</li>
+                        <li>
+                            b. Disconnect any electronic device, such as a black box, installed after shipped.
+                        </li>
+                        <li>
+                            c. Park the vehicle for more than 4 hours and try the updates.
+                        </li>
+                    </ul>
+                </li>
+                <li>    
+                    2. If any device is connected to your Kia's OBD(On Board Diagnostics) at the bottom of the driver's seat, follow these steps to start the wireless download:
+                    <ul>
+                        <li>a. Disconnect the device and start engine to download updates.</li>
+                        <li>
+                            b. Drive the vehicle for more than 30 minutes and stop engine to install updates.
+                        </li>
+                        <li>
+                            c. Do not connect any device to the OBD during the wireless update.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    3. During the update process, the vehicle cannot be operated, and all functions, including electric vehicle high-voltage battery charging and V2L* function, cannot be used for up to 100 minutes.
+                    <p class="note">* V2L: V2L stands for Vehicle-to-Load, which is a bi-directional charging system in electric vehicles.</p>
+                </li>
+            </ul>
+        </div>
+        <!-- //freecode -->
+    </section>
+</div>
+<!-- //TBL03 -->
+<!-- //freecode -->
+
+<!-- CSS -->
+<style type="text/css">
+/* TBL03 */
+.cmpnt-tbl03 {box-sizing:border-box;background-color:#f8f8f8}
+.cmpnt-tbl03__wrap {display:flex;}
+.cmpnt-tbl03__title {font-family:'kiaB';line-height:140%;}
+.cmpnt-tbl03__detail {line-height:150%;color:rgba(5, 20, 31, 0.8);border-top:1px solid #05141F;border-bottom:1px solid rgba(5, 20, 31, 0.2)}
+.cmpnt-tbl03__detail .note {font-size:14px;color:rgba(5, 20, 31, 0.6);margin-top:25px;}
+.cmpnt-tbl03__detail li ul {margin:25px 0 25px 20px}
+
+@media screen and (min-width: 1025px) and (max-width: 20000px) {
+    .cmpnt-tbl03__wrap {width:1280px;margin:0 auto;padding:90px 0;gap:40px}
+    .cmpnt-tbl03__title {width:400px;font-size:26px;}
+    .cmpnt-tbl03__detail {width:calc(100% - 440px);font-size:17px;padding:24px 0;}
+}
+
+@media screen and (max-width:1024px){
+    .cmpnt-tbl03__wrap {padding:60px 0;flex-direction:column;gap:24px;}
+    .cmpnt-tbl03__title {font-size:24px;}
+    .cmpnt-tbl03__detail {font-size:16px;padding:16px 0;}
+}
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-tbl03__wrap {margin:0 38px;}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+    .cmpnt-tbl03__wrap {margin:0 20px;}
+    .cmpnt-tbl03__detail li ul {margin-left:0}
+    .cmpnt-tbl03__detail li ul li {text-indent: 20px;}
+    
+}
+</style>
+<!-- //CSS -->

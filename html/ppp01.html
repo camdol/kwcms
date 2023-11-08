@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>lst02</title><!--GT Title-->
+<title>ppp01</title><!--GT Title-->
 <!-- meta -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -28,9 +29,9 @@
     <div id="header">
         <div class="header_in">
             <!-- GT SEO 20150827 h1 > div -->
-            <!-- new wsg ê°ì  S -->
+            <!-- new wsg ê°ì  S -->
             <div class="logo_h1"><a href="/gt/main.html" class="lg_a"></a></div>
-            <!-- new wsg ê°ì  E -->
+            <!-- new wsg ê°ì  E -->
             <a href="#" class="open_gnb"><span class="cmm_spr spr_menu">open menu</span></a>
             <!-- GNB -->
             <!-- GNB gnb_area open -->
@@ -1282,31 +1283,38 @@
                 <link rel="stylesheet" href="/etc/designs/kia-global/components/owners-new/PPP01/clientlib/css/ppp01.css" type="text/css">
                 <script  defer type="text/javascript" src="/etc/designs/kia-global/components/owners-new/PPP01/clientlib/js/ppp01.js"></script>
                 <!--@ publising -->
-                <button class="clickMe">click!</button>
-                <div class="cmpnt-ppp01">
-                    <div class="cmpnt-ppp01__layer">
-                        <div class="cmpnt-ppp01__wrap">
+                <div class="buttonArea" style="margin: 0 auto; text-align: center;">
+                    <button class="clickMe" onclick="openPopup()" style="padding: 20px; background-color: #000; color: #fff;">popup1</button>
+                </div>
+                <div class="cmpnt-ppp01 cmpnt-popup__windows">
+                    <div class="cmpnt-popup__layer">
+                        <div class="cmpnt-popup__wrap">
                             <div class="cmpnt-ppp01__thumb">
-                                <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_pop01-pc.jpg" alt="">
+                                <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_pop01-pc.jpg" alt=""><!--Product image -->
                             </div>
                             <div class="cmpnt-ppp01__content">
-                                <h4 class="cmpnt-ppp01__product-name">Auto-Dimming Mirror w/ HomeLink® Auto-Dimming Mirror</h4><!--Product Name: 최대 50자 -->
-                                <p class="cmpnt-ppp01__product-number">D4431ADE00STDFD32314</p><!-- Product No.  : 최대 20자 -->
-                                <p class="cmpnt-ppp01__product-desc">A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models. A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models. A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models. A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models.</p>
-                                <div class="cmpnt-ppp01__cost">
-                                    <p class="cmpnt-ppp01__tax-info">Tax Included</p>
-                                    <div class="cmpnt-ppp01__price-info">
-                                        <span class="cmpnt-ppp01__currency">$</span><strong class="cmpnt-ppp01__price">00.00</strong>
+                                <div class="cmpnt-ppp01__inner">
+                                    <div class="cmpnt-ppp01__product">
+                                        <h4 class="cmpnt-ppp01__product-name">Auto-Dimming Mirror w/ HomeLink® Auto-Dimming Mirror</h4><!--Product Name -->
+                                        <p class="cmpnt-ppp01__product-number">D4431ADE00STDFD32314</p><!-- Product No. -->
+                                        <p class="cmpnt-ppp01__product-desc">A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models. A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models. A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models. A perfectly fitting protective liner for the front trunk, located under the hood of 2WD models.</p><!--Product description -->
+                                    </div>
+                                    <div class="cmpnt-ppp01__cost">
+                                        <p class="cmpnt-ppp01__tax-info">Tax Included</p>
+                                        <div class="cmpnt-ppp01__price-info">
+                                            <span class="cmpnt-ppp01__currency">$</span><!-- currency-->
+                                            <strong class="cmpnt-ppp01__price">00.00</strong><!-- price-->
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="cmpnt-ppp01__button">
                                     <a href="#" >Add to My List</a>
                                 </div>
                             </div>
+                            <button class="cmpnt-popup__btn--close" onclick="closePopup()"><span>close</span></button>
                         </div>
-                        <button class="cmpnt-popup__btn--close" onclick="closeMediaPopup()"><span>close</span></button>
                     </div>
-                    <div class="cmpnt-ppp01__dimmed"></div>
+                    <div class="cmpnt-popup__dimmed"></div>
                 </div>
                 <!--@ //publising -->
             </div>
@@ -1540,5 +1548,43 @@
 </div>
 
 
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 </html>

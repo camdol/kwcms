@@ -176,3 +176,19 @@ function playYoutube(url) {
 	}
 }
 
+const popupElem = document.querySelector('.cmpnt-popup__windows');
+const container = document.querySelector('#container');
+
+// popup open
+function openPopup() {
+  popupElem.classList.add('show');
+	container.classList.add('has-popup');
+	enableScrollLock();
+}
+
+// popup close
+function closePopup() {
+  popupElem.classList.remove('show');
+	container.classList.remove('has-popup');
+  disableScrollLock();
+}

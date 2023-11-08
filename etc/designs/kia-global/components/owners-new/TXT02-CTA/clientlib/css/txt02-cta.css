@@ -23,8 +23,11 @@
 .bg-white .ico-phone {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone.svg');}
 .bg-white .ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg');order:2}
 
+.cmpnt-txt02-cta__wrap[data-padding='0'] {padding-bottom:0;}
+
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-txt02-cta__wrap {margin:0 auto;padding:90px 0;display:flex;justify-content:center;gap:10px}
+    .cmpnt-txt02-cta__wrap[data-padding='90'] {padding-bottom:90px;}
 }
 
 @media (max-width:1280px) {
@@ -34,6 +37,7 @@
 
 @media screen and (max-width:1024px){
     .cmpnt-txt02-cta__wrap {padding:60px 0;}
+    .cmpnt-txt02-cta__wrap[data-padding='90'] {padding-bottom:60px;}
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){

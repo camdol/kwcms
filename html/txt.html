@@ -1308,7 +1308,20 @@
                 <script defer src="/etc/designs/kia-global/components/owners-new/TXT02/clientlib/js/txt02.js"></script>
                 <!--@ publising -->
                 <div class="cmpnt-txt02"><!-- background color : 기본(white), bg-grey 클래스 추가 -->
-                    <div class="cmpnt-txt02__wrap" data-type="large"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
+                    <!-- 231107 : podding-bottom : data-padding 값 추가
+                        data-padding | bottom padding
+                        90 | P/T/M - 90/60/60 (기본값)
+                        72 | P/T/M - 72/54/48
+                        54A | P/T/M - 54/40/40
+                        54B | P/T/M - 54/40/36
+                        54C | P/T/M - 54/40/24
+                        48 | P/T/M - 48/40/36
+                        40A | P/T/M - 40/32/28
+                        40B | P/T/M - 40/24/24
+                        0 | P/T/M - 0/0/0
+                    -->
+                    <!-- data-type(cotents type) : large, medium, 231107 : MediumA(1280 Area) add -->
+                    <div class="cmpnt-txt02__wrap" data-type="large" data-padding="90"><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
                         <div class="cmpnt-txt02__title">
                             Remote Diagnostics and Reliable Services
                         </div>
@@ -1319,9 +1332,9 @@
                 </div>
                 <!--// publising -->
 
-                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Content type: large/Background color : grey/Align: center</div>
+                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Content type: large/Background color : grey/Align: center/padding P/T/M - 72/54/48</div>
                 <div class="cmpnt-txt02 bg-grey"><!-- background color : 기본(white), bg-grey 클래스 추가 -->
-                    <div class="cmpnt-txt02__wrap align-center" data-type="large"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
+                    <div class="cmpnt-txt02__wrap align-center" data-type="large" data-padding="72"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
                         <div class="cmpnt-txt02__title">
                             Remote Diagnostics and Reliable Services
                         </div>
@@ -1330,10 +1343,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Content type: medium/Align: left</div>
+                
+                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Content type: medium(Left, 1280 Area)/Align: left/padding P/T/M - 54/40/36</div>
                 <div class="cmpnt-txt02"><!-- background color : 기본(white, 클래스 없음), bg-grey 클래스 추가 -->
-                    <div class="cmpnt-txt02__wrap align-left" data-type="medium"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
+                    <div class="cmpnt-txt02__wrap" data-type="mediumA" data-padding="54B"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
                         <div class="cmpnt-txt02__title">
                             Remote Diagnostics and Reliable Services
                         </div>
@@ -1343,9 +1356,9 @@
                     </div>
                 </div>
 
-                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Content type: medium/Align: center</div>
+                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Content type: medium/Align: left/padding P/T/M - 54/40/40</div>
                 <div class="cmpnt-txt02"><!-- background color : 기본(white, 클래스 없음), bg-grey 클래스 추가 -->
-                    <div class="cmpnt-txt02__wrap align-center" data-type="medium"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
+                    <div class="cmpnt-txt02__wrap align-left" data-type="medium" data-padding="54A"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
                         <div class="cmpnt-txt02__title">
                             Remote Diagnostics and Reliable Services
                         </div>
@@ -1355,9 +1368,21 @@
                     </div>
                 </div>
 
-                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Title only : Align : center</div>
+                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Content type: medium/Align: center/padding P/T/M - 54/40/36</div>
+                <div class="cmpnt-txt02"><!-- background color : 기본(white, 클래스 없음), bg-grey 클래스 추가 -->
+                    <div class="cmpnt-txt02__wrap align-center" data-type="medium" data-padding="54B"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
+                        <div class="cmpnt-txt02__title">
+                            Remote Diagnostics and Reliable Services
+                        </div>
+                        <div class="cmpnt-txt02__sub-title">
+                            You can get remote diagnostic services and troubleshooting consultations without visiting the Kia Service Center. However, if you do need to visit, highly trained technicians will use advanced diagnostic systems and equipment to precisely inspect and repair your Kia.
+                        </div>
+                    </div>
+                </div>
+
+                <div style="width:100%;background-color:rgb(112, 112, 112);color:#fff;font-size:14px;padding:10px 0;text-align:center">Title only : Align : center/padding P/T/M - 54/40/24</div>
                 <div class="cmpnt-txt02"><!-- background color : 기본(white), bg-grey 클래스 추가 -->
-                    <div class="cmpnt-txt02__wrap align-center" data-type="large"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
+                    <div class="cmpnt-txt02__wrap align-center" data-type="large" data-padding="54C"><!-- data-type(cotents type) : large, medium --><!-- align : left(기본, 클래스 없음), align-center, align-right 클래스 추가-->
                         <div class="cmpnt-txt02__title">
                             Remote Diagnostics and Reliable Services
                         </div>
@@ -1410,7 +1435,12 @@
                 <script defer src="/etc/designs/kia-global/components/owners-new/TXT02-CTA/clientlib/js/txt02-cta.js"></script>
                 <!--@ publising -->
                 <div class="cmpnt-txt02-cta">
-                    <div class="cmpnt-txt02-cta__wrap">
+                    <!-- 231107 : podding-bottom : data-padding 값 추가
+                        data-padding | bottom padding
+                        90 | P/T/M - 90/60/60 (기본값)
+                        0 | P/T/M - 0/0/0
+                    -->
+                    <div class="cmpnt-txt02-cta__wrap" data-padding="90"><!-- 231107 add : podding-bottom : data-padding 값 추가 -->
                         <!-- a 태그 
                             _Link - _top(기본)/New window : _blank
                             _Bg color : 기본(Kia Black)/white 시 bg-white 클래스 추가 
