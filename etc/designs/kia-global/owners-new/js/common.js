@@ -12,10 +12,13 @@ function showToggleSelect() {
 			if(target.classList.contains('cmpnt-src-select')) {
 				if (target.classList.contains('is-show')) {
 					target.classList.remove('is-show');
-				}else if (target.parentElement.querySelector('.is-show')) {
+				} else if (target.parentElement.querySelector('.is-show')) {
 					target.parentElement.querySelector('.is-show').classList.remove('is-show');
 					target.classList.add('is-show');
-				}else {
+				} else if (target.closest('form').querySelector('.is-show')) {
+					target.closest('form').querySelector('.is-show').classList.remove('is-show');
+					target.classList.add('is-show');
+				} else {
 					target.classList.add('is-show');
 				}
 			}

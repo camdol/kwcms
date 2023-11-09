@@ -63,6 +63,7 @@
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
+    .cmpnt-txt02__wrap[data-type='mediumA'],
     .cmpnt-txt02__wrap[data-type='large'] {margin:0 38px;}
     .cmpnt-txt02__wrap[data-type='medium'] {width:512px;margin:0 auto}
     .cmpnt-txt02__cta {display:flex;justify-content: center;flex-wrap: wrap;gap:10px}
