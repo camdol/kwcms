@@ -1,23 +1,24 @@
 'use strict';
 
-//#Component : LST03
+//#Component : QCK00
 (function () {
-    window.addEventListener("DOMContentLoaded", categoryToggle);
-
-    function categoryToggle() {
-        const btn = document.querySelector('.cmpnt-lst03-category');
-        btn.addEventListener('click', (e) => {
-            const target = e.target;
-            console.log(target);
-            if(target.classList.contains('is-selected')) {
-                return;
-            } else {
-                if(target.parentElement.querySelector('.is-selected')) {
-                    target.parentElement.querySelector('.is-selected').classList.remove('is-selected');
-                }
-                target.classList.add('is-selected');
-            }
-        });
-    }
+    
 
 })();
+
+function closeQCK00Popup() {
+	const container = document.querySelector('#container');
+
+    event.target.closest('.cmpnt-qck00').classList.remove('is-show');
+	container.classList.remove('has-popup');
+}
+
+//검수용
+function openQCK00Popup() {
+    const popupElem = document.querySelector('.cmpnt-qck00');
+	const container = document.querySelector('#container');
+
+  	popupElem.classList.add('is-show');
+	container.classList.add('has-popup');
+}
+

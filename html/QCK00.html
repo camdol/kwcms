@@ -1278,25 +1278,53 @@
 
             <div style="width:100%;background-color:rgb(0, 0, 0);color:#fff;font-size:14px;padding:10px 0;text-align:center;margin:20px 0">QCK00</div>
 
+            
+
             <!-- QCK00 -->
             <div class="lst02 parbase section">
                 <link rel="stylesheet" href="/etc/designs/kia-global/components/owners-new/QCK00/clientlib/css/qck00.css" type="text/css">
                 <script  defer type="text/javascript" src="/etc/designs/kia-global/components/owners-new/QCK00/clientlib/js/qck00.js"></script>
                 <!--@ publising -->
-                <div class="cmpnt-qck00 cmpnt-popup__windows" style="display:block">
+
+                <!-- 검수용 -->
+                <div class="buttonArea" style="margin: 0 auto; text-align: center;">
+                    <button class="clickMe" onclick="openQCK00Popup()" style="padding: 20px; background-color: #000; color: #fff;">popup1</button>
+                </div>
+                <!-- //검수용 -->
+
+                <div class="cmpnt-qck00">
                     <div class="cmpnt-popup__layer">
                         <div class="cmpnt-popup__wrap cmpnt-qck00__wrap">
-                            <div class="cmpnt-qck00__title">
-                                <h2 class="cmpnt-qck00__title">
+                            <div class="cmpnt-qck00__info">
+                                <h2 class="cmpnt-qck00__info-title">
                                     Controlling the Regenerative Braking Level
                                 </h2>
-                                <div class="cmpnt-qck00__bg">
-                                    <img src="dummy_qck00_01.jpg" alt="">
+                                <div class="cmpnt-qck00__info-bg">
+                                    <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_img03-pc.jpg" alt="">
                                 </div>
-                                
                             </div>
+
+                            <div class="cmpnt-qck00__desc">
+                                Regenerative braking is a technology that converts kinetic energy into electrical energy during deceleration and charges the high-voltage battery. The driver can enjoy driving and increase driving energy efficiency by using the paddle shifter on the steering wheel.
+                            </div>
+
+                            <section data-type="text"><!-- data-type : text, imgText1, imgText2 -->
+                                <div class="cmpnt-qck00__title">
+                                    How to adjust the regenerative braking level
+                                </div>
+    
+                                <div class="cmpnt-qck00__desc">
+                                    The intensity of regenerative braking on Kia's EV models can be adjusted from 0 to 3 levels using the paddle shifter on the steering wheel.
+                                </div>
+                            </section>
+
+                            <section data-type="imgText1">
+                                <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_qck00_img01.jpg" alt="">
+                            </section>
+                            <button class="cmpnt-popup__btn--close" onclick="closeQCK00Popup()"><span>close</span></button>
                         </div>
                     </div>
+                    <div class="cmpnt-popup__dimmed"></div>
                 </div>
                 <!--@ //publising -->
             </div>
