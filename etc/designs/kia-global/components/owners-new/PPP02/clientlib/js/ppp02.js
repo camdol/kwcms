@@ -70,8 +70,13 @@ function popupContentHandler()  {
     }
   }
 
+};
 
-  // 리스트 개수 카운트
+// 리스트 개수 카운트 : 검수용(적용 제외)
+window.addEventListener("DOMContentLoaded", countNumber);
+function countNumber() {
+  const countElem = document.querySelectorAll('.cmpnt-ppp02__count');
+  
   for (let i = 0; i < countElem.length; i++) {
     countElem[i].addEventListener('click', handleCountButtonClick);
   }
@@ -93,4 +98,4 @@ function popupContentHandler()  {
 
     countInput.setAttribute('value', valueNum);
   }
-};
+}

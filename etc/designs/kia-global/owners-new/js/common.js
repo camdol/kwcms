@@ -9,18 +9,24 @@ function showToggleSelect() {
 	Array.prototype.forEach.call(selectEls, function(el){
 		el.addEventListener('click', (e) => {
 			const target = e.target;
+			
 			if(target.classList.contains('cmpnt-src-select')) {
 				if (target.classList.contains('is-show')) {
 					target.classList.remove('is-show');
 				} else if (target.parentElement.querySelector('.is-show')) {
 					target.parentElement.querySelector('.is-show').classList.remove('is-show');
 					target.classList.add('is-show');
-				} else if (target.closest('form').querySelector('.is-show')) {
-					target.closest('form').querySelector('.is-show').classList.remove('is-show');
-					target.classList.add('is-show');
-				} else {
+				} 
+				// else if (target.closest('form').querySelector('.is-show')) {
+					
+				// 	target.closest('form').querySelector('.is-show').classList.remove('is-show');
+				// 	target.classList.add('is-show');
+				// } 
+				else {
 					target.classList.add('is-show');
 				}
+
+				
 			}
 				
 			if(target.classList.contains('cmpnt-src-select__item')) {
@@ -179,12 +185,13 @@ function playYoutube(url) {
 	}
 }
 
+
 // popup open
-function openPopup() {
-	const popupElem = document.querySelector('.cmpnt-popup__windows');
+function openPopup(target) {
+	const popupElem = document.querySelector('.'+ target);
 	const container = document.querySelector('#container');
 
-  	popupElem.classList.add('show');
+  	popupElem.classList.add('is-show');
 	container.classList.add('has-popup');
 	enableScrollLock();
 }
@@ -193,7 +200,7 @@ function openPopup() {
 function closePopup() {
 	const container = document.querySelector('#container');
 
-	event.target.closest('.cmpnt-popup__windows').classList.remove('show');
+	event.target.closest('.cmpnt-popup__windows').classList.remove('is-show');
 	container.classList.remove('has-popup');
   	disableScrollLock();
 }
