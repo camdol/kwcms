@@ -1285,54 +1285,72 @@
                 
                 <!--@ publising -->
                 <div class="cmpnt-map00">
-                    <div class="cmpnt-map00__inner">
+                    <div class="cmpnt-map00__wrap">
                         <div class="cmpnt-map00__topmenu">
-                            <div class="cmpnt-map00__search">
-                                <!--@ 검색 영역  -->
-                                <section class="cmpnt-src05__search">
-                                    <div class="cmpnt-src-input">
-                                        <input type="text" id="search_keyword" placeholder="Kia Charging Station Kia Charging Station" title="" >
-                                    </div>
-                                    <div class="no-result" style="display:none"><span>No results found</span></div> <!-- 검색결과 없을경우 display:block -->
-                                </section>
-                                <!--// 검색 영역  -->
+                            <!-- search -->
+                            <section class="cmpnt-map00__search">
+                                <div class="cmpnt-src-input">
+                                    <input type="text" id="search_keyword" placeholder="City name or Postcode" title="" >
+                                </div>
+                                <div class="no-result" style="display:none"><span>No results found</span></div> <!-- 검색결과 없을경우 display:block -->
+                            </section>
+                            <!-- //search  -->
+
+                            <!-- charging type -->
+                            <div class="cmpnt-map00-category">
+                                <button type="button" class="cmpnt-map00-category__button is-selected" data-type="ac-dc">AC &amp; DC Charging</button><!-- data-type : ac-dc, ultra, kia--><!-- 선택시 is-selected -->
+                                <button type="button" class="cmpnt-map00-category__button" data-type="ultra">Ultra Fast Charging</button>
+                                <button type="button" class="cmpnt-map00-category__button" data-type="kia">Kia Charging</button>
                             </div>
-                            <div class="cmpnt-map00__chargingselect">
-                                <button tyle="button" class="btn_round ac-dc sel-on"><span>AC &amp; DC Charging</span></button> <!-- 선택시 sel-on -->
-                                <button tyle="button" class="btn_round ultra-charging"><span>Ultra Fast Charging</span></button>
-                                <button tyle="button" class="btn_round charging"><span>Kia Charging</span></button>
-                            </div>
+                            <!-- //charging type -->
                         </div>
 
                         <div class="cmpnt-map00__maparea">
                             <div class="cmpnt-map00__maparea-inner">
-                                <button type="button" class="open_box"><br><br><br><br><br><br><br><br><br><br><br><br>map area click class 'open_box' 임시버튼</button>
+                                <button type="button" class="open_box">charging</button>
                             </div>
                         </div>
 
+                        <!-- data -->
                         <div class="cmpnt-map00__detail" style="display:none;">
-                            <div class="map00__detail-inner">
+                            <div class="cmpnt-map00__detail-wrap">
                                 <div class="cmpnt-map00__current">
-                                    <div class="cmpnt-map00__current-text"><span class="ac-dc">AC &amp; DC Charging</span></div>
-                                    <div class="cmpnt-map00__current-available"><span>2 Available</span></div>
+                                    <!-- charging type-->
+                                    <div class="cmpnt-map00__current-text" data-type="ac-dc">AC &amp; DC Charging</div><!-- data-type : ac-dc, ultra, kia-->
+                                    <!-- //charging type-->
+                                    <!-- status-->
+                                    <div class="cmpnt-map00__current-available">2 Available</div>
+                                    <!-- //status-->
                                 </div>
                                 <div class="cmpnt-map00__detail-content">
-                                    <div class="cmpnt-map00__detail-count">
-                                        <span class="round_box">Available 24 / 7</span>
+                                    <!-- service hours -->
+                                    <div class="cmpnt-map00__detail-hours">
+                                        Available 24 / 7
                                     </div>
+                                    <!-- //service hours -->
+                                    <!-- station name -->
                                     <div class="cmpnt-map00__location"><span>Kia Charging Station</span></div>
+                                    <!-- //station name -->
+                                    <!-- chargin info -->
                                     <div class="cmpnt-map00__electic-info"><span>7kW AC</span></div>
+                                    <!-- //chargin info -->
                                 </div>
                                 <div class="cmpnt-map00__addressbox">
+                                    <!-- address -->
                                     <div class="cmpnt-map00__address">
-                                        <span>161 Abc Highway, Abcdef, ABC 1234</span>
-                                        <a href="#"><span class="link_ico">Driving Directions</span></a>
+                                        161 Abc Highway, Abcdef, ABC 1234
                                     </div>
-                                    <div class="cmpnt-map00__phonenumber"><span class="ph_ico">(000) 000-0000</span></div>
+                                    <!-- //address -->
+                                    <a href="#" class="cmpnt-map00__direction"><span>Driving Directions</span></a>
+
+                                    <!-- phone number -->
+                                    <div class="cmpnt-map00__phonenumber">(000) 000-0000</div>
+                                    <!-- //phone number -->
                                 </div>
-                                <div class="cmpnt-map00__box_close"><a href="#"><span class="hide">close</span></a></div>
+                                <button type="button" class="cmpnt-map00__button--close">close</button>
                             </div>
                         </div>
+                        <!-- //data -->
 
                     </div>
                 </div>

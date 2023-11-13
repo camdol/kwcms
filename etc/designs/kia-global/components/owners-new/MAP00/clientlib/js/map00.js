@@ -1,9 +1,24 @@
 
 'use strict';
 
-
+//#Component : MAP00
 (function () {
+    window.addEventListener("DOMContentLoaded", categoryToggle);
 
+    function categoryToggle() {
+        const btn = document.querySelector('.cmpnt-map00-category');
+        btn.addEventListener('click', (e) => {
+            const target = e.target;
+            if(target.classList.contains('is-selected')) {
+                return;
+            } else {
+                if(target.parentElement.querySelector('.is-selected')) {
+                    target.parentElement.querySelector('.is-selected').classList.remove('is-selected');
+                }
+                target.classList.add('is-selected');
+            }
+        });
+    }
 
   // 정보 박스 팝업 
     $(document).ready(function() {
@@ -11,14 +26,7 @@
         mapPopOpen();
         mapPopClose();
 
-        $(".cmpnt-map00__chargingselect .btn_round").click(function(){
-            var idx = $(this).index();
-            $(".cmpnt-map00__chargingselect .btn_round").removeClass("sel-on");
-            $(".cmpnt-map00__chargingselect .btn_round").eq(idx).addClass("sel-on");
-        });
-
-
-		// 박스 스크롤
+        // 박스 스크롤
 		let lastScroll = 0;
         $(window).on('scroll', function(){
             let scrollTop = $(this).scrollTop();
@@ -46,35 +54,7 @@
 
     });
 
-    //열기
-    function mapPopOpen() {
-        var viewportWidth = $(window).width();
-
-        if (viewportWidth <= 1024) {
-
-            //열기
-            $('.open_box').click(function () {
-                $('#header').css('z-index','-1');
-                $(this).parents().find('.cmpnt-map00__detail').show(); 
-                $('.cmpnt-map00').addClass('fixed');  
-                $('.cmpnt-map00__chargingselect').hide();    
-            });    
-            
-        } else {
-
-            $('.cmpnt-map00').removeClass('fixed');
-            
-            //열기
-            $('.open_box').click(function () {
-                $(this).parents().find('.cmpnt-map00__detail').show(); 
-                $('.cmpnt-map00').removeClass('fixed'); 
-                $('#header').css('z-index','1004');
-                $('.cmpnt-map00__chargingselect').show();  
-            });   
-
-
-        }
-    }
+    
 
     //닫기
     function mapPopClose() {
@@ -98,3 +78,34 @@
 
 
 })();
+
+
+//열기
+function openMapPopup () {
+    var viewportWidth = $(window).width();
+
+    if (viewportWidth <= 1024) {
+
+        //열기
+        $('.open_box').click(function () {
+            $('#header').css('z-index','-1');
+            $(this).parents().find('.cmpnt-map00__detail').show(); 
+            $('.cmpnt-map00').addClass('fixed');  
+            $('.cmpnt-map00__chargingselect').hide();    
+        });    
+        
+    } else {
+
+        $('.cmpnt-map00').removeClass('fixed');
+        
+        //열기
+        $('.open_box').click(function () {
+            $(this).parents().find('.cmpnt-map00__detail').show(); 
+            $('.cmpnt-map00').removeClass('fixed'); 
+            $('#header').css('z-index','1004');
+            $('.cmpnt-map00__chargingselect').show();  
+        });   
+
+
+    }
+}
