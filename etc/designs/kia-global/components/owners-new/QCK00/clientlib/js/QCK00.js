@@ -14,13 +14,16 @@ let swiperQck00Options;
 		draggable: true,
 		observer : true,
 		observeParents : true,
+		slidesOffsetAfter: 120,
 		breakpoints: {
 		  1025: {
 			  slidesPerView: 3,
 			  spaceBetween: 40,
+			  slidesOffsetAfter: 0,
 		  },
 		  767: {
 			spaceBetween: 28,
+			slidesOffsetAfter: 100,
 		  },
 		},
 	};

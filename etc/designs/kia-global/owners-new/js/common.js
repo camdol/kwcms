@@ -9,24 +9,16 @@ function showToggleSelect() {
 	Array.prototype.forEach.call(selectEls, function(el){
 		el.addEventListener('click', (e) => {
 			const target = e.target;
-			
+			const container = document.querySelector('#container');
 			if(target.classList.contains('cmpnt-src-select')) {
 				if (target.classList.contains('is-show')) {
 					target.classList.remove('is-show');
-				} else if (target.parentElement.querySelector('.is-show')) {
-					target.parentElement.querySelector('.is-show').classList.remove('is-show');
+				} else if (container.querySelector('.cmpnt-src-select.is-show')) {
+					container.querySelector('.cmpnt-src-select.is-show').classList.remove('is-show');
 					target.classList.add('is-show');
-				} 
-				// else if (target.closest('form').querySelector('.is-show')) {
-					
-				// 	target.closest('form').querySelector('.is-show').classList.remove('is-show');
-				// 	target.classList.add('is-show');
-				// } 
-				else {
+				} else {
 					target.classList.add('is-show');
 				}
-
-				
 			}
 				
 			if(target.classList.contains('cmpnt-src-select__item')) {

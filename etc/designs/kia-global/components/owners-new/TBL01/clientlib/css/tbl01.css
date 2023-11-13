@@ -18,7 +18,7 @@
 .ico-na {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close-grey.svg');}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-    .cmpnt-tbl01__wrap {width:1280px;margin:0 auto;padding-bottom:90px}
+    .cmpnt-tbl01__wrap {width:1280px;margin:0 auto;padding-bottom:24px}
     .cmpnt-tbl01__table .table-thead {border-bottom:1px solid #05141F;gap:40px;}
     .cmpnt-tbl01__table .table-tr {border-bottom:1px solid rgba(5, 20, 31, 0.2)}
     .cmpnt-tbl01__table .table-th,
@@ -32,7 +32,7 @@
 }
 
 @media screen and (max-width:1024px){
-    .cmpnt-tbl01__wrap {padding-bottom:60px;}
+    .cmpnt-tbl01__wrap {padding-bottom:16px;}
     .cmpnt-tbl01__table .table-thead,
     .cmpnt-tbl01__table .table-tr {gap:0 28px;}
     .cmpnt-tbl01__table .table-tr {flex-wrap:wrap;border-top:1px solid #05141F;}

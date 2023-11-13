@@ -66,13 +66,13 @@
     .cmpnt-qck00 .cmpnt-popup__btn--close,
     .cmpnt-qck00 .cmpnt-popup__btn--close span {width:50px;height:50px;}
 
-    .cmpnt-qck00__head h2 {font-size:40px;}
+    .cmpnt-qck00__head h2 {font-size:42px;}
     .cmpnt-qck00__bg {height:430px;}
     .cmpnt-qck00 .cmpnt-popup__btn--close {right:24px;top:24px;width:50px;height:50px;}
 
     .cmpnt-qck00__content {padding:0 110px 60px}
     .cmpnt-qck00__content-type[data-type='imgText1'] {margin-top:50px;}
-    .cmpnt-qck00__content-type[data-type='imgText2'] {gap:40px;margin-top:50px}
+    .cmpnt-qck00__content-type[data-type='imgText2'] {gap:40px;}
     .cmpnt-qck00__content-type[data-type='imgText2'] div {width:calc(50% - 20px)}
     .cmpnt-qck00__content-type[data-type='imgText2'] + .cmpnt-qck00__content-type[data-type='imgText2'] {margin-top:100px}
     .cmpnt-qck00__title {font-size:26px;}
@@ -90,14 +90,15 @@
     .cmpnt-qck00__cautions + .cmpnt-qck00__button-wrap {margin-top:60px}
     .cmpnt-qck00__button-wrap {margin-top:30px}
     
-    .cmpnt-qck00__relation {padding:60px;}
+    .cmpnt-qck00__relation {padding:60px 110px;}
     .cmpnt-qck00__relation-title span {-webkit-line-clamp:2;min-height:48px;max-height:48px}
-    .cmpnt-qck00__relation h3 {font-size:20px;}
+    .cmpnt-qck00__relation h3 {font-size:26px;}
     .cmpnt-qck00__relation h3 + .cmpnt-qck00__swiper {margin-top:22px;}
+    .cmpnt-qck00__list .swiper-slide {width:326px;}
 }
 
 @media screen and (max-width:1024px){
-    .cmpnt-qck00__head h2 {font-size:28px;}
+    .cmpnt-qck00__head h2 {font-size:30px;}
     .cmpnt-qck00__title {font-size:20px;}
     .cmpnt-qck00__desc {font-size:16px;}
 
@@ -118,10 +119,9 @@
     .cmpnt-qck00__button-wrap {margin-top:30px}
     .cmpnt-qck00__cautions + .cmpnt-qck00__button-wrap {margin-top:70px}
 
-    .cmpnt-qck00__relation h3 {font-size:26px;}
+    .cmpnt-qck00__relation h3 {font-size:20px;}
     .cmpnt-qck00__relation h3 + .cmpnt-qck00__swiper {margin-top:20px;}
     .cmpnt-qck00__relation-title span {-webkit-line-clamp:3;min-height:67px;max-height:67px}
-    
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){

@@ -14,7 +14,7 @@
 .cmpnt-lst03__item {position:relative;background-color: #f8f8f8;box-sizing:border-box;}
 .cmpnt-lst03__item:hover {background-color:rgba(5, 20, 31, 0.8);}
 .cmpnt-lst03__item a {text-decoration:none;}
-.cmpnt-lst03__item a:hover {color:#fff;}
+.cmpnt-lst03__item a:hover {color:#fff !important;}
 .cmpnt-lst03__title span {display:inline-block;font-family:'kiaB';line-height:150%;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;box-sizing:border-box;}
 .cmpnt-lst03__title:hover {color:#fff}
 
