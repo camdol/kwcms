@@ -4,7 +4,9 @@
 (function () {
     window.addEventListener("DOMContentLoaded", () => {
         if(window.innerWidth > 767 ) {
-            setTitleHeight();
+            setTimeout(() => {
+                setTitleHeight();
+            }, 300);
         }
     });
 

@@ -4,108 +4,59 @@
 //#Component : MAP00
 (function () {
     window.addEventListener("DOMContentLoaded", categoryToggle);
+    window.addEventListener("DOMContentLoaded", initSearch);
 
+    //catetory toggle
     function categoryToggle() {
         const btn = document.querySelector('.cmpnt-map00-category');
+        const charignTypeEl = document.querySelector('.cmpnt-map00__current-type');
         btn.addEventListener('click', (e) => {
             const target = e.target;
-            if(target.classList.contains('is-selected')) {
+            const type = target.parentElement.getAttribute('data-type');
+            const typeTxt = target.parentElement.innerText;
+            if(target.parentElement.classList.contains('is-selected')) {
                 return;
             } else {
-                if(target.parentElement.querySelector('.is-selected')) {
-                    target.parentElement.querySelector('.is-selected').classList.remove('is-selected');
+                if(target.closest('.cmpnt-map00-category').querySelector('.is-selected')) {
+                    target.closest('.cmpnt-map00-category').querySelector('.is-selected').classList.remove('is-selected');
                 }
-                target.classList.add('is-selected');
+                target.parentElement.classList.add('is-selected');
             }
+            charignTypeEl.dataset.type = type;
+            charignTypeEl.innerText = typeTxt;
         });
     }
 
-  // 정보 박스 팝업 
-    $(document).ready(function() {
-
-        mapPopOpen();
-        mapPopClose();
-
-        // 박스 스크롤
-		let lastScroll = 0;
-        $(window).on('scroll', function(){
-            let scrollTop = $(this).scrollTop();
-            if(scrollTop > lastScroll) {
-                //down
-                $('.cmpnt-map00__detail').addClass('fixed');
-
-            } else {
-                // up
-                $('.cmpnt-map00__detail').removeClass('fixed');
-
+    //검수용(개발적용 제외)
+    function initSearch() {
+        document.querySelector('#search_keyword').addEventListener('keyup', function() {
+            if (event.which === 13) {
+                this.parentElement.nextElementSibling.style.display = 'block';
             }
-            lastScroll = scrollTop;
-        });
-
-		//리사이즈
-        $(window).resize(function() {
-			mapPopOpen();
-        	mapPopClose();
-            $('#header').css('z-index','1004');
-            $('.cmpnt-map00__chargingselect').show(); 
-            $('.cmpnt-map00__detail').hide();
-		});
-
-
-    });
-
-    
-
-    //닫기
-    function mapPopClose() {
-        var viewportWidth = $(window).width();
-
-            // 닫기
-            $('.cmpnt-map00__box_close').click(function (e) {
-                e.preventDefault();
-                $(this).parents().find('.cmpnt-map00__detail').hide(); 
-                $('.cmpnt-map00').removeClass('fixed');    
-                $('#header').css('z-index','1004');
-                $('.cmpnt-map00__chargingselect').show();  
-                
+            this.nextElementSibling.addEventListener('click', function() {
+                this.parentElement.nextElementSibling.style.display = 'none';
             });
-
+        });
     }
-
-
-
-
-
-
+    
 })();
 
 
-//열기
-function openMapPopup () {
-    var viewportWidth = $(window).width();
-
-    if (viewportWidth <= 1024) {
-
-        //열기
-        $('.open_box').click(function () {
-            $('#header').css('z-index','-1');
-            $(this).parents().find('.cmpnt-map00__detail').show(); 
-            $('.cmpnt-map00').addClass('fixed');  
-            $('.cmpnt-map00__chargingselect').hide();    
-        });    
-        
+// popup open
+function openMapPopup() {
+    const targetPop = document.querySelector('.cmpnt-map00__popup');
+    if(window.innerWidth > 1025 ) {
+        targetPop.classList.add('is-open');
     } else {
-
-        $('.cmpnt-map00').removeClass('fixed');
-        
-        //열기
-        $('.open_box').click(function () {
-            $(this).parents().find('.cmpnt-map00__detail').show(); 
-            $('.cmpnt-map00').removeClass('fixed'); 
-            $('#header').css('z-index','1004');
-            $('.cmpnt-map00__chargingselect').show();  
-        });   
-
-
+        document.querySelector('body').classList.add('has-popup');
+        enableScrollLock();
+        targetPop.classList.add('is-open');
     }
+}
+
+// popup open
+function closeMapPopup() {
+    document.querySelector('body').classList.remove('has-popup');
+    document.querySelector('.cmpnt-map00__popup').classList.remove('is-open');
+    disableScrollLock();
 }

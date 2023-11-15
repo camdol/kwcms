@@ -1,10 +1,10 @@
 @charset "utf-8";
 
 .cmpnt-kyv02 {width:100%;padding:72px 0;background-color:#fff;box-sizing:border-box;}
-.cmpnt-kyv02__title {width:1280px;margin:0 auto;font-family:'kiaM';font-size:52px;line-height:130%;box-sizing:border-box;}
+.cmpnt-kyv02__title {margin:0 auto;font-family:'kiaM';line-height:130%;box-sizing:border-box;}
 
-@media (max-width:1280px) {
-    
+@media screen and (min-width: 1025px) and (max-width: 20000px) {
+    .cmpnt-kyv02__title {width:1280px;font-size:52px;}    
 }
 
 @media (max-width:1024px) {

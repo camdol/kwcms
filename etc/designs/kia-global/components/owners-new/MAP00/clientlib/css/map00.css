@@ -1,43 +1,49 @@
 @charset "utf-8";
 
+/* map00 */
 .cmpnt-map00 {width:100%;box-sizing:border-box;}
 .cmpnt-map00__wrap {position:relative;width:100%;max-width:1920px;height: calc(100vh - 112px);margin:auto;box-sizing:border-box;}
 .cmpnt-map00__topmenu {display:flex;justify-content: space-between;padding:12px;background:#f8f8f8;}
 
-.cmpnt-map00__search{position:relative;width:100%;max-width:480px;text-align:center;box-sizing:border-box;}
+.cmpnt-map00__search {position:relative;width:100%;max-width:480px;text-align:center;box-sizing:border-box;}
 .cmpnt-map00__search .cmpnt-src-input {width:100%}
 .cmpnt-map00__search .no-result {display:none;position:absolute;bottom:-44px;left:0;width:100%;padding:11px 60px;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);background:#fff;z-index:50;box-sizing:border-box;}
 .cmpnt-map00__search .no-result span {font-size:14px;line-height:1.5;color: rgba(5, 20, 31, 0.40);}
 
-.cmpnt-map00-category {display:inline-flex;width:100%;align-items: center;justify-content: flex-end;gap:8px;}
-.cmpnt-map00-category__button {position:relative;border-radius:30px;background-color:#fff;border:1px solid rgba(5, 20, 31, 0.2);font-size:14px;box-sizing:border-box;}
+.cmpnt-map00-category {display:inline-flex;width:100%;align-items: center;justify-content:flex-end;gap:8px;}
+.cmpnt-map00-category__button {display:flex;height:42px;padding:0 24px;align-items:center;border-radius: 30px;font-size:14px;line-height:1.5;border:1px solid rgba(5, 20, 31, 0.20);background:#fff;}
 .cmpnt-map00-category__button:hover {border-color:rgba(5, 20, 31, 1);}
-.cmpnt-map00-category__button.is-selected {background-color:#05141F;color:#fff;font-family:'kiaB';}
-.cmpnt-map00-category__button::before {display:inline-block;content:"";width:20px;height:20px;background-size:100%;position:absolute;top:50%;left:24px;transform: translate(0, -50%);}
-[data-type='ac-dc']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ac-dc.svg') no-repeat 0 0;}
-[data-type='ultra']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ultra.svg') no-repeat 0 0;}
-[data-type='kia']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-kiacharging.svg') no-repeat 0 0;}
-[data-type='ac-dc'].is-selected::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ac-dc-white.svg') no-repeat 0 0;background-size:20px 20px;}
-[data-type='ultra'].is-selected::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ultra-white.svg') no-repeat 0 0;background-size:20px 20px;}
-[data-type='kia'].is-selected::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-kiacharging-white.svg') no-repeat 0 0;background-size:20px 20px;}
+.cmpnt-map00-category__button.is-selected {background-color:#05141F;font-family:'kiaB';color:#fff;}
+.cmpnt-map00-category__button span {position:relative;padding-left:25px;}
+.cmpnt-map00-category__button span::before {display:block;content:"";width:20px;height:20px;position:absolute;top:0;left:0;}
+[data-type='ac-dc'] span::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ac-dc.svg') no-repeat 0 0;}
+[data-type='ultra'] span::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ultra.svg') no-repeat 0 0;}
+[data-type='kia'] span::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-kiacharging.svg') no-repeat 0 0;}
+[data-type='ac-dc'].is-selected span::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ac-dc-white.svg') no-repeat 0 0;background-size:20px 20px;}
+[data-type='ultra'].is-selected span::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ultra-white.svg') no-repeat 0 0;background-size:20px 20px;}
+[data-type='kia'].is-selected span::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-kiacharging-white.svg') no-repeat 0 0;background-size:20px 20px;}
 
 .cmpnt-map00__maparea {overflow:hidden;width:100%;height: calc(100% - 70px);background:#fff;box-sizing:border-box;}
-.cmpnt-map00__detail {position:absolute;top:100px;left:30px;width:100%;max-width:375px;padding:24px 20px 40px 20px;background:#fff;box-sizing:border-box;border:1px solid #eee;}
+.cmpnt-map00__maparea-inner {width:100%;height:100%;background:#eee;}
+.cmpnt-map00__maparea img {width:100%;height:100%;object-fit: cover;}
+.cmpnt-map00__maparea iframe {width:100%;height:100%;}
+
+.cmpnt-map00__popup {display:none;width:100%;padding:24px 20px 40px 20px;background:#fff;box-sizing:border-box;border:1px solid #eee;}
+.cmpnt-map00__popup.is-open {display:block}
 .cmpnt-map00__current {display:flex;gap:10px;padding:10px 20px 12px 0;font-family:"kiaB";font-size:14px;line-height:150%;}
-.cmpnt-map00__current-text {display:flex;align-items: center;position:relative;padding-left:26px;margin-right:6px;}
-.cmpnt-map00__current-text::before {display:block;content:"";position:absolute;top:0;left:0;width:20px;height:20px;}
-.cmpnt-map00__current-text[data-type='ac-dc']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ac-dc.svg') no-repeat 0 0;}
-.cmpnt-map00__current-text[data-type='ultra']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ultra.svg') no-repeat 0 0;}
-.cmpnt-map00__current-text[data-type='kia']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-kia.svg') no-repeat 0 0;}
+.cmpnt-map00__current-type {display:flex;align-items: center;position:relative;padding-left:26px;margin-right:6px;}
+.cmpnt-map00__current-type::before {display:block;content:"";position:absolute;top:0;left:0;width:20px;height:20px;}
+.cmpnt-map00__current-type[data-type='ac-dc']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ac-dc.svg') no-repeat 0 0;}
+.cmpnt-map00__current-type[data-type='ultra']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-ultra.svg') no-repeat 0 0;}
+.cmpnt-map00__current-type[data-type='kia']::before {background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-kiacharging.svg') no-repeat 0 0;}
 .cmpnt-map00__current-available {position:relative;padding-left:15px;display:flex;align-items:center;color:#5d7b2b;padding-left:10px;}
 .cmpnt-map00__current-available::before {display:block;content:"";position:absolute;top:50%;left:0;width:6px;height:6px;background:#5d7b2b;border-radius:100%;transform:translateY(-50%);}
-
 .cmpnt-map00__detail-content {padding:30px 20px 30px 0;border-top:1px solid rgba(5, 20, 31, 0.2);border-bottom:1px solid rgba(5, 20, 31, 0.2);}
 .cmpnt-map00__detail-hours {display:inline-flex;padding:4px 12px;align-items: center;font-size:14px;line-height:1.5;border-radius:100px;background:#5D7D2B;color:#fff;}
-.cmpnt-map00__location {padding:16px 0 30px;font-size:26px;font-family:"kiaB";line-height:1.4;color:#05141f;}
-.cmpnt-map00__electic-info {font-size:14px;line-height:1.5;color:#05141f;}
+.cmpnt-map00__location {font-family:"kiaB";line-height:140%;color:#05141f;}
+.cmpnt-map00__electic-info {font-size:14px;line-height:150%;color:#05141f;}
 .cmpnt-map00__addressbox {width:100%;padding:30px 20px 30px 0;}
-.cmpnt-map00__address {font-size:14px;color:rgba(5, 20, 31, 0.80);line-height:150%;}
+.cmpnt-map00__address {font-size:14px;line-height:150%;color:rgba(5, 20, 31, 0.8);}
 .cmpnt-map00__direction {display:block;font-family:"kiaB";font-size:13px;line-height:150%;}
 .cmpnt-map00__direction span {position:relative;padding-right:18px;display:inline-block}
 .cmpnt-map00__direction span::before {content:"";display:block;position:absolute;top:1px;right:0;width:14px;height:14px;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg') no-repeat 0 0;}
@@ -48,30 +54,33 @@
 .cmpnt-map00__button--close{position:absolute;top:16px;right:16px;z-index:10;width:30px;height:30px;border-radius:50%;background:rgba(5, 20, 31, 0.20) url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close-white.svg') no-repeat 50% 50%;background-size:16px;font-size:0}
 .cmpnt-map00__button--close.is-hide {display:block;text-indent:-9999999999px;}
 
-.cmpnt-map00__maparea-inner {width:100%;height:100%;background:#eee;}
-.cmpnt-map00__maparea img {width:100%;height:100%;object-fit: cover;}
-.cmpnt-map00__maparea iframe {width:100%;height:100%;}
-
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-  .cmpnt-map00-category__button {padding:0 24px 0 49px;height:42px;}
+  [data-type='ac-dc'] span {width:128px}
+  [data-type='ultra'] span {width:136px}
+  [data-type='kia'] span {width:92px}
+  .cmpnt-map00__popup {position:absolute;top:100px;left:30px;width:100%;max-width:375px;}
+  .cmpnt-map00__location {padding:16px 0 30px;font-size:26px;}
 }
 
 @media screen and (max-width:1024px){
-.cmpnt-map00.fixed {position:fixed;top:0;left:0;width:100%;height:100%;}
-.cmpnt-map00.fixed .cmpnt-map00__inner {height: 100vh;}
-.cmpnt-map00__inner {height: calc(100vh - 60px);}
-.cmpnt-map00__detail {position:absolute;top:auto;left:0;bottom:0;max-width:100%;}
-.cmpnt-map00__detail.fixed {top:73px;transform: translateY(0);}
-.cmpnt-map00__topmenu {flex-direction: column;padding:0;}
-.cmpnt-map00__chargingselect .btn_round {height:36px;padding: 0px 16px;align-items: center;gap: 5px;}
-.cmpnt-map00__chargingselect {justify-content: flex-start;gap: 6px;white-space: nowrap;padding: 0 16px 16px 16px;overflow-x: auto;box-sizing: border-box;}
-.cmpnt-map00__maparea {height:calc(100% - 127px);}
-.cmpnt-map00__search {max-width:100%;padding:16px 16px 12px 16px;}
-.cmpnt-map00__topmenu.fixed {position:fixed;top:0;left:0;width:100%;z-index:200;}
-.cmpnt-map00__detail-content {padding:24px 20px 24px 0;}
-.cmpnt-map00__location {font-size:20px;padding:12px 0 24px;}
-.cmpnt-map00__addressbox {padding: 24px 20px 24px 0;box-sizing: border-box;}
-.cmpnt-map00__search .cmpnt-src-input>input {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;word-break: break-all;}
+  .has-popup #header {z-index:-1}
+  .has-popup .cmpnt-map00 {position:fixed;top:0;left:0;width:100%;height:100%;}
+  .has-popup .cmpnt-map00__maparea {height: calc(100vh - 60px);}
+  .has-popup .cmpnt-map00__popup {position:fixed;left:0;bottom:0;min-height:calc(100vh * 0.45);}
+  .has-popup .cmpnt-map00-category {display:none}
+  .cmpnt-map00__topmenu {flex-direction:column;padding:0;}
+  .cmpnt-map00-category {justify-content: flex-start;gap:6px;white-space:nowrap;padding: 0 16px 16px 16px;overflow-x:auto;box-sizing:border-box;}
+  .cmpnt-map00-category__button {height:36px;padding: 0px 16px;align-items:center;gap:5px;}
+
+  .cmpnt-map00__maparea {height:calc(100% - 127px);}
+  .cmpnt-map00__search {max-width:100%;padding:16px 16px 12px 16px;}
+  .cmpnt-map00__topmenu.fixed {position:fixed;top:0;left:0;width:100%;z-index:200;}
+  
+  .cmpnt-map00__location {font-size:20px;padding:12px 0 24px;}
+  .cmpnt-map00__addressbox {padding: 24px 20px 24px 0;box-sizing: border-box;}
+  .cmpnt-map00__search .cmpnt-src-input > input {padding: 10px 45px 10px 59px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient: vertical;}
+
+  .cmpnt-map00__search .no-result {bottom:-31px;left:16px;width:calc(100% - 32px);}
 }
 
 

@@ -9,13 +9,13 @@
 .cmpnt-tbl03__detail li ul {margin:25px 0 25px 20px}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-    .cmpnt-tbl03__wrap {width:1280px;margin:0 auto;padding:90px 0 24px;gap:40px}
+    .cmpnt-tbl03__wrap {width:1280px;margin:0 auto;padding:90px 0;gap:40px}
     .cmpnt-tbl03__title {width:400px;font-size:26px;}
     .cmpnt-tbl03__detail {width:calc(100% - 440px);font-size:17px;padding:24px 0;}
 }
 
 @media screen and (max-width:1024px){
-    .cmpnt-tbl03__wrap {padding:60px 0 16px;flex-direction:column;gap:24px;}
+    .cmpnt-tbl03__wrap {padding:60px 0;flex-direction:column;gap:24px;}
     .cmpnt-tbl03__title {font-size:24px;}
     .cmpnt-tbl03__detail {font-size:16px;padding:16px 0;}
 }

@@ -1298,59 +1298,64 @@
 
                             <!-- charging type -->
                             <div class="cmpnt-map00-category">
-                                <button type="button" class="cmpnt-map00-category__button is-selected" data-type="ac-dc">AC &amp; DC Charging</button><!-- data-type : ac-dc, ultra, kia--><!-- 선택시 is-selected -->
-                                <button type="button" class="cmpnt-map00-category__button" data-type="ultra">Ultra Fast Charging</button>
-                                <button type="button" class="cmpnt-map00-category__button" data-type="kia">Kia Charging</button>
+                                <button type="button" class="cmpnt-map00-category__button is-selected" data-type="ac-dc"><span>AC &amp; DC Charging</span></button><!-- data-type : ac-dc, ultra, kia--><!-- 선택시 is-selected -->
+                                <button type="button" class="cmpnt-map00-category__button" data-type="ultra"><span>Ultra Fast Charging</span></button>
+                                <button type="button" class="cmpnt-map00-category__button" data-type="kia"><span>Kia Charging</span></button>
                             </div>
                             <!-- //charging type -->
                         </div>
-
+                        
+                        <!-- Map area -->
                         <div class="cmpnt-map00__maparea">
                             <div class="cmpnt-map00__maparea-inner">
-                                <button type="button" class="open_box">charging</button>
+                                <button type="button" onclick="openMapPopup()" style="position:absolute;left:50%;top:50%;font-size:20px;">charging location</button>
                             </div>
                         </div>
+                        <!-- //Map area -->
 
-                        <!-- data -->
-                        <div class="cmpnt-map00__detail" style="display:none;">
-                            <div class="cmpnt-map00__detail-wrap">
-                                <div class="cmpnt-map00__current">
-                                    <!-- charging type-->
-                                    <div class="cmpnt-map00__current-text" data-type="ac-dc">AC &amp; DC Charging</div><!-- data-type : ac-dc, ultra, kia-->
-                                    <!-- //charging type-->
-                                    <!-- status-->
-                                    <div class="cmpnt-map00__current-available">2 Available</div>
-                                    <!-- //status-->
-                                </div>
-                                <div class="cmpnt-map00__detail-content">
-                                    <!-- service hours -->
-                                    <div class="cmpnt-map00__detail-hours">
-                                        Available 24 / 7
-                                    </div>
-                                    <!-- //service hours -->
-                                    <!-- station name -->
-                                    <div class="cmpnt-map00__location"><span>Kia Charging Station</span></div>
-                                    <!-- //station name -->
-                                    <!-- chargin info -->
-                                    <div class="cmpnt-map00__electic-info"><span>7kW AC</span></div>
-                                    <!-- //chargin info -->
-                                </div>
-                                <div class="cmpnt-map00__addressbox">
-                                    <!-- address -->
-                                    <div class="cmpnt-map00__address">
-                                        161 Abc Highway, Abcdef, ABC 1234
-                                    </div>
-                                    <!-- //address -->
-                                    <a href="#" class="cmpnt-map00__direction"><span>Driving Directions</span></a>
-
-                                    <!-- phone number -->
-                                    <div class="cmpnt-map00__phonenumber">(000) 000-0000</div>
-                                    <!-- //phone number -->
-                                </div>
-                                <button type="button" class="cmpnt-map00__button--close">close</button>
+                        <!-- popup : data -->
+                        <div class="cmpnt-map00__popup">
+                            <div class="cmpnt-map00__current">
+                                <!-- charging type-->
+                                <div class="cmpnt-map00__current-type" data-type="ac-dc">AC &amp; DC Charging</div><!-- data-type : ac-dc, ultra, kia-->
+                                <!--
+                                    <div class="cmpnt-map00__current-type" data-type="ac-dc">AC &amp; DC Charging</div>
+                                    <div class="cmpnt-map00__current-type" data-type="ultra">Ultra Fast Charging</div>
+                                    <div class="cmpnt-map00__current-type" data-type="kia">Kia Charging</div>
+                                -->
+                                <!-- //charging type-->
+                                <!-- status-->
+                                <div class="cmpnt-map00__current-available">2 Available</div>
+                                <!-- //status-->
                             </div>
+                            <div class="cmpnt-map00__detail-content">
+                                <!-- service hours -->
+                                <div class="cmpnt-map00__detail-hours">
+                                    Available 24 / 7
+                                </div>
+                                <!-- //service hours -->
+                                <!-- station name -->
+                                <div class="cmpnt-map00__location"><span>Kia Charging Station</span></div>
+                                <!-- //station name -->
+                                <!-- chargin info -->
+                                <div class="cmpnt-map00__electic-info"><span>7kW AC</span></div>
+                                <!-- //chargin info -->
+                            </div>
+                            <div class="cmpnt-map00__addressbox">
+                                <!-- address -->
+                                <div class="cmpnt-map00__address">
+                                    161 Abc Highway, Abcdef, ABC 1234
+                                </div>
+                                <!-- //address -->
+                                <a href="#" class="cmpnt-map00__direction"><span>Driving Directions</span></a>
+
+                                <!-- phone number -->
+                                <div class="cmpnt-map00__phonenumber">(000) 000-0000</div>
+                                <!-- //phone number -->
+                            </div>
+                            <button type="button" class="cmpnt-map00__button--close" onclick="closeMapPopup()">close</button>
                         </div>
-                        <!-- //data -->
+                        <!-- //popup : data -->
 
                     </div>
                 </div>

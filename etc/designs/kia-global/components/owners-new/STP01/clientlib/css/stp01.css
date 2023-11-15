@@ -17,7 +17,7 @@
 .cmpnt-step__carlistbox:first-child {border-top:none;}
 .cmpnt-step__contentstitle {font-size:20px;color:#05141f;font-family:'kiaB';line-height:1.5;}
 .cmpnt-step__carlist {width:100%;}
-.cmpnt-step__carlist: after {display:block;content:"";clear:both;}
+.cmpnt-step__carlist::after {display:block;content:"";clear:both;}
 .cmpnt-step__carlist .carlist__item {float:left;width:20%;max-width:224px;min-height:172px;margin-top:24px;margin-right:40px;box-sizing:border-box;} 
 .cmpnt-step__carlist .carlist__item:nth-child(5n) {margin-right:0;}
 .cmpnt-step__carlist .carlist__item a {display:block;max-width:224px;width:100%;margin: auto;text-decoration:none;}
@@ -64,7 +64,7 @@
 .cmpnt-step__mapbox {width:100%;padding:0 0 24px 0;box-sizing:border-box;}
 .cmpnt-src05__search .cmpnt-src-input {width:100%;margin:24px 0}
 .cmpnt-src-input__result {margin:18px 0;font-size:14px;line-height:150%;}
-.cmpnt-src-input__message {display:flex;align-items: center;justify-content: center;min-height:840px;font-family:'kiaB';font-size:36px;line-height:140%;}
+.cmpnt-src-input__message {display:flex;align-items: center;justify-content: center;font-family:'kiaB';font-size:36px;line-height:140%;}
 .cmpnt-src-input__message::before {content:'';margin-right:12px;width:48px;height:48px;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-message.svg');background-repeat:no-repeat;background-position:0 50%;background-size:100%;}
 
 .cmpnt-step__vihicle {display:flex;justify-content: flex-start;align-items: center;width:100%;padding-top:12px;box-sizing:border-box;}
@@ -96,7 +96,8 @@
 .cmpnt-step__map-inner {width:100%;height:0;padding-top:100%;}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-    .cmpnt-step__maparea {height:550px;}
+    .cmpnt-step__maparea,
+    .cmpnt-src-input__message {height:550px;}
     .cmpnt-step__dealerbox {overflow-y:auto;overflow-x:hidden;}
 }
 
@@ -116,8 +117,7 @@
     .cmpnt-step__Dealer-address {display:none}
     .cmpnt-src-input__result {margin:14px 0;}
     .cmpnt-src05__search .cmpnt-src-input {margin:18px 0}
-    .cmpnt-src-input__message {min-height:802px;font-size:24px;}
-    .cmpnt-src-input__message {flex-direction:column;gap:10px;}
+    .cmpnt-src-input__message {flex-direction:column;gap:10px;min-height:400px;font-size:24px;}
 }
 
 @media(max-width:767px){
@@ -138,6 +138,7 @@
     .cmpnt-step__button {text-align:center;}
     .cmpnt-step__button .square-button {width:100%;box-sizing:border-box;}
     .cmpnt-src05__search .cmpnt-src-input {margin:20px 0}
+    .cmpnt-src-input__message {font-size:18px;}
 } 
 /* step02 E */
 
@@ -201,8 +202,8 @@
 
 /* check box */
 .cmpnt-step__checkBox .privacy_checkBox {width:100%;}
-.cmpnt-step__checkBox .privacy_checkBox label p.ck_title {margin-left:36px;font-size:13px;line-height:1.5;}
-.cmpnt-step__checkBox .privacy_checkBox .form_chk .check_box2+label span {position:absolute;top:0;left:0;}
+.cmpnt-step__checkBox .privacy_checkBox p.ck_title {margin-left:36px;font-size:13px;line-height:1.5;}
+.cmpnt-step__checkBox .privacy_checkBox .form_chk .check_box2 + label span {position:absolute;top:0;left:0;font-size:0}
 .cmpnt-step__checkBox .form_chk .check_box2{display:none}
 .cmpnt-step__checkBox .form_chk .check_box2+label{cursor:pointer}
 .cmpnt-step__checkBox .form_chk .check_box2+label span{display:inline-block;width:24px;height:24px;margin-right:12px;vertical-align:middle;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/checkbox_off.svg') 50% 50%;}
