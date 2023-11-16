@@ -48,15 +48,21 @@ function openMapPopup() {
     if(window.innerWidth > 1025 ) {
         targetPop.classList.add('is-open');
     } else {
-        document.querySelector('body').classList.add('has-popup');
-        enableScrollLock();
+        const { body } = document;
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        body.style.overflow = 'hidden';
+        body.classList.add('has-popup');
         targetPop.classList.add('is-open');
     }
 }
 
 // popup open
 function closeMapPopup() {
-    document.querySelector('body').classList.remove('has-popup');
+    const { body } = document;
+    body.style.removeProperty('overflow');
+    body.classList.remove('has-popup');
     document.querySelector('.cmpnt-map00__popup').classList.remove('is-open');
-    disableScrollLock();
 }

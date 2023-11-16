@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* ppp04 */
+.cmpnt-ppp04 .cmpnt-popup__layer {max-width: 1280px;}
+.cmpnt-ppp04 .cmpnt-popup__wrap {position: relative;}
+.cmpnt-ppp04.cmpnt-popup {left: inherit; top: inherit; transform: none;}
+
+@media screen and (min-width: 1026px) and (max-width: 20000px) {
+  .cmpnt-ppp04 .cmpnt-popup__media {width: 1280px; height: 720px;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .cmpnt-ppp04 .cmpnt-popup__layer {left: 0; transform: translateY(-50%);}
+}
+
+@media screen and (min-width:0) and (max-width:767px){
+  .cmpnt-ppp04 .cmpnt-popup__layer {left: 0; transform: translateY(-50%);}
+}

@@ -1276,8 +1276,6 @@
             <script defer src="/etc/designs/kia-global/owners-new/js/swiper-bundle.min.js"></script>
             <!-- //Template common -->
 
-            <div style="width:100%;background-color:rgb(0, 0, 0);color:#fff;font-size:14px;padding:10px 0;text-align:center;margin:20px 0">MAP00</div>
-
             <!-- app00 -->
             <div class="map00 parbase section">
                 <link rel="stylesheet" href="/etc/designs/kia-global/components/owners-new/MAP00/clientlib/css/map00.css" type="text/css">
@@ -1292,7 +1290,7 @@
                                 <div class="cmpnt-src-input">
                                     <input type="text" id="search_keyword" placeholder="City name or Postcode" title="" >
                                 </div>
-                                <div class="no-result" style="display:none"><span>No results found</span></div> <!-- 검색결과 없을경우 display:block -->
+                                <div class="no-result" style="display:none"><span>No results found</span></div> <!-- 검색결과 없을 경우 display:block -->
                             </section>
                             <!-- //search  -->
 
@@ -1308,7 +1306,7 @@
                         <!-- Map area -->
                         <div class="cmpnt-map00__maparea">
                             <div class="cmpnt-map00__maparea-inner">
-                                <button type="button" onclick="openMapPopup()" style="position:absolute;left:50%;top:50%;font-size:20px;">charging location</button>
+                                <button type="button" onclick="openMapPopup()" style="position:absolute;left:50%;top:50%;font-size:20px;transform:translate(-50%,-50%);">charging location</button>
                             </div>
                         </div>
                         <!-- //Map area -->
@@ -1344,10 +1342,10 @@
                             <div class="cmpnt-map00__addressbox">
                                 <!-- address -->
                                 <div class="cmpnt-map00__address">
-                                    161 Abc Highway, Abcdef, ABC 1234
+                                    <p>161 Abc Highway, Abcdef, ABC 1234</p><!-- address -->
+                                    <p>06164</p><!-- Zip Code -->
                                 </div>
                                 <!-- //address -->
-                                <a href="#" class="cmpnt-map00__direction"><span>Driving Directions</span></a>
 
                                 <!-- phone number -->
                                 <div class="cmpnt-map00__phonenumber">(000) 000-0000</div>

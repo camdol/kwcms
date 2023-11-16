@@ -19,13 +19,15 @@ function initIMG04Swiper() {
 
 function setIMG04Swiper(el, i) {
   const targetSlide = el.querySelector('.cmpnt-img04__swiper');
+  const swiperBtn = el.querySelector('.swiper-button');
   const cmpntIMG04Swipers = [];
 
   cmpntIMG04Swipers[i] = new Swiper(targetSlide, swiperImg04Options);
+  swiperBtn.style.display = 'block';
 }
 
 function setIMG04Option(pagination, naviNext, naviPrev) {
-  swiperImg04Options = {
+  swiperImg01Options = {
     loop:true,
     slidesPerView: 1,
     spaceBetween: 24,
@@ -34,12 +36,12 @@ function setIMG04Option(pagination, naviNext, naviPrev) {
     observer : true,
     observeParents : true,
     pagination: {
-        el: pagination,
+        el: ".cmpnt-img04__swiper .swiper-pagination",
         clickable: true,
     },
     navigation: {
-      nextEl: naviNext,
-      prevEl: naviPrev,
+      nextEl: '.cmpnt-img04__swiper .swiper-button-next',
+      prevEl: '.cmpnt-img04__swiper .swiper-button-prev',
     },
     breakpoints: {
       1025: {
