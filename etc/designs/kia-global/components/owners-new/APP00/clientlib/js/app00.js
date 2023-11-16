@@ -1,52 +1,47 @@
 'use strict';
 
-$(document).ready(function(){
-    $("div.cmpnt-app00__guide").each(function() {        
-        var $L = $(this);
-        var rtl = $L.find('.cmpnt-app00__slide').attr('dir');
-        
-        $('.cmpnt-app00__slide').slick({ 
-            
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            infinite: false,
-            arrows: true,
-            dots: true, 
-            responsive: [
-                {
-                    breakpoint: 1023,
-                    settings: {
-                        slidesToShow: 2.8,
-                        slidesToScroll: 2,
-                        infinite: false,
-                        arrows: true,
-                        rtl: rtl ? true : false,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        rtl: rtl ? true : false,
-                        dots: true
-                    }
-                }
-                
-            ]                
-            
-        }).resize();        
-    });
-    
-    // slick slider
-    $(window).resize(function() {
-        $("div.cmpnt-app00__guide").find('.cmpnt-app00__slide').slick('resize');
-    });    
-});
+//#Component : IMG01
+let cmpntIMG01Swiper;
+let swiperImg01Options;
+(function () {
+  swiperImg01Options = {
+      loop:false,
+      slidesPerView: 1.5,
+      slidesPerGroup: 1,
+      spaceBetween: 24,
+      slidesOffsetAfter: 130,
+      initialSlide:0,
+      draggable: true,
+      pagination: {
+          el: ".cmpnt-img01__swiper .swiper-pagination",
+          clickable: true,
+      },
+      navigation: {
+        nextEl: '.cmpnt-img01__swiper .swiper-button-next',
+        prevEl: '.cmpnt-img01__swiper .swiper-button-prev',
+      },
+      observer: true,
+      observeParents: true, 
+      watchOverflow : true,
+      breakpoints: {
+        1025: {
+            slidesPerView: 'auto',
+            slidesPerGroup: 2,
+            spaceBetween: 40,
+            slidesOffsetAfter: 622,
+        },
+        768: {
+          loop:false,
+          slidesPerView: 2.5,
+          slidesPerGroup: 2,
+          spaceBetween: 24,
+          slidesOffsetAfter: 150,
+      },
+      },
+    };
+  
+})();
 
-    
-
-
-
-
+function initIMG01Swiper() {
+  cmpntIMG01Swiper = new Swiper(".cmpnt-img01__swiper", swiperImg01Options);
+}
