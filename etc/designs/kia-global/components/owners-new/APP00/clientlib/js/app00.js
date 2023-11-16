@@ -1,40 +1,37 @@
 'use strict';
 
-//#Component : IMG01
-let cmpntIMG01Swiper;
-let swiperImg01Options;
+//#Component : APP00
+let cmpntApp00Swiper;
+let swiperApp00Options;
 (function () {
-  swiperImg01Options = {
+  swiperApp00Options = {
       loop:false,
-      slidesPerView: 1.5,
-      slidesPerGroup: 1,
-      spaceBetween: 24,
-      slidesOffsetAfter: 130,
+      slidesPerView: 1,
+      centeredSlides: true,
       initialSlide:0,
       draggable: true,
       pagination: {
-          el: ".cmpnt-img01__swiper .swiper-pagination",
+          el: ".cmpnt-app00__swiper .swiper-pagination",
           clickable: true,
       },
       navigation: {
-        nextEl: '.cmpnt-img01__swiper .swiper-button-next',
-        prevEl: '.cmpnt-img01__swiper .swiper-button-prev',
+        nextEl: '.cmpnt-app00__swiper .swiper-button-next',
+        prevEl: '.cmpnt-app00__swiper .swiper-button-prev',
       },
       observer: true,
       observeParents: true, 
       watchOverflow : true,
       breakpoints: {
         1025: {
-            slidesPerView: 'auto',
-            slidesPerGroup: 2,
+            slidesPerView: 4,
             spaceBetween: 40,
-            slidesOffsetAfter: 622,
+            centeredSlides: false,
         },
         768: {
           loop:false,
           slidesPerView: 2.5,
-          slidesPerGroup: 2,
-          spaceBetween: 24,
+          spaceBetween: 28,
+          centeredSlides: false,
           slidesOffsetAfter: 150,
       },
       },
@@ -42,6 +39,8 @@ let swiperImg01Options;
   
 })();
 
-function initIMG01Swiper() {
-  cmpntIMG01Swiper = new Swiper(".cmpnt-img01__swiper", swiperImg01Options);
+
+
+function initAPP00Swiper() {
+  cmpntApp00Swiper = new Swiper(".cmpnt-app00__swiper", swiperApp00Options);
 }

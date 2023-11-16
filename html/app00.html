@@ -1287,13 +1287,18 @@
                 <!--@ publising -->
                 <!-- APP00 S -->
                 <div class="cmpnt-app00">
-                    <div class="cmpnt-app00__inner">
-                        <div class="cmpnt-app00__titleWrap">
-                            <div class="cmpnt-app00__titlebox">
-                                <div class="titlebox--inner">
-                                    <div class="cmpnt-app00__title"><span>Kia Owner's Manual APP</span></div>
-                                    <div class="cmpnt-app00__description"><span>What features does your Kia have?<br>With the Kia Owner's Manual app, you can easily access information about various vehicle functions and learn useful driving tips.</span></div>
+                    <div class="cmpnt-app00__wrap">
+                        <div class="cmpnt-app00__title-qr">
+                            <div class="cmpnt-app00__title-wrap">
+                                <!-- title -->
+                                <div class="cmpnt-app00__title">Kia Owner's Manual APP</div>
+                                <!-- //title -->
+                                <!-- sub title -->
+                                <div class="cmpnt-app00__sub-title">
+                                    What features does your Kia have?<br>
+                                    With the Kia Owner's Manual app, you can easily access information about various vehicle functions and learn useful driving tips.
                                 </div>
+                                <!-- //sub title -->
                             </div>    
 
                             <div class="cmpnt-app00__qrImage">
@@ -1301,56 +1306,64 @@
                             </div>
                         </div>
 
-                        <div class="cmpnt-app00__guide">
-                            <div class="cmpnt-app00__slide" <%=langFlag%>> <!-- AR 일경우 dir="rtl" 넣어줘야 작동함 -->
-
-                                <!-- @item -->
-                                <div class="cmpnt-app00__item">
-                                    <div class="item-image">
+                        <div class="swiper cmpnt-app00__swiper">
+                            <div class="swiper-wrapper">
+                                <!-- #list -->
+                                <div class="swiper-slide">
+                                    <div class="cmpnt-app00__image">
                                         <img src="/content/dam/kwcms/gt/en/images/owners-new/owner-resources/manuals-and-guides/manuals-guides-symbol-scanner.jpg" alt="">
                                     </div>
-                                    <div class="item_title">
-                                        <span>Symbol Scanner</span>
+                                    <div class="cmpnt-app00__image-desc">
+                                        Symbol Scanner
                                     </div>
                                 </div>
-                                <!-- @item -->
-
-                                <div class="cmpnt-app00__item">
-                                    <div class="item-image">
+                                <!-- //#list -->
+                                <div class="swiper-slide">
+                                    <div class="cmpnt-app00__image">
                                         <img src="/content/dam/kwcms/gt/en/images/owners-new/owner-resources/manuals-and-guides/manuals-guides-symbol-index.jpg" alt="">
                                     </div>
-                                    <div class="item_title">
-                                        <span>Symbol Index</span>
+                                    <div class="cmpnt-app00__image-desc">
+                                        Symbol Index
                                     </div>
                                 </div>
 
-                                <div class="cmpnt-app00__item">
-                                    <div class="item-image">
+                                <div class="swiper-slide">
+                                    <div class="cmpnt-app00__image">
                                         <img src="/content/dam/kwcms/gt/en/images/owners-new/owner-resources/manuals-and-guides/manuals-guides-warning-indicator-index.jpg" alt="">
                                     </div>
-                                    <div class="item_title">
-                                        <span>Warning Indicator Index</span>
+                                    <div class="cmpnt-app00__image-desc">
+                                        Warning Indicator Index
                                     </div>
                                 </div>
 
-                                <div class="cmpnt-app00__item">
-                                    <div class="item-image">
+                                <div class="swiper-slide">
+                                    <div class="cmpnt-app00__image">
                                         <img src="/content/dam/kwcms/gt/en/images/owners-new/owner-resources/manuals-and-guides/manuals-guides-digital-owners-manual.jpg" alt="">
                                     </div>
-                                    <div class="item_title">
-                                        <span>Digital Owner's Manual</span>
+                                    <div class="cmpnt-app00__image-desc">
+                                        Digital Owner's Manual
                                     </div>
                                 </div>
-
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button">
+                                <div class="swiper-button-next"><span>Next</span></div>
+                                <div class="swiper-button-prev"><span>Prev</span></div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <!-- APP00 E -->
                 <!--@ //publising -->
             </div>
             <!-- //app00 -->
+
+            <script defer>
+                // 검수용 
+                setTimeout(() => {
+                    initAPP00Swiper();    
+                }, 100);
+            </script>
         </div>
     </div>
 </div>
