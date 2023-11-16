@@ -53,17 +53,17 @@
   
   .cmpnt-app00__wrap .swiper-pagination-bullet {width:24px;}
   .cmpnt-app00__wrap .swiper-button-prev,
-  .cmpnt-app00__wrap .swiper-button-next {top:calc(50% - 22px);width:44px;height:44px;background-size:20px;}
+  .cmpnt-app00__wrap .swiper-button-next {top:calc(50% - 44px);width:44px;height:44px;background-size:20px;}
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
   .cmpnt-app00__title-qr {padding:0 38px;}
   .cmpnt-app00__title-qr {gap:28px}
   .cmpnt-app00__title-qr > div {width:calc(50% - 14px)}
-  .swiper.cmpnt-app00__swiper {margin-left:18px;padding-bottom:62px;padding-left:12px}
+  .swiper.cmpnt-app00__swiper {margin-left:12px;padding-bottom:62px;padding-left:22px}
   .cmpnt-app00__title-qr + .cmpnt-app00__swiper {margin-top:40px}
   .cmpnt-app00__image-desc {text-align:left;}
-  .cmpnt-app00__wrap .swiper-button-prev {left:2px}
+  .cmpnt-app00__wrap .swiper-button-prev {left:4px}
   .cmpnt-app00__wrap .swiper-button-next {right:10px;}
   .cmpnt-app00__wrap .swiper-pagination {height:60px;}
 }
