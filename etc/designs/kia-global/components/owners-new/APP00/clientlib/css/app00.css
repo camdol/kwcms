@@ -8,7 +8,9 @@
 .cmpnt-app00__title {font-family:"kiaB";font-size:36px;line-height:140%;}
 .cmpnt-app00__sub-title {line-height:150%;color: rgba(5,20,31,.8);}
 
-.cmpnt-app00__qrImage img {width:100%;height:auto;object-fit:cover;}
+.cmpnt-app00__qrImage {display:flex;box-sizing:border-box;}
+.cmpnt-app00__qrImage a {width:50%;display:inline-flex;justify-content:center}
+
 .cmpnt-app00__image img {width:100%;height:auto}
 .cmpnt-app00__image-desc {line-height:150%;}
 .cmpnt-app00__image + .cmpnt-app00__image-desc {margin-top:24px}
@@ -37,6 +39,8 @@
   .cmpnt-app00__wrap {max-width:1280px;margin:auto;}
   .cmpnt-app00__title-qr {gap:40px}
   .cmpnt-app00__title-qr > div {width:calc(50% - 20px)}
+  .cmpnt-app00__qrImage {padding:0 60px}
+  .cmpnt-app00__qrImage a {padding:62px 42px 46px}
   .cmpnt-app00__title-wrap {gap:20px}
   .cmpnt-app00__title-qr + .cmpnt-app00__swiper {margin-top:48px}
   .cmpnt-app00__title {font-size:36px;}
@@ -50,16 +54,18 @@
   .cmpnt-app00__title {font-size:24px;}
   .cmpnt-app00__sub-title {font-size:16px;}
   .cmpnt-app00__image-desc {font-size:20px;}
-  
+  .cmpnt-app00__qrImage img {width:100%;height:auto}
   .cmpnt-app00__wrap .swiper-pagination-bullet {width:24px;}
   .cmpnt-app00__wrap .swiper-button-prev,
-  .cmpnt-app00__wrap .swiper-button-next {top:calc(50% - 22px);width:44px;height:44px;background-size:20px;}
+  .cmpnt-app00__wrap .swiper-button-next {top:calc(50% - 44px);width:44px;height:44px;background-size:20px;}
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
   .cmpnt-app00__title-qr {padding:0 38px;}
   .cmpnt-app00__title-qr {gap:28px}
   .cmpnt-app00__title-qr > div {width:calc(50% - 14px)}
+  .cmpnt-app00__qrImage {padding:0 34px}
+  .cmpnt-app00__qrImage a {padding:32px 21px 24px}
   .swiper.cmpnt-app00__swiper {margin-left:18px;padding-bottom:62px;padding-left:12px}
   .cmpnt-app00__title-qr + .cmpnt-app00__swiper {margin-top:40px}
   .cmpnt-app00__image-desc {text-align:left;}
@@ -71,6 +77,8 @@
 @media all and (max-width:767px){
   .cmpnt-app00__title-qr {padding:0 20px;flex-direction:column;}
   .cmpnt-app00__title-qr {gap:0;}
+  .cmpnt-app00__qrImage {padding:0 23px}
+  .cmpnt-app00__qrImage a {padding:32px 22px 24px}
   .cmpnt-app00__title-qr + .cmpnt-app00__swiper {margin-top:36px}
   .swiper.cmpnt-app00__swiper {padding-bottom:40px}
   .cmpnt-app00__wrap .swiper-slide {text-align:center}
