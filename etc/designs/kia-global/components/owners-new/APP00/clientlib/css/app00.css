@@ -64,16 +64,12 @@
   .cmpnt-app00__title-qr {padding:0 38px;}
   .cmpnt-app00__title-qr {gap:28px}
   .cmpnt-app00__title-qr > div {width:calc(50% - 14px)}
-<<<<<<< HEAD
   .cmpnt-app00__qrImage {padding:0 34px}
   .cmpnt-app00__qrImage a {padding:32px 21px 24px}
   .swiper.cmpnt-app00__swiper {margin-left:18px;padding-bottom:62px;padding-left:12px}
-=======
-  .swiper.cmpnt-app00__swiper {margin-left:12px;padding-bottom:62px;padding-left:22px}
->>>>>>> edbea38e3578a8234e3a2632aa06f05dd0e63f3a
   .cmpnt-app00__title-qr + .cmpnt-app00__swiper {margin-top:40px}
   .cmpnt-app00__image-desc {text-align:left;}
-  .cmpnt-app00__wrap .swiper-button-prev {left:4px}
+  .cmpnt-app00__wrap .swiper-button-prev {left:2px}
   .cmpnt-app00__wrap .swiper-button-next {right:10px;}
   .cmpnt-app00__wrap .swiper-pagination {height:60px;}
 }
