@@ -1,25 +1,7 @@
 'use strict';
 
-(function() {
-    //window.addEventListener("DOMContentLoaded", showToggleStp01Select);
-
-    // selectbox show/hide
-    const stp01SelectEls = document.querySelectorAll('.cmpnt-src-select');
+(function($) {
     
-    function showToggleStp01Select() {
-        Array.prototype.forEach.call(stp01SelectEls, function(el){
-            el.addEventListener('click', (e) => {
-                const target = e.target;
-                
-                if(target.classList.contains('cmpnt-src-select')) {
-                    if(target.closest('.form').querySelector('.is-show')) {
-						target.closest('form').querySelector('.is-show').classList.remove('is-show');
-						target.classList.add('is-show');
-					}
-                }
-            });
-        });
-    }
 
 })();
 

@@ -6,6 +6,10 @@
 
 .cmpnt-ppp01__content {padding: 54px 30px 54px 52px; background-color: #fff;}
 .cmpnt-ppp01__inner {display: flex; flex-direction: column; justify-content: space-between; padding-right: 10px;}
+.cmpnt-ppp01__inner::-webkit-scrollbar {width: 6px;background-color: #fff}
+.cmpnt-ppp01__inner::-webkit-scrollbar-thumb {background-color: #ccc !important;border-radius: 6px;background-clip: padding-box;border: 1px solid transparent}
+/* .cmpnt-ppp01__inner::-webkit-scrollbar-track {opacity: .2;border-radius: 6px;box-shadow: inset 0 0 2px #fff;} */
+
 .cmpnt-ppp01__product-name {font-family: kiaB; line-height: 140%; }
 .cmpnt-ppp01__product-number {font-size: 14px; line-height: 150%; opacity: 0.8;}
 .cmpnt-ppp01__product-desc {line-height: 150%; opacity: 0.8;}

@@ -32,11 +32,11 @@
 }
 
 @media screen and (min-width:0) and (max-width:767px){
-  .cmpnt-ppp03 .cmpnt-popup__layer {height: 100%; top: 0; left: 0; transform: none;}
+  .cmpnt-ppp03 .cmpnt-popup__layer {left: 0; transform: translateY(-50%);}
   .cmpnt-ppp03 .cmpnt-popup__wrap {padding: 60px 20px;}
   .cmpnt-ppp03__title {font-size: 20px; margin-bottom: 16px;}
   .cmpnt-ppp03__desc {font-size: 16px; margin-bottom: 30px;}
   .cmpnt-ppp03__form {margin-bottom: 10px;}
   .cmpnt-ppp03__button {width: 100%;}
-  .cmpnt-ppp03 .cmpnt-popup__btn--close {top: 20px; right: 20px;}
+  .cmpnt-ppp03 .cmpnt-popup__btn--close {top: 16px; right: 16px;}
 }

@@ -9,6 +9,8 @@
 .cmpnt-src01__item.on {background-color:rgba(5, 20, 31, 0.80);}
 .on .cmpnt-src01__model-name {color:#fff;}
 .cmpnt-src01__item {display:flex;justify-content:space-between;background-color:#fff;border:1px solid rgba(5, 20, 31, 0.20);}
+.cmpnt-src01__item:hover {text-decoration: none; background-color:rgba(5, 20, 31, 0.80);}
+.cmpnt-src01__item:hover .cmpnt-src01__model-name {color:#fff;}
 .cmpnt-src01__modle-img img{width:100%;height:auto}
 .cmpnt-src01__model-name {display:block;color:#000;word-break: break-all;}
 
