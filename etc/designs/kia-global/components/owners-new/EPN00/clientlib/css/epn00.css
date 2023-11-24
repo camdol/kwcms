@@ -7,7 +7,7 @@
 .cmpnt-epn00__list {border-bottom:1px solid #05141F;}
 .cmpnt-epn00__title {position:relative;border-top:1px solid #05141F;}
 .cmpnt-epn00__title button::after {content:'';position:absolute;z-index:5;width:24px;height:24px;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg');background-size:24px;;}
-.cmpnt-epn00__title button {width:100%;text-align:left;font-family:'kiaB';line-height:150%;box-sizing:border-box;}
+.cmpnt-epn00__title button {width:100%;text-align:left;font-family:'kiaB';line-height:150%;box-sizing:border-box;color:#05141F}
 .cmpnt-epn00__detail {display:none;transition: all 0.2s ease;border-top:1px solid rgba(5, 20, 31, 0.20);line-height:150%;color:rgba(5, 20, 31, 0.80);box-sizing:border-box;}
 .is-show .cmpnt-epn00__detail {display:block}
 
