@@ -51,7 +51,7 @@
 
 @media screen and (min-width:0) and (max-width:767px){
     .cmpnt-lst04__list.swiper {position:relative;overflow:visible}
-    .cmpnt-lst04__wrap {padding:0 20px 60px;}
+    .cmpnt-lst04__wrap {padding:0 20px 60px;overflow-x:hidden;}
     .cmpnt-lst04__wrap .swiper-button-prev,
     .cmpnt-lst04__wrap .swiper-button-next {width:44px;height:44px;background-size:20px;}
     .cmpnt-lst04__wrap .swiper-button-prev {left:-10px;top:25.5vw}

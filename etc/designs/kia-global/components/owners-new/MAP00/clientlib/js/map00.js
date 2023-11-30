@@ -12,29 +12,22 @@
         const charignTypeEl = document.querySelector('.cmpnt-map00__current-type');
         btn.addEventListener('click', (e) => {
             const target = e.target;
-            const type = target.parentElement.getAttribute('data-type');
-            const typeTxt = target.parentElement.innerText;
-            if(target.parentElement.classList.contains('is-selected')) {
-                return;
-            } else {
-                if(target.closest('.cmpnt-map00-category').querySelector('.is-selected')) {
-                    target.closest('.cmpnt-map00-category').querySelector('.is-selected').classList.remove('is-selected');
-                }
-                target.parentElement.classList.add('is-selected');
-            }
-            charignTypeEl.dataset.type = type;
-            charignTypeEl.innerText = typeTxt;
+            const targetEl = target.tagName === 'SPAN' ? target.parentElement : target;
+            targetEl.classList.toggle('is-selected');
         });
     }
 
-    //검수용(개발적용 제외)
     function initSearch() {
         document.querySelector('#search_keyword').addEventListener('keyup', function() {
+            //검수용
+            this.closest('.cmpnt-map00__search').querySelector('.src-autocomplete').style.display = 'block';
             if (event.which === 13) {
-                this.parentElement.nextElementSibling.style.display = 'block';
+                this.closest('.cmpnt-map00__search').querySelector('.no-result').style.display = 'block';
             }
+           
             this.nextElementSibling.addEventListener('click', function() {
-                this.parentElement.nextElementSibling.style.display = 'none';
+                this.closest('.cmpnt-map00__search').querySelector('.no-result').style.display = 'none';
+                this.closest('.cmpnt-map00__search').querySelector('.src-autocomplete').style.display = 'none';
             });
         });
     }

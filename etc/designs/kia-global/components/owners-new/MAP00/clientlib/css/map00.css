@@ -8,7 +8,10 @@
 .cmpnt-map00__search {position:relative;width:100%;max-width:480px;text-align:center;box-sizing:border-box;}
 .cmpnt-map00__search .cmpnt-src-input {width:100%}
 .cmpnt-map00__search .no-result {display:none;position:absolute;bottom:-44px;left:0;width:100%;padding:11px 60px;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);background:#fff;z-index:50;box-sizing:border-box;}
-.cmpnt-map00__search .no-result span {font-size:14px;line-height:1.5;color: rgba(5, 20, 31, 0.40);}
+.cmpnt-map00__search .no-result span {font-size:14px;line-height:150%;color: rgba(5, 20, 31, 0.40);}
+.cmpnt-map00__search .src-autocomplete  {display:none;position:absolute;top:44px;left:0;width:100%;padding:0 20px;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);background:#fff;z-index:50;box-sizing:border-box;}
+.cmpnt-map00__search .src-autocomplete li {position:relative;padding:11px 0 11px 39px;font-size:14px;line-height:150%;}
+.cmpnt-map00__search .src-autocomplete li::before {display:inline-block;content:"";width:24px;height:24px;position:absolute;left:0;top:50%;transform:translate(0, -50%);background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-location2.svg') no-repeat 0 0;background-size:24px 24px;}
 
 .cmpnt-map00-category {display:inline-flex;width:100%;align-items: center;justify-content:flex-end;gap:8px;}
 .cmpnt-map00-category__button {display:flex;height:42px;padding:0 24px;align-items:center;border-radius: 30px;font-size:14px;line-height:1.5;border:1px solid rgba(5, 20, 31, 0.20);background:#fff;}
@@ -44,11 +47,16 @@
 .cmpnt-map00__electic-info {font-size:14px;line-height:150%;color:#05141f;}
 .cmpnt-map00__addressbox {width:100%;padding:30px 20px 30px 0;}
 .cmpnt-map00__address {font-size:14px;line-height:150%;color:rgba(5, 20, 31, 0.8);}
+.cmpnt-map00__dirving-direction {position:relative;display:inline-block;font-family:'kiaB';font-size:13px;line-height:150%;padding-right:18px;text-decoration:none;}
+.cmpnt-map00__dirving-direction:hover {text-decoration:none;}
+.cmpnt-map00__dirving-direction::after {content:'';position:absolute;right:0;top:0;display:inline-block;width:14px;height:14px;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg') no-repeat 0 0;}
 .cmpnt-map00__phonenumber {position:relative;padding-left:18px;font-family:"kiaB";font-size:13px;line-height:150%;}
 .cmpnt-map00__phonenumber::before {display:block;content:"";position:absolute;top:1px;left:0;width:14px;height:14px;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone.svg') no-repeat 0 0;background-size:14px 14px;}
+.cmpnt-map00__address + .cmpnt-map00__dirving-direction {margin-top:12px;}
+.cmpnt-map00__dirving-direction + .cmpnt-map00__phonenumber {margin-top:36px;}
 .cmpnt-map00__address + .cmpnt-map00__phonenumber {margin-top:36px;}
 .cmpnt-map00__button--close{position:absolute;top:16px;right:16px;z-index:10;width:30px;height:30px;border-radius:50%;background:rgba(5, 20, 31, 0.20) url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close-white.svg') no-repeat 50% 50%;background-size:16px;font-size:0}
-.cmpnt-map00__button--close.is-hide {display:block;text-indent:-9999999999px;}
+.cmpnt-map00__button--close.is-hide {display:block;text-indent:-99999px;}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
   .cmpnt-map00__wrap {height: calc(100vh - 112px);}
@@ -81,6 +89,7 @@
   .cmpnt-map00__search .cmpnt-src-input > input:focus {padding:11px 45px 9px 59px;margin-left:-1px;margin-top:-1px;width:calc(100% + 2px);}
 
   .cmpnt-map00__search .no-result {bottom:-31px;left:16px;width:calc(100% - 32px);}
+  .cmpnt-map00__search .src-autocomplete {top:59px;left:16px;width:calc(100% - 32px);}
 }
 
 

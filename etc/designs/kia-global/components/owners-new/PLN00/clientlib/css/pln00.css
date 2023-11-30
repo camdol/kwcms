@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
   .plusHeight .cmpnt-pln00__title{min-height: 65px;}
-  .cmpnt-pln00__wrap{margin: 0 38px; padding-bottom: 120px;}
+  .cmpnt-pln00__wrap{margin: 0 38px; padding-bottom: 60px;}
   .cmpnt-pln00__list {flex-wrap: wrap; gap: 28px;}
   .cmpnt-pln00__item {width: calc(50% - 14px); padding: 24px;}
   .cmpnt-pln00__title {font-size: 20px; margin-bottom: 16px; padding-bottom: 8px;}
@@ -37,7 +37,7 @@
 }
 
 @media screen and (min-width:0) and (max-width:767px){
-  .cmpnt-pln00__wrap {margin: 0 20px; padding-bottom: 120px;}
+  .cmpnt-pln00__wrap {margin: 0 20px; padding-bottom: 60px;}
   .cmpnt-pln00__list {flex-direction: column; gap: 20px;}
   .cmpnt-pln00__item {padding: 24px;}
   .cmpnt-pln00__title {font-size: 20px; margin-bottom: 16px; padding-bottom: 8px;}

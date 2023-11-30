@@ -196,3 +196,20 @@ function closePopup() {
 	container.classList.remove('has-popup');
   	disableScrollLock();
 }
+
+// close popup when clicking on the dimmed area
+window.addEventListener('DOMContentLoaded', handleDimmedClick);
+
+function handleDimmedClick() {
+	document.addEventListener('click', (event) => {
+    const dimmedArea = event.target.closest('.cmpnt-popup__dimmed');
+    if (dimmedArea) {
+			const parentPopup = dimmedArea.parentNode;
+        if (parentPopup.classList.contains('cmpnt-ppp04')) {
+          closeVideoPopup();
+        } else {
+          closePopup();
+        }
+    }
+  });
+}

@@ -54,6 +54,16 @@
 .cmpnt-ico__help {padding-left:18px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-help.svg') no-repeat 0 50%;transform: translateY(50%);background-size:14px;}
 .cmpnt-ico__help.cmpnt-ico__help--right {padding-right:18px;padding-left:0;background-position:100% 50%}
 
+/* autofill background-color */
+.cmpnt-src-input > input:-webkit-autofill,
+.cmpnt-src-input > input:-webkit-autofill:hover, 
+.cmpnt-src-input > input:-webkit-autofill:focus, 
+.cmpnt-src-input > input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #fff;
+}
+
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
     .cmpnt-src-select {font-size:16px;min-width:200px}
     .cmpnt-src-select ul {min-width:200px}
@@ -89,13 +99,13 @@
 .cmpnt-pagination a.on:hover {text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;}
 .cmpnt-pagination a:hover {text-decoration:none;}
 .cmpnt-pagination--prev,
-.cmpnt-pagination--next {width:18px;height:18px;background-repeat:no-repeat;background-position:50% 50%;background-size:100%;text-indent:-9999em;}
-.cmpnt-pagination--prev,
-.cmpnt-pagination--next {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-swiper-arrow.svg');}
-.cmpnt-pagination--prev.is-disabled,
-.cmpnt-pagination--next.is-disabled {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-grey.svg');cursor:default;}
-.cmpnt-pagination--prev:not(.is-disabled),
-.cmpnt-pagination--next.is-disabled {transform: rotate(3.142rad)}
+.cmpnt-pagination--next {position:relative;width:18px;height:18px;text-indent:-9999em;}
+.cmpnt-pagination--prev::before,
+.cmpnt-pagination--next::before{content:'';position:absolute;left:0;top:0;display:inline-block;width:18px;height:18px;background-repeat:no-repeat;background-position:50% 50%;background-size:100%;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-swiper-arrow.svg');}
+.cmpnt-pagination--prev.is-disabled::before,
+.cmpnt-pagination--next.is-disabled::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-grey.svg');cursor:default;}
+.cmpnt-pagination--prev:not(.is-disabled)::before,
+.cmpnt-pagination--next.is-disabled::before {transform:scaleX(-1)}
 
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
     .cmpnt-pagination {margin-top:45px}
