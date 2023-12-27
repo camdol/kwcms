@@ -10,7 +10,7 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1439px) {
-  .cmpnt-ppp04 .cmpnt-popup__layer {width:90%;}
+  .cmpnt-ppp04 .cmpnt-popup__layer {width:80%;}
   .cmpnt-ppp04 .cmpnt-popup__media {width:100%;height:auto;}
 }
 
