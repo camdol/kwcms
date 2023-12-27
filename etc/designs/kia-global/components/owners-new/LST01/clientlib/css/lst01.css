@@ -20,7 +20,7 @@
 [data-color='green'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-green.svg');}
 [data-color='blue'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-blue.svg');}
 [data-color='others'] .cmpnt-lst01__tab-title::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/owner-resources/warning-indicators-and-lights/ico-others.svg');}
-.cmpnt-lst01__tab-desc {font-size:14px;line-height:150%;padding-left:32px;}
+.cmpnt-lst01__tab-desc {font-size:14px;line-height:150%;padding-left:32px;color: rgba(5,20,31,0.80);}
 
 .cmpnt-lst01__list.is-active {display:block}
 .cmpnt-lst01__list {display:none}
@@ -111,6 +111,12 @@
     .cmpnt-lst01__title button::after {right:24px;}
     .cmpnt-lst01__title button.is-show::after {transform: rotate(3.142rad) translateY(50%);}
     .cmpnt-lst01__desc {font-size:17px;padding:24px 0;}
+}
+
+
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-lst01-category__wrap,
+    .cmpnt-lst01-content {width:calc(100% - 8vw);}
 }
 
 @media screen and (max-width:1024px){

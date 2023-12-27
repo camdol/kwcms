@@ -13,8 +13,12 @@
             const color = target.dataset.color;
             const listTarget = document.querySelector('.cmpnt-lst01-content');
             const dataColors = listTarget.querySelectorAll('[data-color]');
-
-            categoryTabToggle(target);
+            
+            if(target.tagName !== 'BUTTON') {
+                return;  
+            } else {
+                categoryTabToggle(target);
+            }
             
             if (target.closest('.cmpnt-lst01__wrap').querySelector('.is-show')) {
                 target.closest('.cmpnt-lst01__wrap').querySelector('.is-show').classList.remove('is-show');

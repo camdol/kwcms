@@ -59,7 +59,7 @@ function setIMG04Option(pagination, naviNext, naviPrev) {
         const naviNext = this.navigation.nextEl;
         const naviPrev = this.navigation.prevEl;
         const activeImgH = this.slides[this.activeIndex].querySelector('img').offsetHeight;
-        const pagenationGap = window.innerWidth > 1024 ? 35 : 28;
+        const pagenationGap = window.innerWidth > 1024 ? 24 : 17;
         const naviTop = window.innerWidth > 1024 ? (activeImgH / 2) - 20 + 'px' : (activeImgH / 2) + 'px';
         pagination.style.top = activeImgH + pagenationGap + 'px';
         naviNext.style.top = naviTop;
@@ -70,7 +70,7 @@ function setIMG04Option(pagination, naviNext, naviPrev) {
         const naviNext = this.navigation.nextEl;
         const naviPrev = this.navigation.prevEl;
         const activeImgH = this.slides[this.activeIndex].querySelector('img').offsetHeight;
-        const pagenationGap = window.innerWidth > 1024 ? 35 : 28;
+        const pagenationGap = window.innerWidth > 1024 ? 24 : 17;
         const naviTop = window.innerWidth > 1024 ? (activeImgH / 2) - 20 + 'px' : (activeImgH / 2) + 'px';
         pagination.style.top = activeImgH + pagenationGap + 'px';
         naviNext.style.top = naviTop;

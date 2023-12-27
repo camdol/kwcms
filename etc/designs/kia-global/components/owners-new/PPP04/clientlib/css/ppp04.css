@@ -9,6 +9,11 @@
   .cmpnt-ppp04 .cmpnt-popup__media {width: 1280px; height: 720px;}
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+  .cmpnt-ppp04 .cmpnt-popup__layer {width:90%;}
+  .cmpnt-ppp04 .cmpnt-popup__media {width:100%;height:auto;}
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px){
   .cmpnt-ppp04 .cmpnt-popup__layer {left: 0; transform: translateY(-50%);}
 }

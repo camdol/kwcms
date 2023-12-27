@@ -8,6 +8,7 @@
 .cmpnt-src06-manual__title {font-family:'kiaB';border-bottom:1px solid #05141F;text-align:left}
 .cmpnt-src06-manual__title + .cmpnt-src06-manual__list {margin-top:40px}
 .cmpnt-src06-manual__list {display:flex;flex-wrap: wrap;}
+.cmpnt-src06-manual__list::after {display: none;}
 
 .cmpnt-src06-manual__item {background-color:rgba(5, 20, 31, 0.03);text-align:left;box-sizing:border-box;}
 .cmpnt-src06-manual__name {line-height:150%;}
@@ -31,9 +32,10 @@
     .cmpnt-src06-manual__list + .cmpnt-src06-manual__title {margin-top:90px;}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-src06__wrap {width:calc(100% - 8vw);}
 }
+
 
 @media screen and (max-width:1024px){
     .cmpnt-src06__wrap {padding-bottom:60px;}

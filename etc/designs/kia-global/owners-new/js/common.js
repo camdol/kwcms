@@ -50,12 +50,14 @@ function initSearch() {
 	const input = document.querySelector('.cmpnt-src-input input')
 	input.addEventListener('keyup', function() {
 		this.parentElement.classList.add('is-keyup');
+		if (event.keyCode === 8 && input.value.length === 0) {
+			this.parentElement.classList.remove('is-keyup');
+		}
 	});
 
 	btnReset.addEventListener('click', function() {
 		this.parentElement.classList.remove('is-keyup');
 		input.value = '';
-
 	});
 }  
 
@@ -185,16 +187,26 @@ function openPopup(target) {
 
   	popupElem.classList.add('is-show');
 	container.classList.add('has-popup');
-	enableScrollLock();
+	window.innerWidth < 1025 && enableScrollLock();
 }
 
 // popup close
 function closePopup() {
 	const container = document.querySelector('#container');
+	// Get the stored scroll position
+	const scrollY = parseInt(sessionStorage.getItem('scrollY')) || 0;
 
 	event.target.closest('.cmpnt-popup__windows').classList.remove('is-show');
-	container.classList.remove('has-popup');
-  	disableScrollLock();
+	if(!event.target.closest('.cmpnt-popup__windows').classList.contains('cmpnt-ppp03')) {
+		container.classList.remove('has-popup');
+	}
+
+	// Restore scroll position
+	window.scrollTo(0, scrollY);
+	// Remove scroll position from sessionStorage
+	sessionStorage.removeItem('scrollY');
+
+	window.innerWidth < 1025 && disableScrollLock();
 }
 
 // close popup when clicking on the dimmed area
@@ -202,14 +214,33 @@ window.addEventListener('DOMContentLoaded', handleDimmedClick);
 
 function handleDimmedClick() {
 	document.addEventListener('click', (event) => {
-    const dimmedArea = event.target.closest('.cmpnt-popup__dimmed');
-    if (dimmedArea) {
+		const dimmedArea = event.target.closest('.cmpnt-popup__dimmed');
+		if (dimmedArea) {
 			const parentPopup = dimmedArea.parentNode;
-        if (parentPopup.classList.contains('cmpnt-ppp04')) {
-          closeVideoPopup();
-        } else {
-          closePopup();
-        }
-    }
-  });
+			if (parentPopup.classList.contains('cmpnt-ppp04')) {
+				closeVideoPopup();
+			} else {
+				closePopup();
+			}
+		}
+	});
 }
+
+// add device className
+const device = (() => {
+	const ua = navigator.userAgent.toLowerCase();
+	// 갤럭시 A8 태블릿에서 운영체제가 android가 아닌 linux로 표시되어 androiOthers에 linux 케이스 추가
+	return ua.match(/(iphone|ipod|ipad|mac)/) ? 'ios'
+		: ua.match(/android|blackberry|linux/) ? 'androidOthers'
+		: 'pc';
+})();
+
+const screenW = window.screen.width;
+const isMobileSize = screenW <= 768;
+const isTabletSize = !isMobileSize && screenW <= 1280;
+const isPc = device === 'pc';
+const isMobile = !isPc && isMobileSize;
+const isTablet = !isPc && isTabletSize;
+const deviceClassName = isMobile ? 'mobile' : isTablet ? 'tablet' : 'pc';
+
+document.body.dataset.device = deviceClassName;

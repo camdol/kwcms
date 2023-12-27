@@ -23,8 +23,8 @@
     .cmpnt-src-result__name + .cmpnt-src-result__vlaue {margin-top:12px}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-src02__wrap {width:calc(100% - 8vw);}
 }
 
 @media screen and (max-width:1024px){

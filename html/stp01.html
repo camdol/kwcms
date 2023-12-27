@@ -2001,7 +2001,7 @@
                                                 <ul class="cmpnt-step__info-phone">
                                                     <li class="phone_select">
                                                         <!--@ 전화번호 선택  -->
-                                                        <div class="form_wrp only">
+                                                        <div class="form_wrp only required"><!-- 231221 required add -->
                                                             <span class="cmpnt-src-select" placeholder="Mobile">
                                                                 <input type="hidden" id="Ph_select" name="Ph_select" vlaue="">
                                                                 <ul>
@@ -2010,24 +2010,31 @@
                                                                     <li class="cmpnt-src-select__item">Work</li>
                                                                 </ul>
                                                             </span>
+                                                            <span class="required-text">Required</span><!-- 231221 add -->
                                                         </div>
                                                     </li>
                                                     <li class="phone_td">
                                                         <!--@ 전화번호 입력  -->
                                                         <ul class="info_dth">
                                                             <li class="info_tr">
-                                                                <div class="info_td">
+                                                                <div class="info_td form_wrp required"><!-- 231221 form_wrp, required add -->
                                                                     <div class="form_area phone">
-                                                                        <span class="form_wrp"><input type="number" name="mphone1" id="mphone1" class="input_box" title="phone number" style='ime-mode:disabled;' maxlength="5"></span>
+                                                                        <span class="form_wrp required"><!-- 231222 required add -->
+                                                                            <input type="number" name="mphone1" id="mphone1" class="input_box" title="phone number" style='ime-mode:disabled;' maxlength="5">
+                                                                        </span>
                                                                         <span class="hypen">-</span> 
-                                                                        <span class="form_wrp"><input type="number" name="mphone2" id="mphone2" class="input_box" maxlength="5" style='ime-mode:disabled;' title="phone number"></span>
+                                                                        <span class="form_wrp required"><!-- 231222 required add -->
+                                                                            <input type="number" name="mphone2" id="mphone2" class="input_box" maxlength="5" style='ime-mode:disabled;' title="phone number">
+                                                                        </span>
                                                                         <span class="hypen">-</span> 
-                                                                        <span class="form_wrp"><input type="number" name="mphone3" id="mphone3" class="input_box" maxlength="4" style='ime-mode:disabled;' title="phone number"></span>
+                                                                        <span class="form_wrp required"><!-- 231222 required add -->
+                                                                            <input type="number" name="mphone3" id="mphone3" class="input_box" maxlength="4" style='ime-mode:disabled;' title="phone number">
+                                                                        </span>
                                                                     </div>
+                                                                    <span class="required-text">The phone number format is not valid</span><!-- 231221 add -->
                                                                 </div>
                                                             </li>
                                                         </ul>
-
                                                     </li>
                                                 </ul>
                                             </div>

@@ -1281,7 +1281,12 @@
                 <script  defer type="text/javascript" src="/etc/designs/kia-global/components/owners-new/IMG02/clientlib/js/img02.js"></script>
                 <!--@ publising -->
                 <div class="cmpnt-img02">
-                    <div class="cmpnt-img02__wrap">
+                    <!-- 
+                        * 231213 : padding-top 이 필요할 경우 : data-padding 조건 추가
+                        * data-padding | top padding
+                        * 90 | P/T/M - 90/60/60
+                    -->
+                    <div class="cmpnt-img02__wrap" data-padding="90">
                         <section class="cmpnt-img02__img">
                             <picture>
                                 <source srcset="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_img02-pc.jpg" media="(min-width: 1024px)"> <!-- PC -->

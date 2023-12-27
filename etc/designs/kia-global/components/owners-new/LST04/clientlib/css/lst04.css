@@ -35,6 +35,11 @@
     .cmpnt-lst04__video::after {width:76px;height:76px;}
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-lst04__wrap {width:calc(100% - 8vw);}
+    .cmpnt-lst04__list .swiper-slide {width:calc((100% / 3) - 28px)}
+}
+
 @media screen and (max-width:1024px){
     .cmpnt-lst04__category {gap:6px;padding:28px 0}
     .cmpnt-lst04__button {padding:0 16px;height:36px;}
@@ -58,11 +63,19 @@
     .cmpnt-lst04__wrap .swiper-button-next {right:-10px;top:25.5vw}
     .cmpnt-pagination {display:none}
     .cmpnt-lst04__slide-pagination {display:flex;gap:10px;justify-content: center;align-items: center;margin-top:30px}
-    .cmpnt-lst04__slide-pagination .cmpnt-pagination--prev {margin-right:15px}
-    .cmpnt-lst04__slide-pagination .cmpnt-pagination--next {margin-left:15px}
     .cmpnt-lst04__slide-pagination span {font-size:16px;line-height:150%;}
-    .slide-pagination--current {font-family:'kiaB';}
-    .slide-pagination--total {color:rgba(5, 20, 31, 0.6);}
+    .cmpnt-lst04__slide-pagination--prev {margin-right:15px}
+    .cmpnt-lst04__slide-pagination--next {margin-left:15px}
+    .cmpnt-lst04__slide-pagination--current {font-family:'kiaB';}
+    .cmpnt-lst04__slide-pagination--total {color:rgba(5, 20, 31, 0.6);}
+    .cmpnt-lst04__slide-pagination--prev,
+    .cmpnt-lst04__slide-pagination--next {position:relative;width:18px;height:18px;text-indent:-9999em;}
+    .cmpnt-lst04__slide-pagination--prev::before,
+    .cmpnt-lst04__slide-pagination--next::before{content:'';position:absolute;left:0;top:0;display:inline-block;width:18px;height:18px;background-repeat:no-repeat;background-position:50% 50%;background-size:100%;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-swiper-arrow.svg');}
+    .cmpnt-lst04__slide-pagination--prev.is-disabled::before,
+    .cmpnt-lst04__slide-pagination--next.is-disabled::before {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-grey.svg');cursor:default;}
+    .cmpnt-lst04__slide-pagination--prev:not(.is-disabled)::before,
+    .cmpnt-lst04__slide-pagination--next.is-disabled::before {transform:scaleX(-1)}
 
     .cmpnt-lst04__wrap .swiper-button-next, 
     .cmpnt-lst04__wrap .swiper-button-prev {display:block !important}

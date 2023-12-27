@@ -3,7 +3,7 @@
 /* src03 */
 .cmpnt-txt03 {box-sizing:border-box;background-color:#fff}
 .cmpnt-txt03__list li {color:rgba(5, 20, 31, 0.6);line-height:150%;}
-.cmpnt-txt03__list li + li {margin-top:5px;}
+.cmpnt-txt03__list li + li {margin-top:20px;}
 .cmpnt-txt03__list.type-bullet li {position:relative;padding-left:0;padding-left:10px;}
 .cmpnt-txt03__list.type-bullet li::before {content:'';position:absolute;left:0;display:inline-block;width:4px;height:4px;border-radius:4px;background-color:rgba(5, 20, 31, 0.6);}
 
@@ -14,10 +14,9 @@
     .cmpnt-txt03__list.type-bullet li + li {margin-top:1px}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-txt03__wrap {width:calc(100% - 8vw);}
 }
-
 
 @media screen and (max-width:1024px){
     .cmpnt-txt03__wrap {padding-bottom:60px;}

@@ -39,10 +39,20 @@ function initIMG04Swiper() {
 function closeQCK00Popup() {
 	const container = document.querySelector('#container');
 	const body = document.querySelector('body');
+	const winWidth = window.innerWidth;
+
+	// Get the stored scroll position
+	const scrollY = parseInt(sessionStorage.getItem('scrollY')) || 0;
 
 	body.style.overflowX = 'initial';
-    event.target.closest('.cmpnt-qck00').classList.remove('is-show');
+  event.target.closest('.cmpnt-qck00').classList.remove('is-show');
 	container.classList.remove('has-popup');
+
+	// Restore scroll position
+	window.scrollTo(0, scrollY);
+	// Remove scroll position from sessionStorage
+	sessionStorage.removeItem('scrollY');
+
 	if(winWidth < 768) {
 		disableScrollLock();
 	}
@@ -55,6 +65,14 @@ function openQCK00Popup() {
 	const container = document.querySelector('#container');
 	const winWidth = window.innerWidth;
 
+	// Save the current scroll position
+	const scrollY = window.pageYOffset;
+	sessionStorage.setItem('scrollY', scrollY.toString());
+
+	// Scroll to the top
+	window.scrollTo(0, 0);
+
+
 	if(winWidth > 767 && winWidth <1025) {
 		body.style.overflowX = 'hidden';
 	}
@@ -62,7 +80,7 @@ function openQCK00Popup() {
 	if(winWidth < 768) {
 		enableScrollLock();
 	}
-  	popupElem.classList.add('is-show');
+  popupElem.classList.add('is-show');
 	container.classList.add('has-popup');
 }
 

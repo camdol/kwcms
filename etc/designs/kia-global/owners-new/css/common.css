@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); } /* To fix blue box when clicked on mobile*/
+button {font-family: 'kiaM','Noto Sans',sans-serif;color: #05141f;}
+
 /* layout - common */
 .layout-center {text-align:center}
 .layout-left {text-align:left}
@@ -24,7 +27,7 @@
 .bg-white .ico-outlink {background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg');order:2}
 
 /* Form */
-.cmpnt-src-select {position:relative;display:flex;align-items: center;padding:0 15px;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box;}
+.cmpnt-src-select {position:relative;display:flex;align-items: center;padding:0 15px;height:46px;border:1px solid rgba(5, 20, 31, 0.20);cursor:pointer;box-sizing: border-box; font-size: 14px;}
 .cmpnt-src-select[placeholder]::before {content:attr(placeholder);display: block;line-height: 2em;color:#05141f;opacity:0.6}
 .cmpnt-src-select[value]::before {content: attr(value);color: #05141f;opacity:1;white-space: nowrap;overflow: hidden;text-overflow: ellipsis}
 .cmpnt-src-select::after {content:'';position:absolute;right:15px;top:0;width:20px;height:20px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-arrow-bottom.svg') no-repeat 50% 50%;transform: translateY(58%);}
@@ -45,7 +48,7 @@
 .cmpnt-src__button--reset {display:none;position:absolute;right:20px;top:-2px;width:24px;height:24px;background:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-reset.svg') no-repeat 0 50%;transform: translateY(50%);background-size:24px;cursor:pointer;font-size:0;}
 .is-keyup .cmpnt-src__button--reset {display:block}
 .cmpnt-src-input > input {border:none;background-color: transparent;font-size:16px;line-height:150%;color:#05141F;width:100%;height:46px;padding:10px 20px 10px 59px;box-sizing: border-box;}
-.cmpnt-src-input > input:focus {outline:none;border:1px solid #05141F;line-style:inset;height:46px;box-sizing:border-box;}
+.cmpnt-src-input > input:focus {outline:none;border:1px solid #05141F;height:46px;box-sizing:border-box;}
 .cmpnt-src-input > input::placeholder {color:#05141F;opacity:0.6;font-size:14px}
 .cmpnt-src__search-number {font-size:14px;line-height:150%;padding:18px 0}
 .cmpnt-src-input + .cmpnt-src__helpArea,
@@ -65,12 +68,11 @@
 }
 
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
-    .cmpnt-src-select {font-size:16px;min-width:200px}
+    .cmpnt-src-select {min-width:200px}
     .cmpnt-src-select ul {min-width:200px}
 }
 
 @media screen and (max-width:1024px){
-    .cmpnt-src-select {font-size:14px;}
     .cmpnt-src__search-number {padding:14px 0}
 }
 
@@ -122,7 +124,7 @@
 .cmpnt-search-message li::before {content:'';display:inline-block;background-color: rgba(5, 20, 31, 0.60);width:4px;height:4px;border-radius: 2px;vertical-align:middle;margin-right:10px;}
 
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
-    .cmpnt-search-message {min-height:774px;gap:40px;margin-top:90px}
+    .cmpnt-search-message {min-height:300px;gap:40px;margin-top:90px}
     .cmpnt-search-message strong {font-size:36px;}
     .cmpnt-search-message li {font-size:17px;}
 }
@@ -134,11 +136,11 @@
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
-    .cmpnt-search-message {min-height:802px;}
+    .cmpnt-search-message {min-height:400px;}
 }
 
 @media screen and (min-width:0) and (max-width:767px){
-    .cmpnt-search-message {min-height:494px;}
+    .cmpnt-search-message {min-height:200px;}
 }
 
 /* video button */
@@ -171,7 +173,7 @@
 .cmpnt-popup__btn--close {position:absolute;right:0;top:0;z-index:5;font-size:0}
 .cmpnt-popup__btn--close span {position:relative;display:inline-block;border-radius:50%;background-color:rgba(5, 20, 31, 0.4);font-size:0;}
 .cmpnt-popup__btn--close span::before {content:'';position:absolute;top:50%;left:50%;transform: translate(-50%, -50%);z-index:5;background-image:url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-close-white.svg')}
-.cmpnt-popup__dimmed {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.5); z-index: 2000;}
+.cmpnt-popup__dimmed {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,.8); z-index: 2000;}
 
 /* popup : Video, Youtube */
 .cmpnt-popup {position:fixed;padding:0;z-index:2100}

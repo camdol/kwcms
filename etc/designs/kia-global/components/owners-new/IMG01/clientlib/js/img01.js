@@ -35,7 +35,7 @@ function setIMG01Option(pagination, naviNext, naviPrev) {
     slidesPerView: 1.5,
     slidesPerGroup: 1,
     spaceBetween: 20,
-    slidesOffsetAfter: 120,
+    slidesOffsetAfter: 0,
     initialSlide:0,
     draggable: true,
     pagination: {

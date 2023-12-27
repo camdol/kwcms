@@ -9,7 +9,6 @@
         const btn = document.querySelector('.cmpnt-lst02__category');
         btn.addEventListener('click', (e) => {
             const target = e.target;
-            console.log(target);
             if(target.classList.contains('is-selected')) {
                 return;
             } else {

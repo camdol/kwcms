@@ -26,6 +26,10 @@
     .cmpnt-lst05__date {width:calc(20% - 6px);text-align:right;}
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-lst05__wrap {width:calc(100% - 8vw);}
+}
+
 @media screen and (max-width:1024px){
     .cmpnt-lst05__wrap {padding-bottom:60px}
     .cmpnt-lst05__title {font-size:18px;}

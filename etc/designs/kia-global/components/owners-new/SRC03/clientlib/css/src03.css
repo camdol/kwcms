@@ -4,7 +4,7 @@
 .cmpnt-src03 {box-sizing:border-box;background-color:#f8f8f8;}
 .cmpnt-src03__wrap {text-align: center;}
 
-.cmpnt-src03__search {display:inline-flex;gap:10px;}
+.cmpnt-src03__search {display:flex;justify-content: center;gap:10px;}
 
 .cmpnt-src-result__list {display:flex;border-top:1px solid #05141F;border-bottom:1px solid rgba(5, 20, 31, 0.20);}
 .cmpnt-src-result__list + .cmpnt-src-result__list {border-top:none}
@@ -20,6 +20,9 @@
 .cmpnt-src03-result__info-box {display:flex;align-items: flex-start;justify-content: space-between;}
 .cmpnt-src03-result__info-box--txt {text-align:left;font-size:17px;line-height:150%}
 .cmpnt-src03-result__info  img {width:100%;height:auto;aspect-ratio: 16/9;}
+.cmpnt-src03-result__info a.cmpnt-src__button {display:inline-block;line-height:46px;box-sizing:border-box;}
+.cmpnt-src03-result__info a.cmpnt-src__button,
+.cmpnt-src03-result__info a.cmpnt-src__button:hover {text-decoration:none;}
 
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
     .cmpnt-src03__wrap {width:1280px;margin:0 auto;padding-bottom:90px;}
@@ -28,7 +31,7 @@
     .cmpnt-src03-result__note + .cmpnt-src03-result__info {margin-top:72px;}
     .cmpnt-src03-result__info-box {margin-top:40px;}
     .cmpnt-src03-result__info-box--txt {width:70%;}
-    
+
     .cmpnt-src03__search + .cmpnt-src03__result {margin-top:80px}
     .cmpnt-src-result__item {margin:36px 0;padding:0 20px}
     .cmpnt-src-result__name {font-size:17px;}
@@ -36,8 +39,8 @@
     .cmpnt-src-result__name + .cmpnt-src-result__vlaue {margin-top:12px}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-src03__wrap {width:calc(100% - 8vw);}
 }
 
 @media screen and (max-width:1024px){
@@ -56,8 +59,10 @@
     .cmpnt-src03__search {flex-wrap: wrap;}
     .cmpnt-src-select,
     .cmpnt-src-select ul {width:100%;}
+    .cmpnt-src03__search .cmpnt-src-select ul {box-sizing: content-box;}
     .cmpnt-src-select:nth-child(3),
-    .cmpnt-src-select:nth-child(3) ul {width:573px}
+    .cmpnt-src-select:nth-child(3) ul {flex: 1;}
+    .cmpnt-src03__search .cmpnt-src__button {border: 1px solid #05141F; box-sizing: border-box;}
     .cmpnt-src-result__item {margin:28px 0;padding:0 14px;}
     .cmpnt-src-result__name + .cmpnt-src-result__vlaue {margin-top:12px}
 }

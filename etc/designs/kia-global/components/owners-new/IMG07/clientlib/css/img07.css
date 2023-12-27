@@ -10,19 +10,20 @@
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-img07__wrap {width:1280px;margin:0 auto;padding:0 0 90px;gap:40px;}
-    
+    .cmpnt-img07__wrap[data-padding='90'] {padding-top:90px;}
     .cmpnt-img07__img + .cmpnt-img07__title {margin-top:24px}
     .cmpnt-img07__title + .cmpnt-img07__desc {margin-top:20px}
     .cmpnt-img07__title {font-size:26px;}
     .cmpnt-img07__desc {font-size:17px;}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-img07__wrap {width:calc(100% - 8vw);}
 }
 
 @media screen and (max-width:1024px){
     .cmpnt-img07__wrap {padding:0 0 60px;}
+    .cmpnt-img07__wrap[data-padding='90'] {padding-top:60px;}
     .cmpnt-img07__title {font-size:20px;}
     .cmpnt-img07__desc {font-size:16px;}
     .cmpnt-img07__img + .cmpnt-img07__title {margin-top:24px}

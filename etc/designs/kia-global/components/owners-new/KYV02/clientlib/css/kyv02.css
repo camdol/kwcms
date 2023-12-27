@@ -7,6 +7,10 @@
     .cmpnt-kyv02__title {width:1280px;font-size:52px;}    
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-kyv02__title {width:calc(100% - 4vw);margin-left:4vw}    
+}
+
 @media (max-width:1024px) {
     .cmpnt-kyv02 {width:100%;margin:0;padding:54px 38px;}
     .cmpnt-kyv02__title {font-size:36px;} 

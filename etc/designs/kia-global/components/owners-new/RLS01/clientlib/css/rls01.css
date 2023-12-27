@@ -1,4 +1,4 @@
-charset "utf-8";
+@charset "utf-8";
 
 .cmpnt-stepResult {width:100%;}
 .cmpnt-stepResult__inner {width:100%;max-width:1280px;padding-bottom:90px;margin:auto;box-sizing:border-box;}
@@ -10,7 +10,7 @@ charset "utf-8";
 .cmpnt-stepResult__tr {display:table;table-layout:fixed;width: 100%;}
 .cmpnt-stepResult__th, .cmpnt-stepResult__td {display:table-cell;padding:24px 0;border-top:1px solid #05141f;}
 .cmpnt-stepResult__th {width:290px;padding-right:40px;font-size:20px;font-family:"kiaB";line-height:1.5;}
-.cmpnt-stepResult__td {font-size:17px;line-height:1.5;}
+.cmpnt-stepResult__td {font-size:17px;line-height:1.5;color: rgba(5, 20, 31, 0.8);}
 .cmpnt-stepResult__td .center_name {display:block;padding-bottom:8px;}
 .cmpnt-stepResult__td .center_address {display:block;padding-bottom:8px;}
 .cmpnt-stepResult__td .center_phoneNumber {display:block;}

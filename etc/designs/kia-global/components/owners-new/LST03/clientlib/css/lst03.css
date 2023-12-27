@@ -32,6 +32,15 @@
     .cmpnt-lst03__title span {font-size:17px;min-height:48px;max-height:48px}
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-lst03-category__wrap,
+    .cmpnt-lst03__list {width:calc(100% - 8vw);}
+    .cmpnt-lst03__list {gap:30px}
+    .cmpnt-lst03__item {width:calc((100% / 3) - 20px)}
+    .cmpnt-lst03__img {width:100%;}
+    .cmpnt-lst03__title {width:auto}
+}
+
 @media screen and (max-width:1024px){
     .cmpnt-lst03__wrap {padding-bottom:60px;}
     .cmpnt-lst03-category__button {padding:0 16px;height:36px;}

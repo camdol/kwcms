@@ -15,4 +15,24 @@
         tab.scrollLeft = Number(left);
     }
 
+     
+
+    //tab scroll
+    window.addEventListener('DOMContentLoaded', function() {
+        const locationHash = window.location.hash;
+        if (locationHash) {
+            var tabAnchor = document.querySelector('#tab00_anchor');
+            var header = document.querySelector('#header');
+
+            if (tabAnchor) {
+                if (header && window.innerWidth >= 1024) {
+                    window.scrollTo(0, tabAnchor.offsetTop - header.offsetHeight);
+                    console.log('pc');
+                } else {
+                    window.scrollTo(0, tabAnchor.offsetTop + header.offsetHeight);
+                }
+            }
+        }
+});
+
 })();

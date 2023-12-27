@@ -7,10 +7,16 @@
 
 .cmpnt-map00__search {position:relative;width:100%;max-width:480px;text-align:center;box-sizing:border-box;}
 .cmpnt-map00__search .cmpnt-src-input {width:100%}
+.cmpnt-map00__search .cmpnt-src-input > input {padding: 10px 45px 10px 59px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient: vertical;}
+.cmpnt-map00__search .cmpnt-src-input > input[list]::-webkit-calendar-picker-indicator,
+.cmpnt-map00__search .cmpnt-src-input > input[list]::-webkit-list-button {opacity: 0 !important;} /* Remove iOS datalist input arrow */
+.cmpnt-map00__search .cmpnt-src-input > input:hover,
+.cmpnt-map00__search .cmpnt-src-input > input:focus {border:none}
 .cmpnt-map00__search .no-result {display:none;position:absolute;bottom:-44px;left:0;width:100%;padding:11px 60px;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);background:#fff;z-index:50;box-sizing:border-box;}
 .cmpnt-map00__search .no-result span {font-size:14px;line-height:150%;color: rgba(5, 20, 31, 0.40);}
 .cmpnt-map00__search .src-autocomplete  {display:none;position:absolute;top:44px;left:0;width:100%;padding:0 20px;text-align:left;border:1px solid rgba(5, 20, 31, 0.2);background:#fff;z-index:50;box-sizing:border-box;}
-.cmpnt-map00__search .src-autocomplete li {position:relative;padding:11px 0 11px 39px;font-size:14px;line-height:150%;}
+.cmpnt-map00__search .src-autocomplete li {position:relative;padding:11px 0 11px 39px;box-sizing: border-box;}
+.cmpnt-map00__search .src-autocomplete button {font-size:14px;line-height:150%;width:100%;height:21px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient: vertical;}
 .cmpnt-map00__search .src-autocomplete li::before {display:inline-block;content:"";width:24px;height:24px;position:absolute;left:0;top:50%;transform:translate(0, -50%);background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-location2.svg') no-repeat 0 0;background-size:24px 24px;}
 
 .cmpnt-map00-category {display:inline-flex;width:100%;align-items: center;justify-content:flex-end;gap:8px;}
@@ -50,8 +56,9 @@
 .cmpnt-map00__dirving-direction {position:relative;display:inline-block;font-family:'kiaB';font-size:13px;line-height:150%;padding-right:18px;text-decoration:none;}
 .cmpnt-map00__dirving-direction:hover {text-decoration:none;}
 .cmpnt-map00__dirving-direction::after {content:'';position:absolute;right:0;top:0;display:inline-block;width:14px;height:14px;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-outlink.svg') no-repeat 0 0;}
-.cmpnt-map00__phonenumber {position:relative;padding-left:18px;font-family:"kiaB";font-size:13px;line-height:150%;}
+.cmpnt-map00__phonenumber {display: block;position:relative;padding-left:18px;font-family:"kiaB";font-size:13px;line-height:150%;text-decoration: none;}
 .cmpnt-map00__phonenumber::before {display:block;content:"";position:absolute;top:1px;left:0;width:14px;height:14px;background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-phone.svg') no-repeat 0 0;background-size:14px 14px;}
+.cmpnt-map00__phonenumber:hover {text-decoration: none;}
 .cmpnt-map00__address + .cmpnt-map00__dirving-direction {margin-top:12px;}
 .cmpnt-map00__dirving-direction + .cmpnt-map00__phonenumber {margin-top:36px;}
 .cmpnt-map00__address + .cmpnt-map00__phonenumber {margin-top:36px;}
@@ -67,7 +74,6 @@
 }
 
 @media screen and (max-width:1024px){
-  /* .has-popup #header {z-index:-1} */
   .has-popup .cmpnt-map00 {position:fixed;left:0;top:61px;width:100%;height:calc(100vh - 61px);}
   .has-popup .cmpnt-map00__maparea {height: calc(100vh - 60px);}
   .has-popup .cmpnt-map00__popup {position:fixed;left:0;bottom:0;min-height:calc(100vh * 0.45);}
@@ -85,16 +91,8 @@
   .cmpnt-map00__location {font-size:20px;padding:12px 0 24px;}
   .cmpnt-map00__addressbox {padding: 24px 20px 24px 0;box-sizing: border-box;}
   .cmpnt-map00__detail-hours {padding:4px 8px}
-  .cmpnt-map00__search .cmpnt-src-input > input {padding: 10px 45px 10px 59px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient: vertical;}
-  .cmpnt-map00__search .cmpnt-src-input > input:focus {padding:11px 45px 9px 59px;margin-left:-1px;margin-top:-1px;width:calc(100% + 2px);}
+  .cmpnt-map00__search .cmpnt-src-input > input:focus {padding:11px 45px 9px 59px;margin-left:-1px;margin-top:-1px;width:calc(100% + 2px); border: none;}
 
   .cmpnt-map00__search .no-result {bottom:-31px;left:16px;width:calc(100% - 32px);}
   .cmpnt-map00__search .src-autocomplete {top:59px;left:16px;width:calc(100% - 32px);}
 }
-
-
-
-
-
-
-

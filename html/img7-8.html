@@ -1283,7 +1283,12 @@
                 <script  defer type="text/javascript" src="/etc/designs/kia-global/components/owners-new/IMG07/clientlib/js/img07.js"></script>
                 <!--@ publising -->
                 <div class="cmpnt-img07">
-                    <div class="cmpnt-img07__wrap">
+                    <!-- 
+                        * 231213 : padding-top 이 필요할 경우 : data-padding 조건 추가
+                        * data-padding | top padding
+                        * 90 | P/T/M - 90/60/60
+                    -->
+                    <div class="cmpnt-img07__wrap" data-padding="90">
                         <div class="cmpnt-img07__item">
                             <div class="cmpnt-img07__img">
                                 <img src="/content/dam/kwcms/gt/en/images/owners-new/dummy/dummy_ico07_01.svg" alt="">
@@ -1331,7 +1336,13 @@
                 <script  defer type="text/javascript" src="/etc/designs/kia-global/components/owners-new/IMG08/clientlib/js/img08.js"></script>
                 
                 <!--@ publising -->
-                <div class="cmpnt-img08">
+                <!-- 
+                    * 231214 : padding-top 이 필요할 경우 : data-padding 조건 추가
+                    * IMG08 컴포넌트만 .cmpnt-img08__wrap이 아닌 .cmpnt-img08에 data-padding 속성 추가되도록 수정
+                    * data-padding | top padding
+                    * 90 | P/T/M - 90/60/60
+                -->
+                <div class="cmpnt-img08" data-padding="90">
                     <div class="cmpnt-img08__wrap">
                         <div class="swiper cmpnt-img08__swiper">
                             <div class="swiper-wrapper">

@@ -40,7 +40,8 @@ let swiperOptions;
         1025: {
           spaceBetween: 40,
         }
-      },
+      }
+      /* 기능 삭제 
       on: {
           click: function(e) {
             if(this.el.querySelector('.swiper-slide .on')) {
@@ -49,6 +50,7 @@ let swiperOptions;
             event.target.closest('.cmpnt-src01__item').classList.add('on');
           },
       }
+      */
   };
   
   $.fn.chunk = function(size) {

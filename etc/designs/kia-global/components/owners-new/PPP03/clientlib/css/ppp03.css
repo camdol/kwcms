@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 /* ppp03 */
-.cmpnt-ppp03 .cmpnt-popup__layer {max-width: 1060px; background-color: #fff;}
-.cmpnt-ppp03 .cmpnt-popup__wrap {position: relative; padding: 90px 110px;}
+.cmpnt-ppp03 .cmpnt-popup__layer {background-color: #fff;z-index:2200}
+.cmpnt-ppp03 .cmpnt-popup__dimmed {z-index:2150}
+.cmpnt-ppp03 .cmpnt-popup__wrap {position: relative;}
 .cmpnt-ppp03__title {font-family: kiaB; line-height: 140%; text-align: center;}
 .cmpnt-ppp03__desc {line-height: 140%; text-align: center; opacity: 0.8;}
 .cmpnt-ppp03__form {width: 100%;}
@@ -15,7 +16,8 @@
 .cmpnt-ppp03 .cmpnt-popup__btn--close {position: absolute; top: 24px; right: 24px;}
 
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
-  .cmpnt-ppp03__content {padding: 0 120px;}
+  .cmpnt-ppp03 .cmpnt-popup__layer {max-width:512px;}
+  .cmpnt-ppp03 .cmpnt-popup__wrap {padding: 60px 30px;}
   .cmpnt-ppp03__title {font-size: 26px; margin-bottom: 20px;}
   .cmpnt-ppp03__desc {font-size: 17px; margin-bottom: 40px;}
   .cmpnt-ppp03__form {margin-bottom: 40px;}

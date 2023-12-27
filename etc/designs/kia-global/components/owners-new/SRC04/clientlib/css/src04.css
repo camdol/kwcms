@@ -13,7 +13,7 @@
 
 .cmpnt-src04__list-blt {text-align:left;}
 .cmpnt-src04__list-blt li {color:rgba(5, 20, 31, 0.60);padding-left:6px;text-indent:-6px;padding-bottom:2px;}
-.cmpnt-src04__list-blt li::before {content:'';display:inline-block;background-color: rgba(5, 20, 31, 0.60);width:2px;height:2px;border-radius: 2px;vertical-align:middle;margin-top:-1px}
+.cmpnt-src04__list-blt li::before {content:'';display:inline-block;background-color: rgba(5, 20, 31, 0.60);width:2px;height:2px;border-radius: 2px;vertical-align:middle;margin-top:-1px;margin-right:5px;}
 
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
     .cmpnt-src04__wrap {width:1280px;margin:0 auto;padding-bottom:90px;}
@@ -36,8 +36,8 @@
     .cmpnt-src04__search + .cmpnt-src04__result {margin-top:80px}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-src04__wrap {width:calc(100% - 8vw);}
 }
 
 @media screen and (max-width:1024px){

@@ -8,12 +8,15 @@
 .cmpnt-pln00__title {font-family: kiaB; line-height: 140%; border-bottom: 1px solid #05141F;}
 .cmpnt-pln00__content {display: flex; flex-direction: column; justify-content: space-between; gap: 40px;}
 .cmpnt-pln00__price {line-height: 150%; margin-bottom: 4px;}
-.cmpnt-pln00__desc {min-height: 54px; line-height: 150%;opacity: 0.6;} 
+.cmpnt-pln00__desc {
+  /* min-height: 54px;  */
+  line-height: 150%;opacity: 0.6;} 
 .cmpnt-pln00__benefits {line-height: 150%;}
 .cmpnt-pln00__benefits-item {display: flex; justify-content: space-between; gap: 8px;}
 .cmpnt-pln00__benefits-item p {width: calc(100% - 32px); font-size: 14px; line-height: 150%;opacity: 0.6;}
 .cmpnt-pln00__benefits-item +  .cmpnt-pln00__benefits-item {margin-top: 10px;}
 .cmpnt-pln00__benefits-icon {display: block; width: 24px; height: 24px; background: url('/content/dam/kwcms/gt/en/images/owners-new/common/ico-check.svg'); background-repeat: no-repeat;}
+.detectHeight .cmpnt-pln00__desc{min-height: 54px;}
 
 @media screen and (min-width: 1026px) and (max-width: 20000px) {
   .plusHeight .cmpnt-pln00__title{min-height: 72px;}
@@ -24,6 +27,11 @@
   .cmpnt-pln00__price {font-size: 20px;}
   .cmpnt-pln00__desc {font-size: 17px;}
 }
+
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+  .cmpnt-pln00__wrap {width:calc(100% - 8vw);}
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
   .plusHeight .cmpnt-pln00__title{min-height: 65px;}

@@ -16,7 +16,8 @@
 .cmpnt-img03__button.bg-white {background-color:#fff;border:1px solid #05141F;padding:1px 29px}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
-    .cmpnt-img03__wrap {width:1280px;margin:0 auto;padding:90px 0;}
+    .cmpnt-img03__wrap {width:1280px;margin:0 auto;padding:0 0 90px;}
+    .cmpnt-img03__wrap[data-padding='90'] {padding-top:90px;}
     .cmpnt-img03__media + .cmpnt-img03__text-wrap {margin-top:40px;}
     .cmpnt-img03__text-wrap {gap:40px}
     .cmpnt-img03__title,
@@ -27,12 +28,13 @@
     .cmpnt-img03__desc {font-size:17px;}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-img03__wrap {width:calc(100% - 8vw);}
 }
 
 @media screen and (max-width:1024px){
-    .cmpnt-img03__wrap {padding:60px 0;}
+    .cmpnt-img03__wrap {padding:0 0 60px;}
+    .cmpnt-img03__wrap[data-padding='90'] {padding-top:60px;}
     .cmpnt-img03__media + .cmpnt-img03__text-wrap {margin-top:24px;}
     .cmpnt-img03__btn-play span {width:50px;height:50px;}
     .cmpnt-img03__desc + .cmpnt-img03__cta {margin-top:24px;}

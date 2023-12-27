@@ -9,20 +9,22 @@ let cmpntLst04Swiper;
         const btn = document.querySelector('.cmpnt-lst04__category');
         btn.addEventListener('click', (e) => {
             const target = e.target;
-            console.log(target);
+         
             if(target.classList.contains('is-selected')) {
                 return;
             } else {
                 if(target.parentElement.querySelector('.is-selected')) {
+
                     target.parentElement.querySelector('.is-selected').classList.remove('is-selected');
                 }
                 target.classList.add('is-selected');
+                initCmpntLst04Swiper();
             }
         });
     }
 
-    const paginationCurr = document.querySelector('.slide-pagination--current');
-    const paginationTotal = document.querySelector('.slide-pagination--total');
+    const paginationCurr = document.querySelector('.cmpnt-lst04__slide-pagination--current');
+    const paginationTotal = document.querySelector('.cmpnt-lst04__slide-pagination--total');
     const options = {
         loop:false,
         slidesPerView: 1,
@@ -43,8 +45,8 @@ let cmpntLst04Swiper;
             slideChange: function () {
                 const totalSlides = this.slides.length - 1;
                 const activeIdx = this.realIndex;
-                const paginationPrev = document.querySelector('.cmpnt-pagination--prev');
-                const paginationNext = document.querySelector('.cmpnt-pagination--next');
+                const paginationPrev = document.querySelector('.cmpnt-lst04__slide-pagination--prev');
+                const paginationNext = document.querySelector('.cmpnt-lst04__slide-pagination--next');
                 paginationCurr.innerText = activeIdx + 1;
                 this.el.dataset.index = activeIdx;
 
@@ -74,9 +76,9 @@ let cmpntLst04Swiper;
         const list = document.querySelector('.cmpnt-lst04__list');
         const totalNumber = paginationTotal.innerText - 1;
         let idx = list.getAttribute('data-index');
-        if(idx < totalNumber && target.classList.contains('cmpnt-pagination--next')) {
+        if(idx < totalNumber && target.classList.contains('cmpnt-lst04__slide-pagination--next')) {
             idx = parseInt(idx) + 1;
-        } else if(idx > -1 && target.classList.contains('cmpnt-pagination--prev')) {
+        } else if(idx > -1 && target.classList.contains('cmpnt-lst04__slide-pagination--prev')) {
             idx = parseInt(idx) - 1;
         } 
         list.dataset.index = idx;
@@ -84,3 +86,12 @@ let cmpntLst04Swiper;
     });
 
 })();
+
+function initCmpntLst04Swiper() {
+    const target = document.querySelector('.cmpnt-lst04__list');
+    cmpntLst04Swiper.update();
+    cmpntLst04Swiper.slideTo(0);
+    target.dataset.index = 0;
+    target.querySelector('.cmpnt-lst04__slide-pagination--next').classList.contains('is-disabled') && target.querySelector('.cmpnt-lst04__slide-pagination--next').classList.remove('is-disabled');
+    
+}

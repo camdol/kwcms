@@ -25,12 +25,13 @@
 .cmpnt-img01__wrap .swiper-button-prev:hover,
 .cmpnt-img01__wrap .swiper-button-next:hover {background-color:rgba(255, 255, 255, 1);}
 .cmpnt-img01__wrap .swiper-button-prev.swiper-button-disabled, 
-.cmpnt-img01__wrap .swiper-button-next.swiper-button-disabled {display:none !important}
+.cmpnt-img01__wrap .swiper-button-next.swiper-button-disabled {opacity:unset}
 
 .cmpnt-img01__wrap .swiper-pagination.swiper-pagination-bullets {left:-5px;width:auto;bottom:0;line-height:1em;cursor:pointer}
 .cmpnt-img01__wrap .swiper-pagination {display:flex !important;align-items: center;width:auto;text-align:left}
-.cmpnt-img01__wrap .swiper-pagination-bullet {height:2px;background-color:#fff;opacity:0.2;border-radius: 0;--swiper-pagination-bullet-horizontal-gap:5px}
-.cmpnt-img01__wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {opacity:1}
+.cmpnt-img01__wrap .swiper-pagination-bullet {position:relative;height:40px;background-color:transparent;opacity: 1;border-radius: 0;--swiper-pagination-bullet-horizontal-gap:5px}
+.cmpnt-img01__wrap .swiper-pagination-bullet::before {content:'';position:absolute;left:0;top:50%;transform:translate(0, -50%);width:100%;height:2px;background-color:#fff;opacity:0.2;}
+.cmpnt-img01__wrap .swiper-pagination-bullet.swiper-pagination-bullet-active::before {opacity:1}
 
 @media screen and (min-width: 1025px) and (max-width: 20000px) {
     .cmpnt-img01__wrap {padding-left:calc(50% - 640px);margin-top:auto;margin-bottom:auto;gap:40px;align-items: flex-start;}
@@ -53,8 +54,11 @@
     .cmpnt-img01__wrap .swiper-pagination.swiper-pagination-bullets {height:48px}
 }
 
-@media (max-width:1280px) {
-
+@media screen and (min-width: 1025px) and (max-width: 1439px) {
+    .cmpnt-img01__wrap {padding-left:4vw;}
+    .cmpnt-img01__head {width:calc((100% /3) - 30px);min-width:calc(100% /3)}
+    .cmpnt-img01__wrap .swiper-button-prev {left:unset;right:90px}
+    .cmpnt-img01__wrap .swiper-button-next {left:unset;right:30px}
 }
 
 @media screen and (max-width:1024px){
@@ -83,7 +87,7 @@
 }
 
 @media screen and (min-width:0) and (max-width:767px){
-    .cmpnt-img01__head {margin:0 20px}
+    .cmpnt-img01__head {width:calc(100% - 40px);}
     .cmpnt-img01__wrap .cmpnt-img01__swiper {margin-left:20px;width:calc(100% - 20px)}
     .cmpnt-img01__wrap .swiper-button-prev {left:auto;right:74px;}
     .cmpnt-img01__wrap .swiper-button-next {right:20px;}
