@@ -1558,35 +1558,61 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
 <!-- 231227 -->
 <!-- typing  -->
 <!-- 01 big_h title,  typing__desc -->
-<div class="typing__componant type1">
+<div class="typing__componant">
     <div class="typing__inner">
-        <div class="typing__bg-video">
-             <video id="video" oncontextmenu="return false;" title="" autoplay="autoplay" loop="loop" muted="muted" playsinline="" poster="/content/dam/kwcms/au/en/images/new/Hero-w-01.jpg">
-                 <source src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/video/Hero_film_preview_d.mp4" type="video/mp4">
+        <div class="typing__media">
+            <!-- image -->
+            <picture>
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-01-lg.jpg" media="(min-width: 1024px)"> <!-- PC -->
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-01-lg.jpg" media="(min-width: 768px)"> <!-- Tablet -->
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-01-sm.jpg" media="(min-width: 320px)"> <!-- Mobile -->
+                <img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-01-lg.jpg" alt="">
+            </picture>
+            <!-- //image -->
+            
+            <!-- video -->
+            <!--
+            <video id="video" oncontextmenu="return false;" title="" autoplay="autoplay" loop="loop" muted="muted" playsinline="" poster="/content/dam/kwcms/au/en/images/new/Hero-w-01.jpg">
+                <source src="/content/dam/kwcms/gt/en/images/discover-kia/Sponsorship/video/ao-video-2-int.mp4" type="video/mp4">
             </video>
+            -->
+            <!-- //video -->
         </div>
-        <div class="typing__textArea">
-            <div class="typing__caption">
-                <span>Dear Tennis</span>
+        <div class="typing__textArea" data-type="A"><!-- data-type : A, B, C, D -->
+            <div class="typing__title">
+                <span class="typewrite__text">Dear Tennis</span>
+                <i class="typewrite__cursor"></i>
             </div>
-            <div class="typing__h big__h">
-                <span class="typewriter">Australian Open 2024</span>
-            </div>
-            <div class="typing__h">
-                <span>Dear Tennis</span>
-            </div>
-            <div class="typing__desc">
-                <span>Australian Open 2024</span>
-            </div>
-            <div class="typing__desc">
-                <span></span>
-            </div>
-            <div class="typing__desc">
-                <span></span>
+            <div class="typing__subtitle">
+                Australian Open 2024
             </div>
         </div>
+        <!--
+        <div class="typing__textArea" data-type="B">
+            <div class="typing__midtitle">
+                Dear Tennis
+            </div>
+        </div>
+        <div class="typing__textArea" data-type="C">
+            <div class="typing__desc">
+                Dear Tennis
+            </div>
+        </div>
+        <div class="typing__textArea" data-type="D">
+            <div class="typing__subtitle">
+                Australian Open 2024
+            </div>
+            <div class="typing__midtitle">
+                Dear Tennis
+            </div>
+        </div>
+        -->
     </div>
 </div>
+
+
+
+
 <!-- only typing__h -->
 <div class="typing__componant type2">
     <div class="typing__inner">

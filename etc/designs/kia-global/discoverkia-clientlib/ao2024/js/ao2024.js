@@ -1,22 +1,44 @@
 console.log("ao2024.js");
 
+let textArray;
 
+const startTyping = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      if(!entry.target.dataset.ready){
+        const typingDelay = 150; 
+        let idx = 0; 
+        const targetEl = entry.target.querySelector('.typewrite__text');
+        function type() {
+          if (idx < textArray.length) {
+            targetEl.innerHTML += textArray[idx];
+            idx++; 
+            setTimeout(type, typingDelay); 
+          } else {
+            targetEl.classList.remove("is-active");
+            entry.target.querySelector('.typing__subtitle').classList.add('is-show');
+          }
+        }
+        setType(targetEl);
+        setTimeout(type, 300);
+      }
+      entry.target.setAttribute('data-ready', 'yes');
+      window.addEventListener("scroll", parallaxScroll);
+      console.log("ON");
+    } else {
+      window.removeEventListener("scroll", parallaxScroll);
+      console.log("OFF");
+    }
+  });                            
+});
 
+document.querySelectorAll('.typing__textArea').forEach((wrapper) => startTyping.observe(wrapper));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function setType(el) {
+  textArray = el.innerText;  
+  el.innerHTML = '';
+  el.classList.add("is-active");
+}
 
 
 
