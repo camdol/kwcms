@@ -11,22 +11,30 @@ const startTyping = new IntersectionObserver((entries) => {
         const targetEl = entry.target.querySelector('.typewrite__text');
         function type() {
           if (idx < textArray.length) {
-            targetEl.innerHTML += textArray[idx];
-            idx++; 
+            let txt = textArray[idx++];
+            targetEl.innerHTML += txt=== "\n" ? "<br/>": txt;
+            //targetEl.innerHTML += textArray[idx] === "\n" ? "<br/>": textArray[idx];
+            //idx++; 
             setTimeout(type, typingDelay); 
           } else {
             targetEl.classList.remove("is-active");
-            entry.target.querySelector('.typing__subtitle').classList.add('is-show');
+            entry.target.querySelector('.typing__subtitle') && entry.target.dataset.type !== 'D' && entry.target.querySelector('.typing__subtitle').classList.add('is-show');
+            setTimeout(() => {
+              entry.target.previousElementSibling.classList.add('is-show');
+            }, 500);
+            
           }
         }
         setType(targetEl);
         setTimeout(type, 300);
+       
+        
       }
       entry.target.setAttribute('data-ready', 'yes');
-      window.addEventListener("scroll", parallaxScroll);
+      //window.addEventListener("scroll", parallaxScroll(entry.target));
       console.log("ON");
     } else {
-      window.removeEventListener("scroll", parallaxScroll);
+      //window.removeEventListener("scroll", parallaxScroll(entry.target));
       console.log("OFF");
     }
   });                            
@@ -40,9 +48,35 @@ function setType(el) {
   el.classList.add("is-active");
 }
 
+const changeLineBreak = (letter) => {
+  return letter.map(text => text === "\n" ? "<br>" : text);
+}
 
+const paraSection = document.querySelector('.para-section');
 
+function parallaxScroll(el) {
+  // const elementHeight = paraSection.offsetHeight;
+  // const increment = -1;
 
+  // let centerOffest = window.scrollY - paraSection.offsetTop;
+  // let yOffsetRatio = centerOffest / elementHeight;
+
+  // let yOffset = 50 + yOffsetRatio * 100 * increment;
+  // console.log(yOffset);
+
+  // paraSection.style.backgroundPositionY = `${yOffset}%`;
+  el.parentElement.querySelector('.typing__media').classList.add('is-show');
+};
+
+window.addEventListener("scroll", function (el) {
+  const distance = window.scrollY;
+  //document.querySelector(".typing__media").style.transform = `translateY(${distance * 1}px)`;
+  //el.querySelector(".typing__media").classList.add('is-show');
+  //document.querySelector(".container").style.transform = `translateY(${distance * 0.3}px)`;
+  setTimeout(() => {
+    //document.querySelector("section h3").classList.add("animate-me");
+  }, 400);
+});
 
 
 
