@@ -30,7 +30,6 @@
 .has-cta .ao-typing__midtitle{display:block;}
 .has-cta .ao-typing__media {visibility: visible;opacity: 1;}
 
-.ao-typing__textArea {}
 .ao-typing__btn-arrow {display:none;position: absolute;z-index: 1;bottom:-155%;left:50%;width:50px;height:50px;-webkit-transform: translate3d(-50%,0,0);transform: translate3d(-50%,0,0);color: #fff;-webkit-animation: arrow-down infinite 1.5s;animation: arrow-down infinite 1.5s;cursor: pointer}
 .ao-typing__btn-arrow.is-show {display:block}
 .ao-typing__btn-arrow:before {display:block;content:"";position:absolute;bottom:0;;left:50%;width:50px;height:50px;transform:translateX(-50%);-ms-transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-o-transform:translateX(-50%);background: url("/content/dam/kwcms/gt/en/images/new/icon/footer-arrow-m.png") no-repeat 50% 50%;transform: translate3d(-50%, 0, 0);animation: arrow-down infinite 1.5s;}
@@ -181,7 +180,7 @@
 }
 
 /* component : AO2024-text+image */
-.ao-textImage__component {width:100%;}
+.ao-textImage__component {width:100%;background-color:rgb(57, 50, 43);}
 .ao-textImage__inner {width:100%;padding:120px 0 0;text-align:center}
 .ao-textImage__title {max-width:1060px;margin:auto;font-family:'kiaB';font-size:42px;color:#fff}
 .ao-textImage__text {max-width:1060px;margin:auto;font-size:20px;line-height:1.6;color:rgba(255, 255, 255, 0.8)}
