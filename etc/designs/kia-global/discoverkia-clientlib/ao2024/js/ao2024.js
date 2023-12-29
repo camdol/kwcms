@@ -25,10 +25,17 @@ const startTyping = new IntersectionObserver((entries) => {
             
           }
         }
-        setType(targetEl);
-        setTimeout(type, 300);
-       
-        
+        if(entry.target.dataset.type === 'D') {
+          entry.target.querySelector('.typing__subtitle') && entry.target.querySelector('.typing__subtitle').classList.add('is-show');
+          setTimeout(() => {
+            setType(targetEl);
+            setTimeout(type, 300);
+          }, 2000);
+            
+        } else {
+          setType(targetEl);
+          setTimeout(type, 300);
+        }
       }
       entry.target.setAttribute('data-ready', 'yes');
       //window.addEventListener("scroll", parallaxScroll(entry.target));

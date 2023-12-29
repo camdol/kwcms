@@ -9,7 +9,8 @@
 .search-table + .search-table {margin-top:60px}
 .search-table__title {text-align:left;font-family: 'kiaB';line-height:140%;}
 .table-tr {display:flex;text-align:left;}
-.table-th {font-family: 'kiaB';}
+.table-th {font-family: 'kiaB';line-height:140%;}
+.table-td {line-height:150%;}
 
 .cmpnt-src04__list-blt {text-align:left;}
 .cmpnt-src04__list-blt li {color:rgba(5, 20, 31, 0.60);padding-left:6px;text-indent:-6px;padding-bottom:2px;}

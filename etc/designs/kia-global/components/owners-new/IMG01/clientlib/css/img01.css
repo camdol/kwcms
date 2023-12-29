@@ -55,8 +55,10 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1439px) {
-    .cmpnt-img01__wrap {padding-left:4vw;}
-    .cmpnt-img01__head {width:calc((100% /3) - 30px);min-width:calc(100% /3)}
+    .cmpnt-img01__wrap {padding-left:4vw;gap:2.7778vw;}
+    .cmpnt-img01__head {width:27.7778vw;min-width:27.7778vw}
+    .cmpnt-img01__swiper .cmpnt-img01__item {width:27.7778vw;min-width:27.7778vw;}
+    .cmpnt-img01__swiper .swiper-slide {width:58.3333vw;min-width:58.3333vw;}
     .cmpnt-img01__wrap .swiper-button-prev {left:unset;right:90px}
     .cmpnt-img01__wrap .swiper-button-next {left:unset;right:30px}
 }

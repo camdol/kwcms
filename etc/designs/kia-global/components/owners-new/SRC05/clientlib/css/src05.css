@@ -11,7 +11,8 @@
 .search-table {display:flex;}
 .search-table__title {text-align:left;font-family: 'kiaB';line-height:140%;}
 .table-tr {display:flex;text-align:left;}
-.table-th {font-family: 'kiaB';}
+.table-th {font-family: 'kiaB';line-height:140%;}
+.table-td {line-height:150%;}
 .search-table__list {border-top:1px solid #05141F;}
 
 .cmpnt-src05__list-blt {text-align:left;}

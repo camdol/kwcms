@@ -37,7 +37,7 @@
 .cmpnt-map00__maparea img {width:100%;height:100%;object-fit: cover;}
 .cmpnt-map00__maparea iframe {width:100%;height:100%;}
 
-.cmpnt-map00__popup {display:none;width:100%;padding:24px 20px 40px 20px;background:#fff;box-sizing:border-box;border:1px solid #eee;}
+.cmpnt-map00__popup {display:none;width:100%;padding:24px 20px 24px 20px;background:#fff;box-sizing:border-box;border:1px solid #eee;}
 .cmpnt-map00__popup.is-open {display:block}
 .cmpnt-map00__current {display:flex;gap:10px;padding:10px 20px 12px 0;font-family:"kiaB";font-size:14px;line-height:150%;}
 .cmpnt-map00__current-type {display:flex;align-items: center;position:relative;padding-left:26px;margin-right:6px;}
@@ -51,7 +51,7 @@
 .cmpnt-map00__detail-hours {display:inline-flex;align-items: center;font-size:14px;line-height:1.5;border-radius:100px;background:#5D7D2B;color:#fff;}
 .cmpnt-map00__location {font-family:"kiaB";line-height:140%;color:#05141f;}
 .cmpnt-map00__electic-info {font-size:14px;line-height:150%;color:#05141f;}
-.cmpnt-map00__addressbox {width:100%;padding:30px 20px 30px 0;}
+.cmpnt-map00__addressbox {width:100%;padding:30px 20px 10px 0;}
 .cmpnt-map00__address {font-size:14px;line-height:150%;color:rgba(5, 20, 31, 0.8);}
 .cmpnt-map00__dirving-direction {position:relative;display:inline-block;font-family:'kiaB';font-size:13px;line-height:150%;padding-right:18px;text-decoration:none;}
 .cmpnt-map00__dirving-direction:hover {text-decoration:none;}
@@ -89,7 +89,7 @@
   
   .cmpnt-map00__detail-content {padding:24px 20px 24px 0;}
   .cmpnt-map00__location {font-size:20px;padding:12px 0 24px;}
-  .cmpnt-map00__addressbox {padding: 24px 20px 24px 0;box-sizing: border-box;}
+  .cmpnt-map00__addressbox {padding: 24px 20px 10px 0;box-sizing: border-box;}
   .cmpnt-map00__detail-hours {padding:4px 8px}
   .cmpnt-map00__search .cmpnt-src-input > input:focus {padding:11px 45px 9px 59px;margin-left:-1px;margin-top:-1px;width:calc(100% + 2px); border: none;}
 
