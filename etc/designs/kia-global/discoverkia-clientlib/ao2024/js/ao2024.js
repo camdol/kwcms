@@ -47,8 +47,7 @@ const startTyping = new IntersectionObserver((entries) => {
             setType(targetEl);
             setTimeout(type, 300);
           }, 2000);
-        } else if(entry.target.parentElement.dataset.type === 'B' && entry.target.querySelector('.popupOpen__button') !== null) {
-          console.log('B');
+        } else if(entry.target.parentElement.dataset.type === 'B' && entry.target.querySelector('.ao-typing__cta') !== null) {
           entry.target.parentElement.classList.add('has-cta');
         } else {
           setType(targetEl);
@@ -254,7 +253,7 @@ $(document).ready(function() {
 
 
   ///////////////// youtube popup
-    $(".popupOpen__button a").click(function(e) {
+    $(".ao-typing__cta a").click(function(e) {
         e.preventDefault();
         $(".youtube__video_modal_popup").addClass("reveal"),
         $(".youtube__video_modal_popup .video-wrapper").remove(),

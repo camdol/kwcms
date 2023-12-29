@@ -1556,9 +1556,9 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
         		<div class="par parsys"><div class="ao-2024 section" style="min-height:100px;">
                 <link rel="stylesheet" href="/etc/designs/kia-global/discoverkia-clientlib/ao2024/css/ao2024.css" type="text/css">
 <!-- 231227 -->
-<!-- component : AO 2024-Typing  --><!-- Text type : A -->
+<!-- component : AO 2024-Typing(통합소스)  -->
 <div class="ao-typing__component">
-    <div class="ao-typing__inner" data-type="A"><!-- data-type : A, B, C, D -->
+    <div class="ao-typing__inner" data-type="A"><!-- data-type(Text type) : A, B, C, D -->
         <div class="ao-typing__media">
             <!-- image -->
             <picture>
@@ -1578,6 +1578,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
             <!-- //video -->
         </div>
         <div class="ao-typing__textArea">
+            <!-- Text type A -->
             <div class="ao-typing__title">
                 <span class="typewrite__text">Dear Tennis</span><i class="typewrite__cursor"></i>
             </div>
@@ -1587,29 +1588,48 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
             <button type="button" class="ao-typing__btn-arrow">
                 <span>next section</span>
             </button>
-        </div>
-        <!--
-        <div class="ao-typing__textArea" data-type="B">
-            <div class="ao-typing__midtitle">
-                <span class="typewrite__text">Dear Tennis</span><i class="typewrite__cursor"></i>
+            <!-- //Text type A -->
+            <!-- Text type B -->
+            <!-- middle title
+                <div class="ao-typing__midtitle">
+                    <span class="typewrite__text">Dear Tennis</span><i class="typewrite__cursor"></i>
+                </div>
             </div>
-        </div>
-        <div class="ao-typing__textArea" data-type="C">
+            -->
+            <!-- CTA
+            <div class="ao-typing__cta">
+                <a href="#" data-video="https://www.youtube.com/embed/rwZojR5xv0k" data-title="section-03-between-work-and-play">
+                    <img src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/btn_play.png" alt="play video">
+                    <span>DISCOVER</span>
+                </a>
+            </div>    
+            -->
+            <!-- //Text type B -->
+            <!-- Text type C -->
+            <!--
             <div class="ao-typing__desc">
                 <span class="typewrite__text">Dear Tennis</span><i class="typewrite__cursor"></i>
             </div>
-        </div>
-        <div class="ao-typing__textArea" data-type="D">
+            -->
+            <!-- //Text type C -->
+            <!-- Text type D -->
+            <!--
             <div class="ao-typing__subtitle">
                 Dear Tennis
             </div>
             <div class="ao-typing__midtitle">
                 <span class="typewrite__text">Dear Tennis</span><i class="typewrite__cursor"></i>
             </div>
+            -->
+            <!-- Text type D -->
         </div>
-        -->
     </div>
 </div>
+<!-- cta popup -->
+<div class="youtube__video_modal_popup">
+    <div class="video_modal_popup-closer"></div>
+</div>
+<!-- //cta popup -->
 <!-- //component : AO 2024-Typing  -->
 
 <!-- component : AO 2024-Typing  --><!-- Text type B -->
@@ -1627,7 +1647,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
         </div>
         <div class="ao-typing__textArea">
             <div class="ao-typing__midtitle">
-                <span class="typewrite__text">You are more than just a game</span><i class="typewrite__cursor"></i>
+                <span class="typewrite__text">You are more than<br class="br-mo"> just a game</span><i class="typewrite__cursor"></i>
             </div>
         </div>
     </div>
@@ -1649,7 +1669,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
         </div>
         <div class="ao-typing__textArea">
             <div class="ao-typing__midtitle">
-                <span class="typewrite__text">You are an enduring love</span><i class="typewrite__cursor"></i>
+                <span class="typewrite__text">You are an<br class="br-mo"> enduring love</span><i class="typewrite__cursor"></i>
             </div>
         </div>
     </div>
@@ -1820,18 +1840,12 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
             </div>
             -->
 
-            <div class="popupOpen__button">
+            <div class="ao-typing__cta">
                 <a href="#" data-video="https://www.youtube.com/embed/rwZojR5xv0k" data-title="section-03-between-work-and-play">
                     <img src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/btn_play.png" alt="play video">
                     <span>DISCOVER</span>
                 </a>
             </div>
-        </div>
-        <div class="popupOpen__button">
-            <a href="#" data-video="https://www.youtube.com/embed/rwZojR5xv0k" data-title="section-03-between-work-and-play">
-                <img src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/btn_play.png" alt="play video">
-                <span>DISCOVER</span>
-            </a>
         </div>
     </div>
 </div>
@@ -1858,7 +1872,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
             -->
             <!-- //video -->
         </div>
-        <div class="ao-typing__textArea"><!-- data-type : A, B, C, D -->
+        <div class="ao-typing__textArea">
             <div class="ao-typing__title">
                 <span class="typewrite__text">Dear Rafa</span><i class="typewrite__cursor"></i>
             </div>
@@ -1870,40 +1884,13 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
 </div>
 <!-- //component : AO 2024-Typing  -->
 
-<!-- typing video popup -->
-<div class="ao-typing__component video__pop" style="display:none">
-    <div class="ao-typing__inner">
-        <div class="ao-typing__bg-video">
-             <video id="video" oncontextmenu="return false;" title="" autoplay="autoplay" loop="loop" muted="muted" playsinline="" poster="/content/dam/kwcms/au/en/images/new/Hero-w-01.jpg">
-                 <source src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/video/Hero_film_preview_d.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="ao-typing__textArea">
-            <div class="ao-typing__h">
-                <span>Make you move with Kia</span>
-            </div>
-        </div>
-        <!-- 유투브 팝업 오픈 버튼 S -->
-        <div class="popupOpen__button">
-            <a href="#" data-video="https://www.youtube.com/embed/rwZojR5xv0k" data-title="section-03-between-work-and-play">
-                <img src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/btn_play.png" alt="play video">
-                <span>DISCOVER</span>
-            </a>
-        </div>
-        <div class="youtube__video_modal_popup">
-            <div class="video_modal_popup-closer"></div>
-        </div>
-        <!-- 유투브 팝업 오픈 e -->
-    </div>
-</div>
-
 <!-----------------------------------------------------------------------------  slider  ----------------------------------------------------------------------------------->
 <!-- component : AO2024-Gallery -->
 <div class="ao-gallery__component">
     <div class="ao-gallery__inner">
         <div class="ao-typing__textArea">
             <div class="ao-gallery__title">
-                <span class="typewrite__text">We look forward to the journey ahead</span><i class="typewrite__cursor"></i>
+                <span class="typewrite__text">We look forward to the<br class="br-mo"> journey ahead</span><i class="typewrite__cursor"></i>
             </div>
         </div>
         <!-- <div class="component__title">
@@ -1914,23 +1901,23 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
             <div class="ao-gallery__slide h_slide_scroll">
 				<!-- @ 이미지 슬라이드 리스트 -->
                 <div class="ao-gallery__slide-item">
-                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV5_thumb-pc.jpg" alt=""></a> <!-- 이미지 01 -->
+                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-footage-03-lg.jpg" alt=""></a> <!-- 이미지 01 -->
                 </div>
                 <!-- @ 이미지 슬라이드 리스트 -->
                 <div class="ao-gallery__slide-item">
-                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV3_thumb-pc.jpg" alt=""></a>
+                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-footage-04-lg.jpg" alt=""></a>
                 </div>
                 <div class="ao-gallery__slide-item">
-                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV5_thumb-pc.jpg" alt=""></a>
+                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-footage-03-lg.jpg" alt=""></a>
                 </div>
                 <div class="ao-gallery__slide-item">
-                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV3_thumb-pc.jpg" alt=""></a>
+                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-footage-04-lg.jpg" alt=""></a>
                 </div>
                  <div class="ao-gallery__slide-item">
-                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV5_thumb-pc.jpg" alt=""></a>
+                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-footage-03-lg.jpg" alt=""></a>
                 </div>
                  <div class="ao-gallery__slide-item">
-                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV3_thumb-pc.jpg" alt=""></a>
+                    <a href="#"><img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-footage-04-lg.jpg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -1982,10 +1969,10 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
         <div class="ao-typing__media">
             <!-- image -->
             <picture>
-                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-11-lg.jpg" media="(min-width: 1024px)"> <!-- PC -->
-                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-11-lg.jpg" media="(min-width: 768px)"> <!-- Tablet -->
-                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-11-sm.jpg" media="(min-width: 320px)"> <!-- Mobile -->
-                <img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/tennis-11-lg.jpg" alt="">
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-02-lg.jpg" media="(min-width: 1024px)"> <!-- PC -->
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-02-lg.jpg" media="(min-width: 768px)"> <!-- Tablet -->
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-02-sm.jpg" media="(min-width: 320px)"> <!-- Mobile -->
+                <img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/rafa-02-lg.jpg" alt="">
             </picture>
             <!-- //image -->
         </div>
@@ -1994,7 +1981,7 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
                 <span class="typewrite__text">Make your move</span><i class="typewrite__cursor"></i>
             </div>
 
-            <div class="popupOpen__button">
+            <div class="ao-typing__cta">
                 <a href="#" data-video="https://www.youtube.com/embed/rwZojR5xv0k" data-title="section-03-between-work-and-play">
                     <img src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/btn_play.png" alt="play video">
                     <span>DISCOVER</span>
@@ -2005,49 +1992,22 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
 </div>
 <!-- component : AO 2024-Typing  -->
 
-<!-- youtube popup component -->
-
-<div class="pressPop__component">
-    <div class="pressPop__bg">
-        <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV5_nature-pc.jpg" media="(min-width: 1024px)"> <!-- PC -->
-            <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV5_nature-pc.jpg" media="(min-width: 768px)"> <!-- Tablet -->
-            <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/Mobile/EV5_nature-mo.jpg" media="(min-width: 320px)"> <!-- Mobile -->
-            <!--[if IE 9]></video><![endif]-->
-            <img src="/content/dam/kwcms/gt/en/images/discover-kia/EV-day/PC/EV5_nature-pc.jpg" alt="">
-        </picture>
-    </div>
-    <div class="pressPop__content">
-        <div class="pressPop__content-inner">
-            <span>Make your move</span>
-        </div>
-    </div>
-    <!-- 유투브 팝업 오픈 버튼 S -->
-    <div class="popupOpen__button">
-        <a href="#" data-video="https://www.youtube.com/embed/rwZojR5xv0k" data-title="section-03-between-work-and-play">
-            <img src="/content/dam/kwcms/gt/en/images/discover-kia/sustainability/btn_play.png" alt="play video">
-            <span>DISCOVER</span>
-        </a>
-    </div>
-    <div class="youtube__video_modal_popup">
-        <div class="video_modal_popup-closer"></div>
-    </div>
-    <!-- 유투브 팝업 오픈 e -->
-</div>
-
-
 <!-- component : AO2024-text+image -->
 <div class="ao-textImage__component">
     <div class="ao-textImage__inner">
         <div class="ao-textImage__title">
-            <span>Kia, Major Partner of Austrailian Open</span>
+            <span>Kia, Major Partner<br class="br-mo"> of Austrailian Open</span>
         </div>
         <div class="ao-textImage__text">
             <span>As the longest-running major partner of the Australian Open (AO), Kia has played a key role since 2002 in supporting the players on and off the court, while promoting the growth of tennis around the world. Kia has also extended its support of the AO to 2028, continuing the brand’s highly successful partnership with the prestigious tennis Grand Slam.</span>
         </div>
         <div class="ao-textImage__image">
-            <img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/partnership-lg.jpg" alt="">
+            <picture>
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/partnership-lg.jpg" media="(min-width: 1024px)"> <!-- PC -->
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/partnership-lg.jpg" media="(min-width: 768px)"> <!-- Tablet -->
+                <source srcset="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/partnership-sm.jpg" media="(min-width: 320px)"> <!-- Mobile -->
+                <img src="/content/dam/kwcms/gt/en/images/discover-kia/magazine/ao-2024/partnership-lg.jpg" alt="">
+            </picture>
         </div>
     </div>
 </div>
