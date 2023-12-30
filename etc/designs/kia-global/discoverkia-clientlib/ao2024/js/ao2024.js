@@ -1,101 +1,163 @@
 console.log("ao2024.js");
 
 let textArray;
+window.addEventListener("DOMContentLoaded", goNext); 
+window.addEventListener("DOMContentLoaded", setTypingString); 
+window.addEventListener("DOMContentLoaded", setTypingCta); 
+window.addEventListener("DOMContentLoaded", setYoutubePop); 
 
 const startTyping = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
       if(!entry.target.dataset.ready){
-        const typingDelay = 150; 
-        let idx = 0; 
         const targetEl = entry.target.querySelector('.typewrite__text');
-        function type() {
-          if (idx < textArray.length) {
-            let txt = textArray[idx++];
-            targetEl.innerHTML += txt=== "\n" ? "<br/>": txt;
-            setTimeout(type, typingDelay); 
-          } else {
-            targetEl.classList.remove("is-active");
-            if(entry.target.parentElement.dataset.type === 'A') {
-              entry.target.querySelector('.ao-typing__subtitle') && entry.target.dataset.type !== 'D' && entry.target.querySelector('.ao-typing__subtitle').classList.add('is-show');
-              setTimeout(() => {
-                entry.target.querySelector('.ao-typing__btn-arrow').classList.add('is-show');
-              }, 1000);
-              
+
+        if(targetEl) {
+          const typingDelay = 120; //typing time
+          let idx = 0; 
+          let textArray = targetEl.dataset.txt;
+          //typing animation
+          function type() {
+            if (idx < textArray.length) {
+              let txt = textArray[idx++];
+              targetEl.innerHTML += txt=== "\n" ? "<br>": txt;
+              setTimeout(type, typingDelay); 
             } else {
-              setTimeout(() => {
-                entry.target.previousElementSibling.classList.add('is-show');
-              }, 500);
+              //Text type A
+              if(entry.target.parentElement.dataset.type === 'A') {
+                entry.target.querySelector('.ao-typing__subtitle') && entry.target.querySelector('.ao-typing__subtitle').classList.add('is-show');
+                setTimeout(() => {
+                  entry.target.querySelector('.ao-typing__btn-arrow').style.display = 'block';
+                }, 1000);
+                window.addEventListener("scroll", parallaxScroll(entry.target));
+              } else if(entry.target.parentElement.dataset.type === 'B' && entry.target.querySelector('.ao-typing__cta')) {
+                setTimeout(() => {
+                  entry.target.querySelector('.ao-typing__cta').classList.add('is-show');
+                }, 500);
+              } else if(entry.target.parentElement.classList.contains('ao-gallery__inner')) {
+                setTimeout(() => {
+                  entry.target.nextElementSibling.classList.add('is-show');
+                }, 500);
+              } else {
+                setTimeout(() => {
+                  entry.target.previousElementSibling.classList.add('is-show');
+                }, 500);
+              }
             }
           }
-        }
-        
-        window.addEventListener("scroll", function () {
-          if(entry.target.parentElement.dataset.type === 'A') {
-            const intro = entry.target.parentElement.parentElement.querySelector('.ao-typing__inner[data-type="A"]');
-            intro.querySelector('.ao-typing__media').classList.add('is-show');
-            // intro.querySelector('.ao-typing__media').style.position = 'fixed';
-            intro.querySelector('.ao-typing__textArea').classList.add('is-hide');
-          }
-        });
-
-        if(entry.target.parentElement.dataset.type === 'D') {
-          entry.target.querySelector('.ao-typing__midtitle') && entry.target.querySelector('.ao-typing__midtitle').classList.add('is-hide');
-          entry.target.querySelector('.ao-typing__subtitle') && entry.target.querySelector('.ao-typing__subtitle').classList.add('is-show');
-          setTimeout(() => {
-            entry.target.querySelector('.ao-typing__midtitle').classList.contains('is-hide') && entry.target.querySelector('.ao-typing__midtitle').classList.remove('is-hide');
-            setType(targetEl);
+          //Text type D
+          if(entry.target.parentElement.dataset.type === 'D') {
+            setTimeout(() => {
+              entry.target.querySelector('.ao-typing__subtitle').classList.add('is-show');
+            }, 500);
+            setTimeout(type, 1000);
+          } else {
             setTimeout(type, 300);
-          }, 2000);
-        } else if(entry.target.parentElement.dataset.type === 'B' && entry.target.querySelector('.ao-typing__cta') !== null) {
-          entry.target.parentElement.classList.add('has-cta');
+          }
         } else {
-          setType(targetEl);
-          setTimeout(type, 300);
+          if(entry.target.querySelector('.ao-typing__cta')) {
+            setTimeout(() => {
+              entry.target.querySelector('.ao-typing__cta').classList.add('is-show');
+            }, 500);
+          }
         }
       }
       entry.target.setAttribute('data-ready', 'yes');
-
-      
-      //window.addEventListener("scroll", parallaxScroll(entry.target));
-      console.log("ON");
-    } else {
-      //window.removeEventListener("scroll", parallaxScroll(entry.target));
-      
-    }
-  });                            
+    } 
+  });
 });
 
 document.querySelectorAll('.ao-typing__textArea').forEach((wrapper) => startTyping.observe(wrapper));
 
-
-
-function setType(el) {
-  textArray = el.innerText;  
-  console.log(textArray);
-  el.innerHTML = '';
-  el.classList.add("is-active");
+//Typing component : string set
+function setTypingString() {
+  const txtArrays = document.querySelectorAll('.typewrite__text');
+  Array.prototype.forEach.call(txtArrays, function(el){
+    let elString = []
+    if(window.innerWidth > 1024) {
+      elString = el.innerHTML.replaceAll(/<br class="br-mo">/gi, '').replaceAll(/<br>/gi, '\n');
+    } else {
+      elString = el.innerHTML.replaceAll(/<br class="br-mo">|<br>/gi, '\n');
+    }
+    el.dataset.txt = elString;
+    el.innerText = '';
+  });
 }
 
-const changeLineBreak = (letter) => {
-  return letter.map(text => text === "\n" ? "<br>" : text);
+//Typing component : next section pallaxScroll
+function goNext() {
+  const btns = document.querySelectorAll('.ao-typing__btn-arrow');
+  Array.prototype.forEach.call(btns, function(el){
+		el.addEventListener('click', (e) => {
+      const target =  e.target.parentElement.closest('.ao-typing__component');
+      const gap = window.innerWidth > 1024 ? 0 : 60;
+      const targetTop = target.getBoundingClientRect().height + target.offsetTop + gap;
+      //parallaxScroll(e.target.parentElement)
+      window.scrollTo({let:0, top:targetTop, behavior:'smooth'});
+    });
+  });
 }
 
-const paraSection = document.querySelector('.para-section');
+//Text type B & CTA 
+function setTypingCta() {
+  const ctas = document.querySelectorAll('.ao-typing__inner');
+  Array.prototype.forEach.call(ctas, function(el){
+    el.dataset.type === 'B' && el.querySelector('.ao-typing__cta') !== null && el.classList.add('has-cta');
+  });
+}
 
+//pallaxScroll motion
 function parallaxScroll(el) {
-  // const elementHeight = paraSection.offsetHeight;
-  // const increment = -1;
-
-  // let centerOffest = window.scrollY - paraSection.offsetTop;
-  // let yOffsetRatio = centerOffest / elementHeight;
-
-  // let yOffset = 50 + yOffsetRatio * 100 * increment;
-  // console.log(yOffset);
-
-  // paraSection.style.backgroundPositionY = `${yOffset}%`;
-  el.parentElement.querySelector('.ao-typing__media').classList.add('is-show');
+  el.previousElementSibling.classList.add('is-show');
+  //el.previousElementSibling.style.position = 'fixed';
+  el.classList.add('is-hide');
 };
+
+// youtube popup
+function setYoutubePop() {
+  const playBtns = document.querySelectorAll('.ao-typing__cta a');
+  Array.prototype.forEach.call(playBtns, function(el){
+		el.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = event.target.parentElement.dataset.video;
+      openYoutubePopup(url);
+    });
+  });
+
+  function setPopup(url) {
+    const targetDiv = document.querySelector('.new_ex_layout');
+    const popLayer = document.createElement('div');
+    popLayer.setAttribute('class', 'youtube__video_modal_popup');
+    const existingnode = targetDiv.lastChild;
+    const youtubeHtml = `
+      <button class="video_modal_popup-closer" onClick="closeYoutubePopup();"></button>
+      <div class='video-wrapper'>closePopup
+        <div class='pop_inner'>
+          <iframe width='560' height='315' src='${url}?rel=0&playsinline=1&autoplay=1' allow='autoplay; encrypted-media' allowfullscreen></iframe>
+          <div class='dimm'></div>
+        </div>
+      </div>
+    `;
+    popLayer.innerHTML = youtubeHtml;
+    targetDiv.insertBefore(popLayer, existingnode);
+  }
+
+  function openYoutubePopup(url) {
+    setPopup(url);
+    document.querySelector('.youtube__video_modal_popup').classList.add('reveal');
+    document.querySelector('#header').style.zIndex = '-1';
+    document.querySelector('body').style.overflow = 'hidden';
+    document.querySelector('.btn_box.top').style.zIndex = '-1';
+  }
+}
+
+function closeYoutubePopup() {
+  const target = event.target;
+  target.closest('.youtube__video_modal_popup').remove();
+  document.querySelector('#header').style.zIndex = '1004';
+  document.querySelector('body').style.overflow = '';
+  document.querySelector('.btn_box.top').style.zIndex = '1004';
+}
 
 window.addEventListener("scroll", function (el) {
   const distance = window.scrollY;
@@ -107,7 +169,15 @@ window.addEventListener("scroll", function (el) {
   }, 400);
 });
 
-
+// function parallaxScroll(el) {
+//   const elementHeight = paraSection.offsetHeight;
+//   const increment = -1;
+//   let centerOffest = window.scrollY - paraSection.offsetTop;
+//   let yOffsetRatio = centerOffest / elementHeight;
+//   let yOffset = 50 + yOffsetRatio * 100 * increment;
+//   console.log(yOffset);
+//   paraSection.style.backgroundPositionY = `${yOffset}%`;
+// };
 
 
 
@@ -252,23 +322,7 @@ $(document).ready(function() {
 
 
 
-  ///////////////// youtube popup
-    $(".ao-typing__cta a").click(function(e) {
-        e.preventDefault();
-        $(".youtube__video_modal_popup").addClass("reveal"),
-        $(".youtube__video_modal_popup .video-wrapper").remove(),
-        $(".youtube__video_modal_popup").append("<div class='video-wrapper'><div class='pop_inner'><iframe width='560' height='315' src='" + $(this).data("video") + "?rel=0&playsinline=1&autoplay=1' allow='autoplay; encrypted-media' allowfullscreen></iframe><div class='dimm'></div></div></div>")
-        $('#header').css('z-index','-1');
-        $('body').css('overflow','hidden');
-        $('.btn_box.top').css('z-index','-1');
-    }),
-    $(".video_modal_popup-closer").click(function() {
-        $(".youtube__video_modal_popup .video-wrapper").remove(),
-        $(".youtube__video_modal_popup").removeClass("reveal");
-        $('#header').css('z-index','1004');
-        $('body').css('overflow','');
-        $('.btn_box.top').css('z-index','1004');
-    });
+
 
 
 
