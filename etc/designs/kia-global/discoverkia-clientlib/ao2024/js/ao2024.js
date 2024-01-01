@@ -23,6 +23,7 @@ const startTyping = new IntersectionObserver((entries) => {
               targetEl.innerHTML += txt=== "\n" ? "<br>": txt;
               setTimeout(type, typingDelay); 
             } else {
+              targetEl.dataset.txt = '';
               //Text type A
               if(dataType === 'A') {
                 entry.target.querySelector('.ao-typing__subtitle') && showTypingEl(entry.target, '.ao-typing__subtitle');
