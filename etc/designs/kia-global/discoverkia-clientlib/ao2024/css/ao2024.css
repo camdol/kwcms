@@ -158,7 +158,7 @@
 .ao-textImage__text + .ao-textImage__image {margin-top:100px}
 .new_ex_layout div.ao-textImage__text {line-height:1.6;}
 .is-show.ao-textImage__title,
-.is-show.ao-textImage__text {visibility:visible;animation: fadeIn 3s ease-out 1}
+.is-show.ao-textImage__text {visibility:visible;animation: fadeIn 5s ease-out 1}
 .is-show.ao-textImage__image {visibility:visible;}
 
 @media screen and (max-width:1180px) {
@@ -186,7 +186,7 @@
 .ao-vehicle__image {overflow:hidden;width:100%;height:auto;}
 .ao-vehicle__image img {width:100%;height:100%;object-fit:cover;}
 .ao-vehicle__text {position:absolute;left:40px;bottom:25px;font-family:'kiaB';font-size:28px;color:#fff}
-.is-show.ao-vehicle__title {visibility:visible;animation: fadeIn 3s ease-out 1}
+.is-show.ao-vehicle__title {visibility:visible;animation: fadeIn 5s ease-out 1}
 .is-show.ao-vehicle__wrap {visibility:visible;}
 
 @media screen and (max-width:1180px) {
