@@ -23,6 +23,7 @@ const startTyping = new IntersectionObserver((entries) => {
               targetEl.innerHTML += txt=== "\n" ? "<br>": txt;
               setTimeout(type, typingDelay); 
             } else {
+              targetEl.classList.remove('is-active');
               targetEl.dataset.txt = '';
               //Text type A
               if(dataType === 'A') {
@@ -67,7 +68,7 @@ document.querySelectorAll('.ao-typing__textArea').forEach((wrapper) => startTypi
 function showTypingEl(target, className) {
   setTimeout(() => {
     return target.querySelector(className).classList.add('is-show');
-  }, 1500);
+  }, 1000);
 }
 //Typing component : string set
 function setTypingString() {
@@ -81,6 +82,7 @@ function setTypingString() {
     }
     el.dataset.txt = elString;
     el.innerText = '';
+    el.classList.add('is-active');
   });
 }
 
@@ -107,9 +109,11 @@ function setTypingCta() {
 
 //pallaxScroll motion
 function parallaxScroll(el) {
-  el.previousElementSibling.classList.add('is-show');
+  setTimeout(() => {
+    el.previousElementSibling.classList.add('is-show');
+  }, 2500);
   //el.previousElementSibling.style.position = 'fixed';
-  el.classList.add('is-hide');
+  //el.classList.add('is-hide');
 };
 
 // youtube popup
