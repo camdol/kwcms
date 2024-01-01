@@ -1,6 +1,5 @@
 console.log("ao2024.js");
 
-let textArray;
 window.addEventListener("DOMContentLoaded", goNext); 
 window.addEventListener("DOMContentLoaded", setTypingString); 
 window.addEventListener("DOMContentLoaded", setTypingCta); 
@@ -9,8 +8,9 @@ window.addEventListener("DOMContentLoaded", setYoutubePop);
 const startTyping = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
-      if(!entry.target.dataset.ready){
+      if(!entry.target.dataset.motion){
         const targetEl = entry.target.querySelector('.typewrite__text');
+        const dataType = entry.target.parentElement.dataset.type;
 
         if(targetEl) {
           const typingDelay = 120; //typing time
@@ -24,51 +24,50 @@ const startTyping = new IntersectionObserver((entries) => {
               setTimeout(type, typingDelay); 
             } else {
               //Text type A
-              if(entry.target.parentElement.dataset.type === 'A') {
-                entry.target.querySelector('.ao-typing__subtitle') && entry.target.querySelector('.ao-typing__subtitle').classList.add('is-show');
+              if(dataType === 'A') {
+                entry.target.querySelector('.ao-typing__subtitle') && showTypingEl(entry.target, '.ao-typing__subtitle');
                 setTimeout(() => {
                   entry.target.querySelector('.ao-typing__btn-arrow').style.display = 'block';
-                }, 1000);
+                }, 2000);
                 window.addEventListener("scroll", parallaxScroll(entry.target));
-              } else if(entry.target.parentElement.dataset.type === 'B' && entry.target.querySelector('.ao-typing__cta')) {
-                setTimeout(() => {
-                  entry.target.querySelector('.ao-typing__cta').classList.add('is-show');
-                }, 500);
+              } else if(dataType === 'B' && entry.target.querySelector('.ao-typing__cta')) {  //Middle title & CTA
+                entry.target.previousElementSibling.classList.add('is-show')
+                showTypingEl(entry.target, '.ao-typing__cta');
               } else if(entry.target.parentElement.classList.contains('ao-gallery__inner')) {
-                setTimeout(() => {
-                  entry.target.nextElementSibling.classList.add('is-show');
-                }, 500);
+                entry.target.nextElementSibling.classList.add('is-show');
               } else {
-                setTimeout(() => {
-                  entry.target.previousElementSibling.classList.add('is-show');
-                }, 500);
+                entry.target.previousElementSibling.classList.add('is-show');
               }
             }
           }
           //Text type D
-          if(entry.target.parentElement.dataset.type === 'D') {
-            setTimeout(() => {
-              entry.target.querySelector('.ao-typing__subtitle').classList.add('is-show');
-            }, 500);
-            setTimeout(type, 1000);
+          if(dataType === 'D') {
+            showTypingEl(entry.target, '.ao-typing__subtitle');
+            setTimeout(type, 2500);
           } else {
             setTimeout(type, 300);
           }
         } else {
+          //CTA
           if(entry.target.querySelector('.ao-typing__cta')) {
-            setTimeout(() => {
-              entry.target.querySelector('.ao-typing__cta').classList.add('is-show');
-            }, 500);
+            entry.target.previousElementSibling.classList.add('is-show');
+            showTypingEl(entry.target, '.ao-typing__cta')
           }
         }
       }
-      entry.target.setAttribute('data-ready', 'yes');
+      entry.target.setAttribute('data-motion', 'yes');
     } 
   });
 });
 
 document.querySelectorAll('.ao-typing__textArea').forEach((wrapper) => startTyping.observe(wrapper));
 
+
+function showTypingEl(target, className) {
+  setTimeout(() => {
+    return target.querySelector(className).classList.add('is-show');
+  }, 1500);
+}
 //Typing component : string set
 function setTypingString() {
   const txtArrays = document.querySelectorAll('.typewrite__text');
@@ -92,7 +91,6 @@ function goNext() {
       const target =  e.target.parentElement.closest('.ao-typing__component');
       const gap = window.innerWidth > 1024 ? 0 : 60;
       const targetTop = target.getBoundingClientRect().height + target.offsetTop + gap;
-      //parallaxScroll(e.target.parentElement)
       window.scrollTo({let:0, top:targetTop, behavior:'smooth'});
     });
   });
@@ -158,6 +156,44 @@ function closeYoutubePopup() {
   document.querySelector('body').style.overflow = '';
   document.querySelector('.btn_box.top').style.zIndex = '1004';
 }
+
+//AO2024-text+image motion
+const startTextImage = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      if(!entry.target.dataset.motion){
+        entry.target.querySelector('.ao-textImage__title').classList.add('is-show');
+        entry.target.querySelector('.ao-textImage__text').classList.add('is-show');  
+        setTimeout(() => {
+          entry.target.querySelector('.ao-textImage__image').classList.add('is-show');  
+        }, 2000);
+      }
+      entry.target.setAttribute('data-motion', 'yes');
+    } 
+  });
+});
+
+startTextImage.observe(document.querySelector('.ao-textImage__component'));
+
+//AO2024-Vehicle motion
+const startVehiclee = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      if(!entry.target.dataset.motion){
+        entry.target.querySelector('.ao-vehicle__title').classList.add('is-show');
+        showTypingEl(entry.target, '.ao-vehicle__wrap');
+        setTimeout(() => {
+          entry.target.querySelector('.ao-vehicle__wrap').classList.add('is-show');  
+        }, 2000);
+      }
+      entry.target.setAttribute('data-motion', 'yes');
+    } 
+  });
+});
+
+startVehiclee.observe(document.querySelector('.ao-vehicle__component'));
+
+
 
 window.addEventListener("scroll", function (el) {
   const distance = window.scrollY;
